@@ -16,6 +16,7 @@ public class Code {
 	public static Item refinedDiamond;
 	public static Item hotDiamond;
 	public static Item refinedpick;
+	public static Item refinedaxe;
 	public static Block Refined_Diamond_Block;
 	public static void Items() {
 		
@@ -29,6 +30,8 @@ public class Code {
 		GameRegistry.registerItem(refinedpick, "refinedpick");
 		GameRegistry.addSmelting(new ItemStack(Items.diamond), new ItemStack(hotDiamond), 0F);
 		GameRegistry.addSmelting(new ItemStack(refinedDiamond), new ItemStack(hotDiamond, 2), 0F);
+		refinedaxe = new RefinedAxe(RefinedDiamondTool);
+		GameRegistry.registerItem(refinedaxe, "refinedaxe");
 		
 		/*
 		 * Recipes
