@@ -1,0 +1,66 @@
+package com.allforfunmc.refineddiamond;
+
+import com.allforfunmc.scaffolding.BlockOfScaffolding;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class Code {
+	public static Item refinedDiamond;
+	public static Item hotDiamond;
+	public static Item refinedpick;
+	public static Block Refined_Diamond_Block;
+	public static void Items() {
+		
+		ToolMaterial RefinedDiamondTool = EnumHelper.addToolMaterial("refinedDiamond", 5, 3500, 50F, 15, 1);
+		
+		refinedDiamond = new RefinedDiamond();
+		GameRegistry.registerItem(refinedDiamond, "refinedDiamond");
+		hotDiamond = new HotDiamond();
+		GameRegistry.registerItem(hotDiamond, "hotDiamond");
+		refinedpick = new RefinedPick(RefinedDiamondTool);
+		GameRegistry.registerItem(refinedpick, "refinedpick");
+		GameRegistry.addSmelting(new ItemStack(Items.diamond), new ItemStack(hotDiamond), 0F);
+		GameRegistry.addSmelting(new ItemStack(refinedDiamond), new ItemStack(hotDiamond, 2), 0F);
+		
+		/*
+		 * Recipes
+		 */
+		
+		
+		//Shapeless Recipes
+		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond), new ItemStack(hotDiamond));
+		//Shaped Recipes
+		GameRegistry.addRecipe(new ItemStack(refinedDiamond,2), new Object[] {
+			" H ",
+			"H H",
+			" H ",
+			'H', hotDiamond
+		});
+		GameRegistry.addRecipe(new ItemStack(refinedpick), new Object[]{
+			"RRR",
+			" S ",
+			" S ",
+			'R', refinedDiamond, 'S', Items.stick
+		});
+		/*
+		 * Block
+		 */
+		Refined_Diamond_Block = new Refined_Diamond_Block(Material.rock);
+		GameRegistry.registerBlock(Refined_Diamond_Block, "Refined_Diamond_Block");
+		
+		GameRegistry.addRecipe(new ItemStack(Refined_Diamond_Block), new Object[]{
+			"RRR",
+			"RRR",
+			"RRR",
+			'R', refinedDiamond
+		});
+	}
+}
