@@ -28,8 +28,8 @@ public class Generator implements IWorldGenerator {
         public void generateSurface(World world, Random random, int x, int z) {
  
                 addOreSpawn(Code.refinedOre, world, random,
-                                x, z, 32, 32, 5,
-                                9, 6, 9);
+                                x, z, 32, 3, 5,
+                                9, 1, 14);
                
         }
  
