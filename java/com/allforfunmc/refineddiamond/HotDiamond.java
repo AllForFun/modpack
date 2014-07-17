@@ -7,7 +7,7 @@ public class HotDiamond extends Item{
 	
 	public HotDiamond(){
 		super();
-		this.setCreativeTab(CreativeTabs.tabMaterials);
+		setCreativeTab(Code.AllForFunTab);
 		this.setTextureName("refineddiamondmod:hotdiamond");
 		this.setMaxStackSize(64);
 		this.setUnlocalizedName("hotdiamond");

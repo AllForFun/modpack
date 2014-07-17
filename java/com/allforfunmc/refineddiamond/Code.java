@@ -72,12 +72,12 @@ public class Code {
 		/*
 		 * Tab
 		 */
-		public static CreativeTabs tabCustom = new CreativeTabs("All For Fun Mods") {
+		}
+		public static final CreativeTabs AllForFunTab = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun Mods") {
 		    @Override
 		    @SideOnly(Side.CLIENT)
 		    public Item getTabIconItem() {
-		        return Items.ender_eye;
+		        return refinedDiamond;
 		    }
 		};
-	}
 }

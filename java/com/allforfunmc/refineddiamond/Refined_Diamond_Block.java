@@ -12,7 +12,7 @@ public class Refined_Diamond_Block extends Block {
     public Refined_Diamond_Block(Material material) {
             super(material);
             setHardness(25F);
-            setCreativeTab(CreativeTabs.tabBlock);
+            setCreativeTab(Code.AllForFunTab);
             setBlockTextureName("refineddiamondmod:refineddiamondblock");
             setHarvestLevel("Pickaxe", 5);
             setResistance(250);

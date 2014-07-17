@@ -1,5 +1,6 @@
 item.refineddiamond.name=Refined Diamond
 item.hotdiamond.name=Melted Diamond
 item.refinedpick.name=Refined Diamond Pickaxe
-item.refiendaxe.name=Refined Diamond Axe
+item.refinedaxe.name=Refined Diamond Axe
 tile.RefinedDiamondBlock.name=Refined Diamond Block 
+itemGroup.AllForFun Mods=AllForFun Mods

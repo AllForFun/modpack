@@ -10,6 +10,7 @@ public class RefinedAxe extends ItemAxe{
 	public RefinedAxe(ToolMaterial mat){
 		super(mat);
 		this.setCreativeTab(CreativeTabs.tabTools);
+		setCreativeTab(Code.AllForFunTab);
 		this.setTextureName("refineddiamondmod:refinedaxe");
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("refinedaxe");
