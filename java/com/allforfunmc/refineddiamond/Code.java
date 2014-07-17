@@ -11,6 +11,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.util.EnumHelper;
+import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -21,6 +22,8 @@ public class Code {
 	public static Item refinedpick;
 	public static Item refinedaxe;
 	public static Block Refined_Diamond_Block;
+	public static Block refinedOre;
+	public static IWorldGenerator Generator;
 	public static void Items() {
 		
 		ToolMaterial RefinedDiamondTool = EnumHelper.addToolMaterial("refinedDiamond", 5, 3500, 50F, 15, 1);
@@ -31,16 +34,19 @@ public class Code {
 		GameRegistry.registerItem(hotDiamond, "hotDiamond");
 		refinedpick = new RefinedPick(RefinedDiamondTool);
 		GameRegistry.registerItem(refinedpick, "refinedpick");
-		GameRegistry.addSmelting(new ItemStack(Items.diamond), new ItemStack(hotDiamond), 0F);
-		GameRegistry.addSmelting(new ItemStack(refinedDiamond), new ItemStack(hotDiamond, 2), 0F);
+		refinedOre = new RefinedOre(Material.rock);
+		GameRegistry.registerBlock(refinedOre, "refinedOre");
 		refinedaxe = new RefinedAxe(RefinedDiamondTool);
 		GameRegistry.registerItem(refinedaxe, "refinedaxe");
+		Generator = new Generator();
+		GameRegistry.registerWorldGenerator(Generator, 15);
 		
 		/*
 		 * Recipes
 		 */
-		
-		
+		//Smelting
+		GameRegistry.addSmelting(new ItemStack(Items.diamond), new ItemStack(hotDiamond), 0F);
+		GameRegistry.addSmelting(new ItemStack(refinedDiamond), new ItemStack(hotDiamond, 2), 0F);
 		//Shapeless Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond), new ItemStack(hotDiamond));
 		//Shaped Recipes
