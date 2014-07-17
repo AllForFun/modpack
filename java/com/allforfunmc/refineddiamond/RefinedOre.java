@@ -3,7 +3,6 @@ package com.allforfunmc.refineddiamond;
 import net.minecraft.block.Block;
 
 import java.util.Random;
-import java.util.stream.IntStream;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
