@@ -27,6 +27,7 @@ public class RefinedOre extends Block {
     @Override
     public Item getItemDropped(int metadata, Random random, int fourtune){
     	f = fourtune;
+    	System.out.println("Item Dropped picker: Fourtune:" + fourtune + ", Random:" + r);
     	
     	if(r == 0){
     		return null;
@@ -41,6 +42,7 @@ public class RefinedOre extends Block {
     @Override
 	public int quantityDropped(Random random){
     	r = random.nextInt(f + 1);
+    	System.out.println("Dropped Number picker: Random:" + r);
     	if (r >= 3){
     		return r - 1;
     	} else {
