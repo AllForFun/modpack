@@ -15,6 +15,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class RefinedOre extends Block {
 	private int r;
+	private int f = 0;
     public RefinedOre(Material material) {
             super(material);
             setHardness(15F);
@@ -26,8 +27,8 @@ public class RefinedOre extends Block {
     }
     @Override
     public Item getItemDropped(int metadata, Random random, int fourtune){
-    	
-    	r = random.nextInt(fourtune + 1);
+    	f = fourtune;
+    	System.out.println("Item Dropped picker: Fourtune:" + fourtune + ", Random:" + r);
     	
     	if(r == 0){
     		return null;
@@ -37,8 +38,16 @@ public class RefinedOre extends Block {
     		return Items.diamond;
     	}else {
     		return Code.refinedDiamond;
-    	}
-    	
+    	}	
     }
-    
+    @Override
+	public int quantityDropped(Random random){
+    	r = random.nextInt(f + 1);
+    	System.out.println("Dropped Number picker: Random:" + r);
+    	if (r >= 3){
+    		return r - 1;
+    	} else {
+    		return 1;
+    	}
+	}
 }
