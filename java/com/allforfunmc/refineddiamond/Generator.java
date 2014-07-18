@@ -29,7 +29,7 @@ public class Generator implements IWorldGenerator {
  
                 addOreSpawn(Code.refinedOre, world, random,
                                 x, z, 32, 3, 5,
-                                5, 1, 14);
+                                4, 1, 14);
                
         }
  
