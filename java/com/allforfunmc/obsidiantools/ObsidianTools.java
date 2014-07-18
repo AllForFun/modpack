@@ -1,4 +1,4 @@
-package com.allforfunmc.obsidiontools;
+package com.allforfunmc.obsidiantools;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -6,11 +6,11 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod (modid="ObsidionTools", name="AllForFun's Obsidion Tools", version="Alpha")
-public class ObsidionTools {
+@Mod (modid="obsidiantools", name="AllForFun's Obsidian Tools", version="Alpha")
+public class ObsidianTools {
 	@Instance (value="GenericModID")
-	public static ObsidionTools instance;
-	@SidedProxy(clientSide="com.allforfunmc.obsidiontools.ClientProxy",serverSide="com.allforfunmc.obsidiontools.CommonProxy")
+	public static ObsidianTools instance;
+	@SidedProxy(clientSide="com.allforfunmc.obsidiantools.ClientProxy",serverSide="com.allforfunmc.obsidiantools.CommonProxy")
 	public static CommonProxy proxy;
 	@EventHandler()
 	public void load(FMLInitializationEvent event) {

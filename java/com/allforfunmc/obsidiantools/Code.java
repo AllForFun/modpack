@@ -1,4 +1,4 @@
-package com.allforfunmc.obsidiontools;
+package com.allforfunmc.obsidiantools;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -9,15 +9,15 @@ import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Code {
-	public static Item obsidionpickaxe;
+	public static Item obsidianpickaxe;
 	public static void Blocks() {
 		
 	}
 	public static void Items() {
-		ToolMaterial Obsidion = EnumHelper.addToolMaterial("Obsidion", 2, 10000, 4F, 9, 0);
+		ToolMaterial Obsidian = EnumHelper.addToolMaterial("Obsidion", 2, 1999, 4F, 9, 0);
 		
-		obsidionpickaxe = new ObsidionPickaxe(Obsidion);
-		GameRegistry.registerItem(obsidionpickaxe, "ObsidionPickaxe");
+		obsidianpickaxe = new ObsidianPickaxe(Obsidian);
+		GameRegistry.registerItem(obsidianpickaxe, "ObsidionPickaxe");
 		
 		
 	}

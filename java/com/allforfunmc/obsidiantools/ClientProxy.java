@@ -1,4 +1,4 @@
-package com.allforfunmc.obsidiontools;
+package com.allforfunmc.obsidiantools;
 import net.minecraftforge.client.MinecraftForgeClient;
 
 public class ClientProxy extends CommonProxy {

@@ -1,19 +1,19 @@
-package com.allforfunmc.obsidiontools;
+package com.allforfunmc.obsidiantools;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemPickaxe;
 
-public class ObsidionPickaxe extends ItemPickaxe{
+public class ObsidianPickaxe extends ItemPickaxe{
 	
-	public ObsidionPickaxe(ToolMaterial mat){
+	public ObsidianPickaxe(ToolMaterial mat){
 		super(mat);
 		this.setCreativeTab(CreativeTabs.tabTools);
 		setCreativeTab(CreativeTabs.tabTools);
-		this.setTextureName("obsidiontools:ObsidionPick");
+		this.setTextureName("obsidiantools:ObsidianPick");
 		this.setMaxStackSize(1);
-		this.setUnlocalizedName("ObsidionPickaxe");
+		this.setUnlocalizedName("ObsidianPickaxe");
 	}
 
 }
