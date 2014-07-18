@@ -62,6 +62,12 @@ public class Code {
 			" S ",
 			'R', refinedDiamond, 'S', Items.stick
 		});
+		GameRegistry.addRecipe(new ItemStack(refinedaxe), new Object[]{
+			"RR ",
+			"RS ",
+			" S ",
+			'S', Items.stick, 'R', refinedDiamond
+		});
 		/*
 		 * Block
 		 */

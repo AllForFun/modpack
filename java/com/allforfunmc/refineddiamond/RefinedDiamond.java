@@ -9,7 +9,7 @@ public class RefinedDiamond extends Item{
 		super();
 		setCreativeTab(Code.AllForFunTab);
 		this.setTextureName("refineddiamondmod:refineddiamond");
-		this.setMaxStackSize(64);
+		this.setMaxStackSize(16);
 		this.setUnlocalizedName("refineddiamond");
 	}
 
