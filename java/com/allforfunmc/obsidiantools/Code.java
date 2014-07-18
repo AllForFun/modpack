@@ -10,14 +10,17 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Code {
 	public static Item obsidianpickaxe;
+	public static Item obsidianaxe;
 	public static void Blocks() {
 		
 	}
 	public static void Items() {
-		ToolMaterial Obsidian = EnumHelper.addToolMaterial("Obsidion", 2, 1999, 4F, 9, 0);
+		ToolMaterial Obsidian = EnumHelper.addToolMaterial("Obsidian", 2, 1999, 4F, 9, 0);
 		
 		obsidianpickaxe = new ObsidianPickaxe(Obsidian);
-		GameRegistry.registerItem(obsidianpickaxe, "ObsidionPickaxe");
+		GameRegistry.registerItem(obsidianpickaxe, "ObsidianPickaxe");
+		obsidianaxe = new ObsidianAxe(Obsidian);
+		GameRegistry.registerItem(obsidianaxe, "ObsidianAxe");
 		
 		
 	}
@@ -25,7 +28,17 @@ public class Code {
 		//Shapeless Recipes
 		
 		//Shaped Recipes
-		
+		GameRegistry.addRecipe(new ItemStack(obsidianpickaxe), new Object[]{
+			"OOO",
+			" S ",
+			" S ",
+			'O', Blocks.obsidian, 'S', Items.stick
+		}); GameRegistry.addRecipe(new ItemStack(obsidianaxe), new Object[]{
+			"OO ",
+			"OS ",
+			" S ",
+			'O', Blocks.obsidian, 'S', Items.stick
+		});
 	}
 	public static void Smelting() {
 		
