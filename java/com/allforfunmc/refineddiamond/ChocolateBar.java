@@ -13,10 +13,11 @@ public class ChocolateBar extends ItemFood{
     public ChocolateBar(int healthGain, float SaturationGain, boolean dogsFavorite) {
             super(healthGain, SaturationGain, dogsFavorite);
             setMaxStackSize(64);
-            setUnlocalizedName("ChocolateBar");
+            setUnlocalizedName("chocolateBar");
             setTextureName("");
+            //No texture yet
             setAlwaysEdible();
-            this.setCreativeTab(Code.AllForFunTab);
+            this.setCreativeTab(CreativeTabs.tabFood);
             this.setPotionEffect(10, 5, 5, 100);
             this.setPotionEffect(18, 60, 3, 75);
     }
