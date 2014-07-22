@@ -7,9 +7,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 @Mod (modid="obsidiantools", name="AllForFun's Obsidian Tools", version="Alpha")
-public class ObsidianTools {
+public class obsidiantools {
 	@Instance (value="GenericModID")
-	public static ObsidianTools instance;
+	public static obsidiantools instance;
 	@SidedProxy(clientSide="com.allforfunmc.obsidiantools.ClientProxy",serverSide="com.allforfunmc.obsidiantools.CommonProxy")
 	public static CommonProxy proxy;
 	@EventHandler()
