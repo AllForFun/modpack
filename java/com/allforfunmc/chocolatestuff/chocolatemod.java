@@ -19,9 +19,9 @@ public class chocolatemod {
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		Code.Blocks();
+		Code.Items();
 		Code.Crafting();
 		Code.Enchantments();
 		Code.Smelting();
-		Code.Items();
 	}
 }
