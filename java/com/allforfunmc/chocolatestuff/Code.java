@@ -29,7 +29,7 @@ public class Code {
 			's', Items.sugar, 'c', meltedChocolate, 'm', Items.milk_bucket}
 		);
 	}	public static void Smelting() {
-		
+		GameRegistry.addSmelting(new ItemStack(Items.dye,1,3), new ItemStack(meltedChocolate), 0);
 	}	public static void Enchantments() {
 		
 	}
