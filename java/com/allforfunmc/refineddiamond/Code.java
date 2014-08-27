@@ -1,5 +1,6 @@
 package com.allforfunmc.refineddiamond;
 
+import com.allforfunmc.chocolatestuff.ChocolateBar;
 import com.allforfunmc.scaffolding.BlockOfScaffolding;
 
 import net.minecraft.block.Block;
@@ -20,7 +21,6 @@ public class Code {
 	public static Item refinedDiamond;
 	public static Item hotDiamond;
 	public static Item refinedpick;
-	public static Item chocolateBar;
 	public static Item refinedaxe;
 	public static Block Refined_Diamond_Block;
 	public static Block refinedOre;
@@ -39,8 +39,6 @@ public class Code {
 		GameRegistry.registerBlock(refinedOre, "refinedOre");
 		refinedaxe = new RefinedAxe(RefinedDiamondTool);
 		GameRegistry.registerItem(refinedaxe, "refinedaxe");
-		chocolateBar = new ChocolateBar(5, 5, false);
-		GameRegistry.registerItem(chocolateBar, "chocolateBar");
 		Generator = new Generator();
 		GameRegistry.registerWorldGenerator(Generator, 15);
 		

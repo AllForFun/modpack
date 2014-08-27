@@ -1,4 +1,4 @@
-package com.allforfunmc.refineddiamond;
+package com.allforfunmc.chocolatestuff;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,7 +14,7 @@ public class ChocolateBar extends ItemFood{
             super(healthGain, SaturationGain, dogsFavorite);
             setMaxStackSize(64);
             setUnlocalizedName("chocolateBar");
-            setTextureName("refineddiamondmod:chocolatebar");
+            setTextureName("chocolatestuff:chocolatebar");
             //No texture yet
             setAlwaysEdible();
             setCreativeTab(CreativeTabs.tabFood);
