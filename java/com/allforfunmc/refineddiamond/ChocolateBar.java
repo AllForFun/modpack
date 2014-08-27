@@ -14,11 +14,12 @@ public class ChocolateBar extends ItemFood{
             super(healthGain, SaturationGain, dogsFavorite);
             setMaxStackSize(64);
             setUnlocalizedName("chocolateBar");
-            setTextureName("");
+            setTextureName("refineddiamondmod:chocolatebar");
             //No texture yet
             setAlwaysEdible();
-            this.setCreativeTab(CreativeTabs.tabFood);
+            setCreativeTab(CreativeTabs.tabFood);
             this.setPotionEffect(10, 5, 5, 100);
+            this.setPotionEffect(9, 5, 5, 1);
             this.setPotionEffect(18, 60, 3, 75);
     }
 }

@@ -40,7 +40,7 @@ public class Code {
 		refinedaxe = new RefinedAxe(RefinedDiamondTool);
 		GameRegistry.registerItem(refinedaxe, "refinedaxe");
 		chocolateBar = new ChocolateBar(5, 5, false);
-		GameRegistry.registerItem(chocolateBar, "ChocolateBar");
+		GameRegistry.registerItem(chocolateBar, "chocolateBar");
 		Generator = new Generator();
 		GameRegistry.registerWorldGenerator(Generator, 15);
 		
