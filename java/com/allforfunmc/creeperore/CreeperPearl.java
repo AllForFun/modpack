@@ -9,7 +9,7 @@ public class CreeperPearl extends Item{
 		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
 		this.setTextureName("creeperore:creeperpearl");
 		this.setMaxStackSize(16);
-		this.setUnlocalizedName("creeperore");
+		this.setUnlocalizedName("creeperpearl");
 	}
 
 }
