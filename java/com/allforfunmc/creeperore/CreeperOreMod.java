@@ -6,7 +6,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod (modid="creeperore", name="AllForFun's CreeperOreMod", version="Dev")
+@Mod (modid="creeperore", name="AllForFun's CreeperOreMod", version="1")
 public class CreeperOreMod {
 	@Instance (value="GenericModID")
 	public static CreeperOreMod instance;

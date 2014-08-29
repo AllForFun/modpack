@@ -6,7 +6,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 
-@Mod (modid="chocolatestuff", name="Chocolate Stuff", version="Dev")
+@Mod (modid="chocolatestuff", name="Chocolate Stuff", version="1")
 public class chocolatemod {
 	@Instance (value="GenericModID")
 	public static chocolatemod instance;
