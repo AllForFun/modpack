@@ -9,8 +9,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Code {
 	public static Block CreeperOre = new CreeperOre(Material.rock);
+	
+	public static Generator Generator = new Generator();
 	public static void Blocks() {
 		GameRegistry.registerBlock(CreeperOre, "CreeperOre");
+		GameRegistry.registerWorldGenerator(Generator, 20);
 	}
 	public static void Crafting() {
 		//Shapeless Recipes

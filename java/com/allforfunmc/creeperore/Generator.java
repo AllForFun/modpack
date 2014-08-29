@@ -27,10 +27,10 @@ public class Generator implements IWorldGenerator {
  
         public void generateSurface(World world, Random random, int x, int z) {
  
-                addOreSpawn(Code.refinedOre, world, random,
-                                x, z, 32, 3, 5,
-                                4, 1, 14);
-               
+                addOreSpawn(Code.CreeperOre, world, random,
+                                x, z, 5, 5, 5,
+                                25, 3, 50);
+       
         }
  
         public void generateNether(World world, Random random, int x, int z) {
