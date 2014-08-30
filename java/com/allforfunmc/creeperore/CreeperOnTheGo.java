@@ -26,7 +26,6 @@ public class CreeperOnTheGo extends Item{
 
         if (!world.isRemote)
         {
-        	System.out.println("Spawn");
         	world.spawnEntityInWorld(new ThrownCreeperOnTheGo(world, player));
         }
 
