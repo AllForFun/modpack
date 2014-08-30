@@ -32,8 +32,17 @@ public class Code {
 	}
 	public static void Crafting() {
 		//Shapeless Recipes
-		
+		GameRegistry.addShapelessRecipe(new ItemStack(CreeperPearl,2), new Object[]{
+			Items.ender_pearl,
+			Blocks.tnt
+		});
 		//Shaped Recipes
+		GameRegistry.addRecipe(new ItemStack(CreeperOnTheGo,4), new Object[]{
+			"ppp",
+			" p ",
+			" m ",
+			'p', CreeperPearl, 'm', Items.minecart
+		});
 		GameRegistry.addRecipe(new ItemStack(CreeperPick), new Object[]{
 			"tct",
 			"cpc",
