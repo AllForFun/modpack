@@ -1,7 +1,10 @@
 package com.allforfunmc.creeperore;
 
+import com.allforfunmc.chocolatestuff.chocolatemod;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -15,7 +18,7 @@ public class Code {
 	public static ToolMaterial CreeperTool = EnumHelper.addToolMaterial("Creeper", 4, 1, 10F, 20, 1);
 	public static Item CreeperPick = new CreeperPickaxe(CreeperTool);
 	public static Item CreeperPearl = new CreeperPearl();
-	
+	public static Item CreeperOnTheGo = new CreeperOnTheGo();
 	
 	public static Generator Generator = new Generator();
 	public static void Blocks() {
@@ -25,6 +28,7 @@ public class Code {
 	public static void Items() {
 		GameRegistry.registerItem(CreeperPick, "Creeper Pick");
 		GameRegistry.registerItem(CreeperPearl, "Creeper Pearl");
+		GameRegistry.registerItem(CreeperOnTheGo, "Creeper On The Go");
 	}
 	public static void Crafting() {
 		//Shapeless Recipes
