@@ -40,4 +40,9 @@ public class ThrownCreeperOnTheGo extends EntityThrowable
             this.setDead();
         }
     }
+    @Override
+    protected float getGravityVelocity()
+    {
+        return 0;
+    }
 }
