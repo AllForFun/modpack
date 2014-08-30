@@ -33,7 +33,6 @@ public class ThrownCreeperOnTheGo extends EntityThrowable
     protected void onImpact(MovingObjectPosition MOP){
         float f = 4.0F;
         this.worldObj.createExplosion(null, MOP.blockX, MOP.blockY, MOP.blockZ, f, true);
-        System.out.println("Explode! Info: X" + MOP.blockX + MOP.blockY + MOP.blockZ);
         
     	if (!this.worldObj.isRemote)
         {
