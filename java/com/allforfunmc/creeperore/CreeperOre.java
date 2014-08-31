@@ -26,8 +26,10 @@ public class CreeperOre extends Block {
     }
     @Override
     public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
-        float f = 4.0F;
-        world.createExplosion(null, x, y, z, f, true);
+        if(!world.isRemote){
+        	float f = 4.0F;
+        	world.createExplosion(null, x, y, z, f, true);
+        }
     }
     @Override
     public Item getItemDropped(int p_149650_1_, Random p_149650_2_, int p_149650_3_)

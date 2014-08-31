@@ -19,11 +19,13 @@ public class Code {
 	public static Item CreeperPick = new CreeperPickaxe(CreeperTool);
 	public static Item CreeperPearl = new CreeperPearl();
 	public static Item CreeperOnTheGo = new CreeperOnTheGo();
-	
 	public static Generator Generator = new Generator();
+	public static Block MineMaker = new MineMaker(Material.rock);
 	public static void Blocks() {
 		GameRegistry.registerBlock(CreeperOre, "CreeperOre");
 		GameRegistry.registerWorldGenerator(Generator, 20);
+		GameRegistry.registerBlock(MineMaker, "MineMaker");
+		
 	}
 	public static void Items() {
 		GameRegistry.registerItem(CreeperPick, "Creeper Pick");
@@ -46,10 +48,8 @@ public class Code {
 			"ccc",
 			"cpc",
 			"ccc",
-			'c', CreeperOnTheGo,
-			'p', Items.diamond_pickaxe
+			'c', CreeperOnTheGo,'p', Items.diamond_pickaxe
 		});
-		
 	}
 	public static void Smelting() {
 		
