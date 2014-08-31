@@ -38,17 +38,15 @@ public class Code {
 		});
 		//Shaped Recipes
 		GameRegistry.addRecipe(new ItemStack(CreeperOnTheGo,4), new Object[]{
-			"ppp",
-			" p ",
-			" m ",
-			'p', CreeperPearl, 'm', Items.minecart
+			"pt",
+			"tp",
+			'p', CreeperPearl, 't', Blocks.tnt
 		});
 		GameRegistry.addRecipe(new ItemStack(CreeperPick), new Object[]{
-			"tct",
+			"ccc",
 			"cpc",
-			"tct",
-			't', Blocks.tnt,
-			'c', CreeperPearl,
+			"ccc",
+			'c', CreeperOnTheGo,
 			'p', Items.diamond_pickaxe
 		});
 		
