@@ -21,7 +21,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 @Mod(modid =  Main.modid, version = Main.version)
 public class Main {
 
-	public static final String modid = "com.allforfunmc.darkglass";
+	public static final String modid = "darkglass";
 	public static final String version = "1.0.0";
 	
 	public static BlockBreakable blockDarkGlass;
