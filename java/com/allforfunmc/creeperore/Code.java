@@ -62,6 +62,12 @@ public class Code {
 			"ccc",
 			'c', CreeperOnTheGo,'p', Items.diamond_pickaxe
 		});
+		GameRegistry.addRecipe(new ItemStack(MineMakerBlock), new Object[]{
+			"sss",
+			"sts",
+			"sss",
+			's', Blocks.stone, 't', Blocks.tnt
+		});
 	}
 	public static void Smelting() {
 		
