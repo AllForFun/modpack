@@ -1,6 +1,6 @@
 package com.allforfunmc.creeperore;
 
-import com.allforfunmc.chocolatestuff.chocolatemod;
+import com.allforfunmc.creeperore.MineMaker;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -14,18 +14,30 @@ import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Code {
+	
+	
 	public static Block CreeperOre = new CreeperOre(Material.rock);
 	public static ToolMaterial CreeperTool = EnumHelper.addToolMaterial("Creeper", 4, 1, 10F, 20, 1);
 	public static Item CreeperPick = new CreeperPickaxe(CreeperTool);
 	public static Item CreeperPearl = new CreeperPearl();
 	public static Item CreeperOnTheGo = new CreeperOnTheGo();
 	public static Generator Generator = new Generator();
-	public static Block MineMaker = new MineMaker(Material.rock);
+	public static Block MineMakerBlock = new MineMaker(Material.rock);
+	
+	//Mines
+	public static Block GrassMine = MineMaker.CreateMine(Blocks.grass);
+	public static Block DirtMine = MineMaker.CreateMine(Blocks.dirt);
+	public static Block SandMine = MineMaker.CreateMine(Blocks.sand);
+	public static Block StoneMine = MineMaker.CreateMine(Blocks.stone);
+	public static Block CobbleMine = MineMaker.CreateMine(Blocks.cobblestone);
+	public static Block DiamondOreMine = MineMaker.CreateMine(Blocks.diamond_ore);
+	public static Block DiamondBlockMine = MineMaker.CreateMine(Blocks.diamond_block);
+	public static Block WoodenPlankMine = MineMaker.CreateMine(Blocks.planks);
+	
 	public static void Blocks() {
 		GameRegistry.registerBlock(CreeperOre, "CreeperOre");
 		GameRegistry.registerWorldGenerator(Generator, 20);
-		GameRegistry.registerBlock(MineMaker, "MineMaker");
-		
+		GameRegistry.registerBlock(MineMakerBlock, "MineMaker");
 	}
 	public static void Items() {
 		GameRegistry.registerItem(CreeperPick, "Creeper Pick");
@@ -52,9 +64,6 @@ public class Code {
 		});
 	}
 	public static void Smelting() {
-		
-	}
-	public static void Enchantments() {
 		
 	}
 }
