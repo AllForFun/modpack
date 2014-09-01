@@ -21,7 +21,6 @@ public class CreeperOreMod {
 		Code.Blocks();
 		Code.Items();
 		Code.Crafting();
-		Code.Enchantments();
 		Code.Smelting();
 	}
 }
