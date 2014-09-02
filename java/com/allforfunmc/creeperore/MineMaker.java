@@ -49,7 +49,7 @@ public class MineMaker extends Block{
     	try{
     		Block block = Block.getBlockFromItem(player.getCurrentEquippedItem().getItem());
 	    	if(Mines.containsKey(block) && powerhash.containsKey(blockkey)){
-	    		if((Integer) powerhash.get(blockkey) >= 5){
+	    		if((Integer) powerhash.get(blockkey) >= 10){
 	    			ItemStack mine = new ItemStack((Block) Mines.get(block),player.getCurrentEquippedItem().stackSize);
 	    			player.setCurrentItemOrArmor(0, mine);
 	    			int newpower = (Integer) powerhash.get(blockkey) - 5;

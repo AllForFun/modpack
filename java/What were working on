@@ -2,13 +2,14 @@ Add what you are working on to the section below your username:
 
 /---------------------------------\
 |Penne12:                         |
-|[Cobble Armor]                   |
+|[Easy Ore Api]                   |
 |---------------------------------|
 |ndh175:                          |
 |[Put what you're working on here]|
 \---------------------------------/
 
 Ideas:
-Mod                     | Idea              | Description
-More Ores and More      | Ruby Ore          | Ore: Rarer then diamond Armor: Regens health at level 1 for user. 50 durablity. 
-More Ores and More      | Cobble Armor      | Strong as chain armor. Slows and weakens user at level 1.
+Mod                     | Idea           |Progress| Description
+More Ores and More      | Ruby Ore       |   0%   | Ore: Rarer then diamond Armor: Regens health at level 1 for user. 50 durablity. 
+More Ores and More      | Cobble Armor   |   0%   | Strong as chain armor. Slows and weakens user at level 1.
+Easy Ore Api            | Api for new ore|  2.5%  | Easy way to make a new ore. No new classes! Just public static block (orename) = easyoreapi.addore();!
