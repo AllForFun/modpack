@@ -37,14 +37,15 @@ public class EasyOre extends Block{
 	public static HashMap minY = new HashMap();
 	public static HashMap maxY = new HashMap();
 	public static ArrayList<Block> blocksToGenerate = new ArrayList<Block>();
-	public void EasyGenerator(Block block, int maxX, int maxZ,
+	/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
+	public static void EasyGenerator(Block block, int maxX, int maxZ,
 			int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
-		this.maxX.put(block, maxX);
-		this.maxZ.put(block, maxZ);
-		this.maxVeinSize.put(block, maxVeinSize);
-		this.chancesToSpawn.put(block, chancesToSpawn);
-		this.minY.put(block, minY);
-		this.maxY.put(block, maxY);
+		EasyOre.maxX.put(block, maxX);
+		EasyOre.maxZ.put(block, maxZ);
+		EasyOre.maxVeinSize.put(block, maxVeinSize);
+		EasyOre.chancesToSpawn.put(block, chancesToSpawn);
+		EasyOre.minY.put(block, minY);
+		EasyOre.maxY.put(block, maxY);
 		blocksToGenerate.add(block);
 	}
 	public Block newEasyOre(String unlocalisedName, String texture, int toolLevel, Item drop, int quantityDrop, float resistance, int maxX, int maxZ,
