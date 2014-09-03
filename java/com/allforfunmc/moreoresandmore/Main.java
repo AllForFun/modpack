@@ -51,9 +51,6 @@ public class Main {
 		//blocks
 		blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
 		GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
-		/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
-		EasyOre.EasyGenerator(blockCompressedCobble, 10, 10, 25, 25, 1, 35);
-		//items
 		
 		
 		
@@ -88,6 +85,8 @@ public class Main {
 	
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent postEvent){
-		
+		/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
+		EasyOre.EasyGenerator(blockCompressedCobble, 10, 10, 25, 25, 1, 35);
+		//items
 	}
 }
