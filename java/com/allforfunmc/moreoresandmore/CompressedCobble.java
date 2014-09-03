@@ -14,7 +14,7 @@ public class CompressedCobble extends Block{
 	public CompressedCobble(Material material) {
 		super(material);
 		
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
 	}
 
 	@SideOnly(Side.CLIENT)

@@ -27,16 +27,6 @@ public class Main {
 	
 	public static String bootName = "Iron Boots"; 
 	
-	/* public boolean onTickInGame(float f, Minecraft minecraft) {
-		if(minecraft.thePlayer.inventory.armorItemInSlot(0) != null) {
-			ItemStack itemstack = minecraft.thePlayer.inventory.armorItemInSlot(0);
-			if(itemstack.getDisplayName() == bootName); {
-				//minecraft.thePlayer.speedOnGround = 0.4F;
-				player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 10));
-			}
-		}
-	} */
-	
 	public Main(World world, EntityPlayer player, ItemStack itemStack) {
 
 		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(2) != null && player.getCurrentArmor(1) != null && player.getCurrentArmor(0) != null) {
@@ -56,8 +46,12 @@ public class Main {
 
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
+<<<<<<< HEAD
 	
 
+=======
+		//new ores. test
+>>>>>>> origin/master
 		
 		//blocks
 		blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
