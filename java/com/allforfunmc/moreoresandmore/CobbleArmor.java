@@ -31,18 +31,10 @@ public class CobbleArmor extends ItemArmor{
 
 	}
 	
-	/* @Override
+	@Override
 	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack) {
-			if (player.getCurrentArmor(3) != null && player.getCurrentArmor(2) != null && player.getCurrentArmor(1) != null && player.getCurrentArmor(1) != null) {
-					ItemStack helmet = player.getCurrentArmor(3);
-					ItemStack chest = player.getCurrentArmor(2);
-					ItemStack legs = player.getCurrentArmor(1);
-					ItemStack boots = player.getCurrentArmor(0);
-				if (helmet.getItem() == Main.armorCobbleHelm && chest.getItem() == Main.armorCobbleChest && legs.getItem() == Main.armorCobbleLegs && boots.getItem() == Main.armorCobbleBoots) {
-					player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 100));
-				}
-			}
-		} */
+					player.addPotionEffect(new PotionEffect(Potion.moveSlowdown.getId(), 2, 2));
+	}
 	
 		public String getArmorTexture(ItemStack itemstack, Entity entity, int slot, String type) {
 			if (itemstack.getItem() == Main.armorCobbleHelm || itemstack.getItem() == Main.armorCobbleChest || itemstack.getItem() == Main.armorCobbleBoots) {
