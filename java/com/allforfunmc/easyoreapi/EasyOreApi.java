@@ -1,12 +1,10 @@
 package com.allforfunmc.easyoreapi;
 
-import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod (modid="oreapi", name="AllForFun's EasyOreAPI", version="Dev")
 public class EasyOreApi {
@@ -24,7 +22,6 @@ public class EasyOreApi {
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		IWorldGenerator generator = new Generator();
-		GameRegistry.registerWorldGenerator(generator, 21);
+		
 	}
 }
