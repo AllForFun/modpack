@@ -28,7 +28,8 @@ public class Main {
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
-	
+		//new mines. test
+		
 		//blocks
 		blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
 		GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
