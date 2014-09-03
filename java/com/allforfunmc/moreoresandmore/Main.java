@@ -1,5 +1,7 @@
 package com.allforfunmc.moreoresandmore;
 
+import com.allforfunmc.easyoreapi.EasyOre;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -24,6 +26,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Main {
 
 	public static final String modid = "moreoresandmore";
+	public static final String name = "AllForFun's More Ores And More";
 	public static final String version = "1.0.0";
 	
 	public static int armorCobbleHelmID;
@@ -42,17 +45,14 @@ public class Main {
 
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
-			/* <<<<<<< HEAD
-	
+			
 
-			=======
-			//new ores. test
-			>>>>>>> origin/master */
 		
 		//blocks
 		blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
 		GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
-		
+		/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
+		EasyOre.EasyGenerator(blockCompressedCobble, 10, 10, 25, 25, 1, 35);
 		//items
 		
 		
