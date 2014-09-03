@@ -31,22 +31,24 @@ public class Generator implements IWorldGenerator {
         }
  
         public void generateSurface(World world, Random random, int x, int z) {
-        	HashMap maxX = new HashMap(EasyOre.maxX);
-        	HashMap maxZ = new HashMap(EasyOre.maxZ);
-        	HashMap maxVeinSize = new HashMap(EasyOre.maxVeinSize);
-        	HashMap chancesToSpawn = new HashMap(EasyOre.chancesToSpawn);
-        	HashMap minY = new HashMap(EasyOre.minY);
-        	HashMap maxY = new HashMap(EasyOre.maxY);
-        	for(int i = 0;EasyOre.blocksToGenerate.size() < i; i++){
-				Block block = EasyOre.blocksToGenerate.get(i);
-	            addOreSpawn(block, world, random, x, z,
-	                            Integer.parseInt((String) maxX.get(block)),
-	                           	Integer.parseInt((String) maxZ.get(block)),
-	                           	Integer.parseInt((String) maxVeinSize.get(block)),
-	                           	Integer.parseInt((String) chancesToSpawn.get(block)),
-	                           	Integer.parseInt((String) minY.get(block)),
-	                           	Integer.parseInt((String) maxY.get(block)));
-			}
+        	if(EasyOre.blocksToGenerate.size() != 0){
+	        	HashMap maxX = new HashMap(EasyOre.maxX);
+	        	HashMap maxZ = new HashMap(EasyOre.maxZ);
+	        	HashMap maxVeinSize = new HashMap(EasyOre.maxVeinSize);
+	        	HashMap chancesToSpawn = new HashMap(EasyOre.chancesToSpawn);
+	        	HashMap minY = new HashMap(EasyOre.minY);
+	        	HashMap maxY = new HashMap(EasyOre.maxY);
+	        	for(int i = 0;EasyOre.blocksToGenerate.size() < i; i++){
+					Block block = EasyOre.blocksToGenerate.get(i);
+		            addOreSpawn(block, world, random, x, z,
+		            Integer.parseInt((String) maxX.get(block)),
+		            Integer.parseInt((String) maxZ.get(block)),
+		            Integer.parseInt((String) maxVeinSize.get(block)),
+		            Integer.parseInt((String) chancesToSpawn.get(block)),
+		            Integer.parseInt((String) minY.get(block)),
+		            Integer.parseInt((String) maxY.get(block)));
+	        	}
+        	}
         }
  
         public void generateNether(World world, Random random, int x, int z) {
