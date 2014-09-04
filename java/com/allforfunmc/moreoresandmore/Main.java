@@ -68,6 +68,7 @@ public class Main {
 		GameRegistry.registerItem(armorCobbleBoots, "CobbleBoots");
 		
 		
+		
 	}
 	
 	@EventHandler
