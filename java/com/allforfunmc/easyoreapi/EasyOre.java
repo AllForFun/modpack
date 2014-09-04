@@ -30,29 +30,17 @@ public class EasyOre extends Block{
 		GameRegistry.registerBlock(NewOre, unlocalisedName);
 		return NewOre;
 	}
-	public static HashMap maxX = new HashMap();
-	public static HashMap maxZ = new HashMap();
-	public static HashMap maxVeinSize = new HashMap();
-	public static HashMap chancesToSpawn = new HashMap();
-	public static HashMap minY = new HashMap();
-	public static HashMap maxY = new HashMap();
 	public static ArrayList<Block> blocksToGenerate = new ArrayList<Block>();
 	/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
 	public static void EasyGenerator(Block block, int maxX, int maxZ,
-			int maxVeinSize, int chancesToSpawn, int minY, int maxY) {
-		EasyOre.maxX.put(block, maxX);
-		EasyOre.maxZ.put(block, maxZ);
-		EasyOre.maxVeinSize.put(block, maxVeinSize);
-		EasyOre.chancesToSpawn.put(block, chancesToSpawn);
-		EasyOre.minY.put(block, minY);
-		EasyOre.maxY.put(block, maxY);
-		blocksToGenerate.add(block);
+			int maxVeinSize, int chancesToSpawn, int minY, int maxY, int wieght) {;
+		GameRegistry.registerWorldGenerator(new Generator(block, maxX, maxZ, maxVeinSize, chancesToSpawn, minY, maxY), wieght);
 	}
 	public Block newEasyOre(String unlocalisedName, String texture, int toolLevel, Item drop, int quantityDrop, float resistance, int maxX, int maxZ,
-			int maxVeinSize, int chancesToSpawn, int minY, int maxY){
+			int maxVeinSize, int chancesToSpawn, int minY, int maxY, int wieght){
 		Block NewOre = new EasyOre(unlocalisedName, texture, toolLevel, drop, quantityDrop, resistance);
 		GameRegistry.registerBlock(NewOre, unlocalisedName);
-		EasyGenerator(NewOre,maxX,maxZ,maxVeinSize,chancesToSpawn,minY,maxY);
+		EasyGenerator(NewOre,maxX,maxZ,maxVeinSize,chancesToSpawn,minY,maxY,wieght);
 		return NewOre;
 	}
 	public Block newEasyOre(String unlocalisedName, String texture, int toolLevel, Item drop, int quantityDrop){

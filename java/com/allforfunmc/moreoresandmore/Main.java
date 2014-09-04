@@ -86,7 +86,7 @@ public class Main {
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent postEvent){
 		/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
-		EasyOre.EasyGenerator(blockCompressedCobble, 10, 10, 25, 25, 1, 35);
+		EasyOre.EasyGenerator(blockCompressedCobble, 10, 10, 25, 25, 1, 35,24);
 		//items
 	}
 }

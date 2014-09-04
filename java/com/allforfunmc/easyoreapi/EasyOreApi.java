@@ -10,7 +10,6 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod (modid="oreapi", name="AllForFun's EasyOreAPI", version="Dev")
 public class EasyOreApi {
-	private static final IWorldGenerator Generator = new Generator();
 	@Instance (value="GenericModID")
 	public static EasyOreApi instance;
 	@SidedProxy(clientSide="com.allforfunmc.easyoreapi.ClientProxy",serverSide="com.allforfunmc.easyoreapi.CommonProxy")
@@ -25,6 +24,5 @@ public class EasyOreApi {
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		GameRegistry.registerWorldGenerator(Generator, 25);
 	}
 }

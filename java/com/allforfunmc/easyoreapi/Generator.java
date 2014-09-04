@@ -13,6 +13,23 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
  
 public class Generator implements IWorldGenerator {
+		private Block Block;
+		private int MaxX;
+		private int MaxZ;
+		private int MaxVeinSize;
+		private int ChancesToSpawn;
+		private int MinY;
+		private int MaxY;
+		public Generator(Block block, int maxX, int maxZ, int maxVeinSize,
+                int chancesToSpawn, int minY, int maxY){
+			Block = block;
+			MaxX = maxX;
+			MaxZ = maxZ;
+			MaxVeinSize = maxVeinSize;
+			ChancesToSpawn = chancesToSpawn;
+			MinY=minY;
+			MaxY=maxY;
+		}
         @Override
         public void generate(Random random, int chunkX, int chunkZ, World world,
                         IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
@@ -32,22 +49,9 @@ public class Generator implements IWorldGenerator {
  
         public void generateSurface(World world, Random random, int x, int z) {
         	if(EasyOre.blocksToGenerate.size() != 0){
-	        	HashMap maxX = new HashMap(EasyOre.maxX);
-	        	HashMap maxZ = new HashMap(EasyOre.maxZ);
-	        	HashMap maxVeinSize = new HashMap(EasyOre.maxVeinSize);
-	        	HashMap chancesToSpawn = new HashMap(EasyOre.chancesToSpawn);
-	        	HashMap minY = new HashMap(EasyOre.minY);
-	        	HashMap maxY = new HashMap(EasyOre.maxY);
 	        	for(int i = 0;EasyOre.blocksToGenerate.size() < i; i++){
 					Block block = EasyOre.blocksToGenerate.get(i);
-		            addOreSpawn(block, world, random, x, z,
-		            Integer.parseInt((String) maxX.get(block)),
-		            Integer.parseInt((String) maxZ.get(block)),
-		            Integer.parseInt((String) maxVeinSize.get(block)),
-		            Integer.parseInt((String) chancesToSpawn.get(block)),
-		            Integer.parseInt((String) minY.get(block)),
-		            Integer.parseInt((String) maxY.get(block)));
-	        	}
+		            addOreSpawn(block, world, random, x, z, MaxX, MaxZ, MaxVeinSize, ChancesToSpawn, MinY, MaxY);	        	}
         	}
         }
  
