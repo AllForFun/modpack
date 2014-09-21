@@ -22,12 +22,14 @@ public class Code {
 	public static Item hotDiamond;
 	public static Item refinedpick;
 	public static Item refinedaxe;
+	public static Item MeltingPick;
 	public static Block Refined_Diamond_Block;
 	public static Block refinedOre;
 	public static IWorldGenerator Generator;
 	public static void Items() {
 		
 		ToolMaterial RefinedDiamondTool = EnumHelper.addToolMaterial("refinedDiamond", 5, 3500, 50F, 15, 1);
+		ToolMaterial MeltingTool = EnumHelper.addToolMaterial("meltingTool", 4, 500, 1000, 100f, 1);
 		
 		refinedDiamond = new RefinedDiamond();
 		GameRegistry.registerItem(refinedDiamond, "refinedDiamond");
@@ -41,7 +43,8 @@ public class Code {
 		GameRegistry.registerItem(refinedaxe, "refinedaxe");
 		Generator = new Generator();
 		GameRegistry.registerWorldGenerator(Generator, 15);
-		
+		MeltingPick = new MeltingPickaxe(MeltingTool);
+		GameRegistry.registerItem(MeltingPick, "MeltingPick");
 		
 		/*
 		 * Recipes
