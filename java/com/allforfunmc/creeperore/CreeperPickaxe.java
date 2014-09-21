@@ -23,7 +23,7 @@ public class CreeperPickaxe extends ItemPickaxe{
     public boolean onBlockDestroyed(ItemStack pickaxe, World world, Block block, int x, int y, int z, EntityLivingBase entity)
     {
        	if(!world.isRemote){
-       		float f = 1.0F;
+       		float f = 1.5F;
        		world.createExplosion(entity, x, y, z, f, true);
        	}
     	return true;	
