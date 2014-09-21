@@ -10,6 +10,9 @@
 *.mtl
 *.classpath
 *.project
-/.gradle
+
 /.settings
 /libs
+# Gradle
+/.gradle
+gradle-app.setting
