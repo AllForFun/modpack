@@ -29,7 +29,7 @@ public class Code {
 	public static void Items() {
 		
 		ToolMaterial RefinedDiamondTool = EnumHelper.addToolMaterial("refinedDiamond", 5, 3500, 50F, 15, 1);
-		ToolMaterial MeltingTool = EnumHelper.addToolMaterial("meltingTool", 4, 350, 1000, 100f, 1);
+		ToolMaterial MeltingTool = EnumHelper.addToolMaterial("meltingTool", 4, 350, 1000, 10F, 1);
 		
 		refinedDiamond = new RefinedDiamond();
 		GameRegistry.registerItem(refinedDiamond, "refinedDiamond");
