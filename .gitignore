@@ -10,6 +10,9 @@
 *.mtl
 *.classpath
 *.project
+# System Files
+*.dsstore
+*.metadata*
 
 /.settings
 /libs
