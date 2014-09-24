@@ -22,7 +22,7 @@ group= "com.allforfunmc.modpack" // http://maven.apache.org/guides/mini/guide-na
 archivesBaseName = "AllForFunMods"
 
 minecraft {
-    version = "1.7.10-10.13.0.1180"
+    version = "1.7.10-10.13.1.1217"
     assetDir = "eclipse/assets"
 }
 
