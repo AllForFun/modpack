@@ -43,30 +43,20 @@ public class MeltingPickaxe extends ItemPickaxe implements IEnergyContainerItem 
 		if (pickaxe.stackTagCompound == null) {
 			pickaxe.stackTagCompound = new NBTTagCompound();
 		}
-		boolean dropDiffernt = true;
-		if (!world.isRemote) {
-			ItemStack Result = FurnaceRecipes.smelting().getSmeltingResult(
-					new ItemStack(block));
+		if (pickaxe.stackTagCompound.getInteger("energy") >= (baseCost)) {
+			ItemStack Result = FurnaceRecipes.smelting().getSmeltingResult(new ItemStack(block));
 			if (Result == null) {
-				if (block.getMaterial() == Material.rock) {
+				if(block.isOpaqueCube()){
 					Result = new ItemStack(block);
-				} else {
-					dropDiffernt = false;
-
-				}
+				} else
+					block.getItemDropped(block.getDamageValue(world, x, y, z), null, 0);
 			}
-			if (dropDiffernt
-					&& pickaxe.stackTagCompound.getInteger("energy") > (baseCost)) {
-				world.setBlockToAir(x, y, z);
-				EntityItem DroppedResult = new EntityItem(world, (double) x,
-						(double) y, (double) z, Result);
-				DroppedResult.delayBeforeCanPickup = 10;
-				world.spawnEntityInWorld(DroppedResult);
-				pickaxe.stackTagCompound.setInteger("energy",
-						pickaxe.stackTagCompound.getInteger("energy") - 2000);
-			} else {
-				pickaxe.damageItem(1, entity);
-			}
+			world.setBlockToAir(x, y, z);
+			EntityItem DroppedResult = new EntityItem(world, (double) x,
+					(double) y, (double) z, Result);
+			DroppedResult.delayBeforeCanPickup = 10;
+			world.spawnEntityInWorld(DroppedResult);
+			pickaxe.stackTagCompound.setInteger("energy", pickaxe.stackTagCompound.getInteger("energy") - 2000);
 		}
 		return true;
 	}

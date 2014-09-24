@@ -1,7 +1,6 @@
 package com.allforfunmc.refineddiamond;
 
-import com.allforfunmc.chocolatestuff.ChocolateBar;
-import com.allforfunmc.scaffolding.BlockOfScaffolding;
+
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -29,7 +28,7 @@ public class Code {
 	public static void Items() {
 		
 		ToolMaterial RefinedDiamondTool = EnumHelper.addToolMaterial("refinedDiamond", 5, 3500, 50F, 15, 1);
-		ToolMaterial MeltingTool = EnumHelper.addToolMaterial("meltingTool", 4, 350, 4, 5f, 1);
+		ToolMaterial MeltingTool = EnumHelper.addToolMaterial("meltingTool", 4, 350, 4, 25f, 1);
 		
 		refinedDiamond = new RefinedDiamond();
 		GameRegistry.registerItem(refinedDiamond, "refinedDiamond");
@@ -72,6 +71,12 @@ public class Code {
 			"RS ",
 			" S ",
 			'S', Items.stick, 'R', refinedDiamond
+		});
+		GameRegistry.addRecipe(new ItemStack(MeltingPick), new Object[]{
+			"DDD",
+			" S ",
+			" S ",
+			'D', hotDiamond, 's', Items.stick
 		});
 		/*
 		 * Block
