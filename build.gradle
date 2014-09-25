@@ -19,7 +19,7 @@ apply plugin: 'forge'
 
 version = "2.5"
 group= "com.allforfunmc.modpack" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "AllForFunModpack”
+archivesBaseName = "AllForFunModpack"
 
 minecraft {
     version = "1.7.10-10.13.1.1217"
