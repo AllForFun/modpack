@@ -22,7 +22,6 @@ public class Code {
 	
 	public static Block CreeperOre = new CreeperOre(Material.rock);
 	public static ToolMaterial CreeperTool = EnumHelper.addToolMaterial("Creeper", 4, 1, 10F, 20, 1);
-	public static ArmorMaterial JetPakMat = EnumHelper.addArmorMaterial("JetPack", 15, new int[] {2, 6, 5, 2}, 9);
 	public static Item CreeperPick = new CreeperPickaxe(CreeperTool);
 	public static Item CreeperPearl = new CreeperPearl();
 	public static Item creeperOnTheGo = new CreeperOnTheGo();
