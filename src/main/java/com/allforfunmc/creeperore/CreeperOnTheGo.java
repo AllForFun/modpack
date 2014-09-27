@@ -18,6 +18,7 @@ public class CreeperOnTheGo extends Item{
 		super();
 		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
 		this.setTextureName("creeperore:creeperpearl");
+		
 	}
 	@Override
 	public int getItemStackLimit(ItemStack stack){
