@@ -1,5 +1,7 @@
 package com.allforfunmc.creeperore;
 
+import com.sun.tools.internal.ws.processor.generator.Names;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
@@ -8,6 +10,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class CreeperOnTheGo extends Item{
+	/**
+	 * A flying entity that is awesome.<br>
+	 * Dedicated to creaperonthego (you'll find him playing towny on lobby.muttsworldmine.com)
+	*/
 	public CreeperOnTheGo(){
 		super();
 		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
@@ -17,10 +23,10 @@ public class CreeperOnTheGo extends Item{
 	public int getItemStackLimit(ItemStack stack){
 		return 12 - stack.getItemDamage();
 	}
-	/* 
+	/** 
 	 * Get pearlNames in an array
 	 */
-	public String[] getPearlNames(){
+	public static String[] getPearlNames(){
 		String[] names = new String[11];
 		names[0] = "Tiny";
 		names[1] = "Smallest";
@@ -35,6 +41,20 @@ public class CreeperOnTheGo extends Item{
 		names[10] = "Nuke";
 		return names;
 	}
+	
+	/**
+	 * Get id of a pearl based on it's name 
+	 */
+	
+	public static int getPearlID(String name){
+		int id = -1;
+		for(int i = 0; i > CreeperOnTheGo.getPearlNames().length; i++){
+			if (CreeperOnTheGo.getPearlNames()[i] == name) {
+				id = i;
+			}
+		}
+		return id;
+	}
 	/*
 	 * Get damage value unlocalized name for pearls 
 	 * 
@@ -43,7 +63,7 @@ public class CreeperOnTheGo extends Item{
     public String getUnlocalizedName(ItemStack stack){
         return "item.creeperonthego." + this.getPearlNames()[stack.getItemDamage()];
     }
-	/* 
+	/*
 	 * Spawns thrownCreaperOnTheGo with power chosen from damage value.
 	 * 
 	 */
