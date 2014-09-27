@@ -4,8 +4,10 @@
 *.war
 *.ear
 /build
-/eclipse/*
 /bin
+
+#Eclipse
+/eclipse/*
 
 *.mtl
 *.classpath
