@@ -50,8 +50,9 @@ public class Code {
 		GameRegistry.registerItem(creeperOnTheGo, "Creeper On The Go");
 	}
 	public static void Crafting() {
+		//Smelting
+		GameRegistry.addSmelting(CreeperPearl, new ItemStack(CreeperPearl, 5, 0), 1);
 		//Shapeless Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(CreeperPearl,1,0), new ItemStack(CreeperPearl));
 		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,1),
 				new ItemStack(creeperOnTheGo,1,0), new ItemStack(creeperOnTheGo,1,0), new ItemStack(Items.gunpowder));
 		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,2),
@@ -84,7 +85,6 @@ public class Code {
 				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
 		
 		//Shaped Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo), CreeperPearl);
 		GameRegistry.addRecipe(new ItemStack(CreeperPick), new Object[]{
 			"ccc",
 			"cpc",
