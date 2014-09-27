@@ -1,5 +1,8 @@
 package com.allforfunmc.creeperore;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import com.allforfunmc.creeperore.MineMaker;
 
 import net.minecraft.block.Block;
@@ -22,7 +25,7 @@ public class Code {
 	public static ArmorMaterial JetPakMat = EnumHelper.addArmorMaterial("JetPack", 15, new int[] {2, 6, 5, 2}, 9);
 	public static Item CreeperPick = new CreeperPickaxe(CreeperTool);
 	public static Item CreeperPearl = new CreeperPearl();
-	public static Item CreeperOnTheGo = new CreeperOnTheGo();
+	public static Item creeperOnTheGo = new CreeperOnTheGo();
 	public static Generator Generator = new Generator();
 	public static Block MineMakerBlock = new MineMaker(Material.rock);
 	
@@ -44,25 +47,49 @@ public class Code {
 	public static void Items() {
 		GameRegistry.registerItem(CreeperPick, "Creeper Pick");
 		GameRegistry.registerItem(CreeperPearl, "Creeper Pearl");
-		GameRegistry.registerItem(CreeperOnTheGo, "Creeper On The Go");
+		GameRegistry.registerItem(creeperOnTheGo, "Creeper On The Go");
 	}
 	public static void Crafting() {
 		//Shapeless Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(CreeperPearl,2), new Object[]{
-			Items.ender_pearl,
-			Blocks.tnt
-		});
+		GameRegistry.addShapelessRecipe(new ItemStack(CreeperPearl,1,0), new ItemStack(CreeperPearl));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,1),
+				new ItemStack(creeperOnTheGo,1,0), new ItemStack(creeperOnTheGo,1,0), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,2),
+				new ItemStack(creeperOnTheGo,1,1), new ItemStack(creeperOnTheGo,1,1), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,3),
+				new ItemStack(creeperOnTheGo,1,2), new ItemStack(creeperOnTheGo,1,2), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,4),
+				new ItemStack(creeperOnTheGo,1,3), new ItemStack(creeperOnTheGo,1,3), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,5),
+				new ItemStack(creeperOnTheGo,1,4),new ItemStack(creeperOnTheGo,1,4),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,6),
+				new ItemStack(creeperOnTheGo,1,5),new ItemStack(creeperOnTheGo,1,5),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,7),
+				new ItemStack(creeperOnTheGo,1,6),new ItemStack(creeperOnTheGo,1,6),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder),
+				new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,8),
+				new ItemStack(creeperOnTheGo,1,7),new ItemStack(creeperOnTheGo,1,7),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,9),
+				new ItemStack(creeperOnTheGo,1,8),new ItemStack(creeperOnTheGo,1,8),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo,1,10),
+				new ItemStack(creeperOnTheGo,1,9),new ItemStack(creeperOnTheGo,1,9),new ItemStack(Items.gunpowder),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder),
+				new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder), new ItemStack(Items.gunpowder));
+		
 		//Shaped Recipes
-		GameRegistry.addRecipe(new ItemStack(CreeperOnTheGo,4), new Object[]{
-			"pt",
-			"tp",
-			'p', CreeperPearl, 't', Blocks.tnt
-		});
+		GameRegistry.addShapelessRecipe(new ItemStack(creeperOnTheGo), CreeperPearl);
 		GameRegistry.addRecipe(new ItemStack(CreeperPick), new Object[]{
 			"ccc",
 			"cpc",
 			"ccc",
-			'c', CreeperOnTheGo,'p', Items.diamond_pickaxe
+			'c', creeperOnTheGo,'p', Items.diamond_pickaxe
 		});
 		GameRegistry.addRecipe(new ItemStack(MineMakerBlock), new Object[]{
 			"sss",
