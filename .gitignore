@@ -6,9 +6,6 @@
 /build
 /bin
 
-#Eclipse
-/eclipse/*
-
 *.mtl
 *.classpath
 *.project
