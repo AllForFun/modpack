@@ -90,16 +90,5 @@ public class Code {
 			"RRR",
 			'R', refinedDiamond
 		});
-		
-		/*
-		 * Tab
-		 */
 		}
-		public static final CreativeTabs AllForFunTab = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun Mods") {
-		    @Override
-		    @SideOnly(Side.CLIENT)
-		    public Item getTabIconItem() {
-		        return refinedDiamond;
-		    }
-		};
 }
