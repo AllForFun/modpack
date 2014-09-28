@@ -1,7 +1,6 @@
-package com.elementalores.blocks;
+package com.allforfunmc.elementalores.blocks;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+import com.allforfunmc.elementalores.BlocksAndItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

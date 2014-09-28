@@ -1,4 +1,4 @@
-package com.elementalores.blocks;
+package com.allforfunmc.elementalores.blocks;
 
 import com.elementalores.elementaloresmod.BlocksAndItems;
 import com.elementalores.elementaloresmod.ElementalOresMod;
