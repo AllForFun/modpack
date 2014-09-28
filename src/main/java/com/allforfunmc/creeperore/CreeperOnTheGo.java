@@ -1,7 +1,5 @@
 package com.allforfunmc.creeperore;
 
-import com.sun.tools.internal.ws.processor.generator.Names;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
