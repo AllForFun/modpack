@@ -1,16 +1,19 @@
-﻿
-def modVersion = "3.0"
+def modVersion = "2.8"
 def mcVersion = "1.7.10"
 def changes = """
-Added @ess090502's elemental ore mod.
+New:
+• Creeper On The Gos of all different shapes and sizes.
+• Gradle Deployment
+Fixed
+• Unneeded import
+Removed:
 
 """
 
 
 //Don't mess with anything below this text. Thanks!
 
-//def apikey = new File('apikey.txt').text
-def apikey = "testkey"
+def apikey = new File('apikey.txt').text
 def baseName = "AllForFunModpack"
 
 buildscript {
