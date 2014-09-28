@@ -1,7 +1,7 @@
 def modVersion = "2.8"
 def mcVersion = "1.7.10"
-def changes = file(new File('Changlelog.txt'))
-def apikey = file(new File('apikey.txt'))
+def changes = new File('Changlelog.txt').text
+def apikey = new File('apikey.txt').text
 def baseName = "AllForFunModpack"
 
 buildscript {
