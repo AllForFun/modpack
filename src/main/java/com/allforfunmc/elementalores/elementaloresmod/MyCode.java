@@ -177,7 +177,6 @@ public class MyCode {
 	
 	public static void MyRecipes(){
 		//shapeless Recipes
-		GameRegistry.addShapelessRecipe(new ItemStack(Items.map, 3),new ItemStack(Items.written_book));
 		GameRegistry.addShapelessRecipe(new ItemStack(icecrystal, 1),new ItemStack(iceore));
 		GameRegistry.addShapelessRecipe(new ItemStack(camoApple, 1),new ItemStack(camoGem));
 		GameRegistry.addShapelessRecipe(new ItemStack(camoblock, 1),new ItemStack(camoGem, 9));
