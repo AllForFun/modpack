@@ -23,4 +23,6 @@
 /.gradle
 gradle-app.setting
 ./gradle
-build.gradle
+
+
+apikey.txt
