@@ -1,4 +1,5 @@
-﻿def modVersion = "3.0"
+﻿
+def modVersion = "3.0"
 def mcVersion = "1.7.10"
 def changes = """
 Added @ess090502's elemental ore mod.
