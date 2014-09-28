@@ -13,6 +13,9 @@
 *.dsstore
 *.metadata*
 
+/eclipse/*
+
+
 /.settings
 /libs
 
