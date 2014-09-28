@@ -1,8 +1,5 @@
 package com.allforfunmc.CamoStuff;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
-
 import net.minecraft.item.ItemFood;
 
 public class CamoApple extends ItemFood{
@@ -11,7 +8,7 @@ public class CamoApple extends ItemFood{
             super(healthGain, SaturationGain, dogsFavorite);
             setMaxStackSize(64);
             setUnlocalizedName("camoApple");
-            this.setCreativeTab(BlocksAndItems.moditemsTab);
+            this.setCreativeTab(com.allforfunmc.allforfuncore.Core.AllForFunFood);
             setTextureName("sleshymod:camo_apple");
             setAlwaysEdible();
             this.setPotionEffect(14, 900, 10, 100);

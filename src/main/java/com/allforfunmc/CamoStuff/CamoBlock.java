@@ -1,7 +1,6 @@
 package com.allforfunmc.CamoStuff;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -12,7 +11,7 @@ public class CamoBlock extends  Block{
 	public CamoBlock (int camoblockID, Material mat){
 		super(mat);
 		setBlockName("camo_block");
-		setCreativeTab(BlocksAndItems.moditemsTab);
+		setCreativeTab(Core.AllForFunBlocks);
 		this.setHardness(6f);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setBlockTextureName("sleshymod:camo_block");

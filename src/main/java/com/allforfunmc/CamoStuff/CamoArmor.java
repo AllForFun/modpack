@@ -1,7 +1,7 @@
 package com.allforfunmc.CamoStuff;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+
+import com.allforfunmc.allforfuncore.Core;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,7 +19,7 @@ public class CamoArmor extends ItemArmor {
             super(material, id, place);
            
             this.setMaxStackSize(1);
-            this.setCreativeTab(BlocksAndItems.moditemsTab);
+            this.setCreativeTab(Core.AllForFunArmor);
             this.setTextures(place);
     }
    
