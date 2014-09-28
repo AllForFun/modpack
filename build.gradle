@@ -1,11 +1,12 @@
-def modVersion = "2.8"
-def mcVersion = "1.7.10"
+def modVersion = "3.0"
 def changes = """
 New:
-• Creeper On The Gos of all different shapes and sizes.
-• Gradle Deployment
+• Elemental Ore Mod by @ess090502
+• The Elemental Ore mod is so big, it deserves more lines in this changelog..
+• So now it got three. YAY!
+• Organized Creative Tabs
 Fixed
-• Unneeded import
+
 Removed:
 
 """
