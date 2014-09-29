@@ -8,7 +8,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class CamoBlock extends  Block{
 	
-	public CamoBlock (int camoblockID, Material mat){
+	public CamoBlock (Material mat){
 		super(mat);
 		setBlockName("camo_block");
 		setCreativeTab(Core.AllForFunBlocks);

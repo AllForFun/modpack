@@ -811,9 +811,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
     	camoGem = new CamoGem();
     	GameRegistry.registerItem(camoGem, "camo_gem");
     	
-        camoApple = new CamoApple(2, 2, false);
-        GameRegistry.registerItem(camoApple, "camo_apple");
-    	
     	//pick are here
     	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 5f, 30);
     	firepick = new FirePick(fireMaterial);
@@ -927,7 +924,7 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
     	 GameRegistry.registerItem(IceBoots, "Ice_boots");
     	 
          
-     	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 100, new int[]{3, 6, 5, 2}, 30);
+     	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial"
      	 //(name, durability, damageReductionAmounts, enchantability)
      	 CamoHelmet = new CamoArmor(myArmorMaterial, helmid3, 0).setUnlocalizedName("Camo_helmet");
      	CamoPlate = new CamoArmor(myArmorMaterial, chestid3, 1).setUnlocalizedName("Camo_chestplate");
