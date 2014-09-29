@@ -15,8 +15,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-WorkToDo:
-	//Add the registers and crafting recipes.
+
 
 @Mod (modid="camostuff", name="AllForFun's CamoStuff", version="1")
 public class Main {
@@ -45,11 +44,18 @@ public class Main {
 	@EventHandler()
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
+		//Blocks
+		GameRegistry.registerBlock(CamoBlock, "camo_block");
+		GameRegistry.registerBlock(CamoOre, "camo_ore");
+		//Items
+		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		
 		//Crafting
+		//Shaped
+		GameRegistry.addShapedRecipe(output, params)
 		//Shapeless
 	}
 }
