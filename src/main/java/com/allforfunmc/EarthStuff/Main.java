@@ -32,10 +32,16 @@ public class Main {
 	@EventHandler()
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
+		
+		//Register Items
 		GameRegistry.registerItem(EarthGem, "earth_gem");
 		GameRegistry.registerItem(EarthSword, "earth_sword");
 		GameRegistry.registerItem(EarthPickaxe, "earth_pickaxe");
 		GameRegistry.registerItem(EarthHoe, "earth_hoe");
+		GameRegistry.registerItem(EarthAxe, "earth_axe");
+		//Register Blocks
+		GameRegistry.registerBlock(EarthBlock, "Earth_Block");
+		GameRegistry.registerBlock(EarthOre, "Earth_Ore");
 	}
 	
 	public static Item EarthGem = (new Item()).setUnlocalizedName("earth_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:earth_gem");
