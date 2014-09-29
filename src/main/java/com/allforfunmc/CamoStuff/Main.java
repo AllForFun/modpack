@@ -24,14 +24,17 @@ public class Main {
 	public static CommonProxy proxy;
 	
 	//Materials
-	public ToolMaterial camoMat = EnumHelper.addToolMaterial("camo_material", 3, 3000, 15f, 15f, 30);
-	public ArmorMaterial camoArmorMat = EnumHelper.addArmorMaterial("camo_armor_material", 100, new int[]{3, 6, 5, 2}, 30);
+	public static ToolMaterial camoMat = EnumHelper.addToolMaterial("camo_material", 3, 3000, 15f, 15f, 30);
+	public static ArmorMaterial camoArmorMat = EnumHelper.addArmorMaterial("camo_armor_material", 100, new int[]{3, 6, 5, 2}, 30);
 	//Null Id
 	public static int NullID;
 	//Items
-	public Item CamoApple = new CamoApple(2, 2, false);
-	public Item CamoArmor = new CamoArmor(camoArmorMat, NullID, 1);
-	public Item CamoAxe = new CamoAxe(camoMat);
+	public static Item CamoApple = new CamoApple(2, 2, false);
+	public static Item CamoArmorHat = new CamoArmor(camoArmorMat, NullID, 1);
+	public static Item CamoArmorShirt = new CamoArmor(camoArmorMat, NullID, 2);
+	public static Item CamoArmorPants = new CamoArmor(camoArmorMat, NullID, 3);
+	public static Item CamoArmorShoes = new CamoArmor(camoArmorMat, NullID, 4);
+	public static Item CamoAxe = new CamoAxe(camoMat);
 	
 	//Blocks
 	public Block CamoBlock = new CamoBlock(Material.rock);
@@ -43,8 +46,6 @@ public class Main {
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		
-		
 		
 		//Crafting
 		//Shapeless

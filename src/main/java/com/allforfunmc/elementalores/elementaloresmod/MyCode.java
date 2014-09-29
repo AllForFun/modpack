@@ -924,16 +924,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
     	 GameRegistry.registerItem(IceBoots, "Ice_boots");
     	 
          
-     	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial"
-     	 //(name, durability, damageReductionAmounts, enchantability)
-     	 CamoHelmet = new CamoArmor(myArmorMaterial, helmid3, 0).setUnlocalizedName("Camo_helmet");
-     	CamoPlate = new CamoArmor(myArmorMaterial, chestid3, 1).setUnlocalizedName("Camo_chestplate");
-     	CamoLegs = new CamoArmor(myArmorMaterial, legid3, 2).setUnlocalizedName("Camo_leggings");
-     	CamoBoots = new CamoArmor(myArmorMaterial, bootid3, 3).setUnlocalizedName("Camo_boots");
-     	 GameRegistry.registerItem(CamoHelmet, "Camo_helmet");
-     	 GameRegistry.registerItem(CamoPlate, "Camo_chestplate");
-     	 GameRegistry.registerItem(CamoLegs, "Camo_leggings");
-     	 GameRegistry.registerItem(CamoBoots, "Camo_boots");
      	 
          
      	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 3000, new int[]{7, 13, 12, 6}, 30);
