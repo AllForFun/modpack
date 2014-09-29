@@ -1,5 +1,7 @@
 package com.allforfunmc.moreoresandmore;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,7 +18,7 @@ public class CobbleArmor extends ItemArmor{
 	public CobbleArmor(ArmorMaterial material, int id, int slot) {
 		super(material, id, slot);
 		
-		this.setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+		this.setCreativeTab(Core.AllForFunArmor);
 		
 		if(slot == 0) {
 			this.setTextureName(Main.modid + ":cobble_helm");

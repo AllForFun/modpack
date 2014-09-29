@@ -1,5 +1,6 @@
 package com.allforfunmc.moreoresandmore;
 
+import com.allforfunmc.allforfuncore.Core;
 import com.allforfunmc.moreoresandmore.Main;
 
 import cpw.mods.fml.relauncher.Side;
@@ -14,7 +15,7 @@ public class CompressedCobble extends Block{
 	public CompressedCobble(Material material) {
 		super(material);
 		
-		this.setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+		this.setCreativeTab(Core.AllForFunBlocks);
 	}
 
 	@SideOnly(Side.CLIENT)

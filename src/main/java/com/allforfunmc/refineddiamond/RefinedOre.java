@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 
 import java.util.Random;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
@@ -18,7 +20,7 @@ public class RefinedOre extends Block {
     public RefinedOre(Material material) {
             super(material);
             setHardness(15F);
-            setCreativeTab(Code.AllForFunTab);
+            setCreativeTab(Core.AllForFunBlocks);
             setBlockTextureName("refineddiamondmod:refinedore");
             setHarvestLevel("Pickaxe", 3);
             setResistance(50);

@@ -1,5 +1,7 @@
 package com.allforfunmc.creeperore;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
@@ -14,7 +16,7 @@ public class CreeperOnTheGo extends Item{
 	*/
 	public CreeperOnTheGo(){
 		super();
-		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+		setCreativeTab(Core.AllForFunItems);
 		this.setTextureName("creeperore:creeperpearl");
 		
 	}

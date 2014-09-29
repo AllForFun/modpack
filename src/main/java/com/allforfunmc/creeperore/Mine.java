@@ -4,6 +4,8 @@ import net.minecraft.block.Block;
 
 import java.util.Random;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
@@ -25,7 +27,7 @@ public class Mine extends Block {
     		super(block2.getMaterial());
     		block = block2;
             setHardness(0.5F);
-            setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+            setCreativeTab(Core.AllForFunBlocks);
             setResistance(2);
             setBlockName("Mine");
     }

@@ -19,13 +19,14 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+import com.allforfunmc.allforfuncore.Core;
 import com.allforfunmc.creeperore.Mine;
 
 public class MineMaker extends Block{
 	public MineMaker(Material material) {
             super(material);
             setHardness(3F);
-            setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+            setCreativeTab(Core.AllForFunBlocks);
             setBlockTextureName("creeperore:minemaker");
             setResistance(2);
             setBlockName("MineMaker");

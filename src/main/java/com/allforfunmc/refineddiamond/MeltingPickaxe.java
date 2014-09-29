@@ -2,6 +2,8 @@ package com.allforfunmc.refineddiamond;
 
 import java.util.List;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityLivingBase;
@@ -21,7 +23,7 @@ public class MeltingPickaxe extends ItemPickaxe implements IEnergyContainerItem 
 
 	public MeltingPickaxe(ToolMaterial mat) {
 		super(mat);
-		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+		setCreativeTab(Core.AllForFunTools);
 		this.setTextureName("refineddiamondmod:melting_pickaxe");
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("MeltingPickaxe");

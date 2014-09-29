@@ -1,5 +1,7 @@
 package com.allforfunmc.refineddiamond;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -12,7 +14,7 @@ public class Refined_Diamond_Block extends Block {
     public Refined_Diamond_Block(Material material) {
             super(material);
             setHardness(25F);
-            setCreativeTab(Code.AllForFunTab);
+            setCreativeTab(Core.AllForFunBlocks);
             setBlockTextureName("refineddiamondmod:refineddiamondblock");
             setHarvestLevel("Pickaxe", 5);
             setResistance(250);

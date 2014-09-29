@@ -1,5 +1,7 @@
 package com.allforfunmc.creeperore;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
@@ -14,7 +16,7 @@ public class CreeperPickaxe extends ItemPickaxe{
 	
 	public CreeperPickaxe(ToolMaterial mat){
 		super(mat);
-		setCreativeTab(com.allforfunmc.refineddiamond.Code.AllForFunTab);
+		setCreativeTab(Core.AllForFunTools);
 		this.setTextureName("creeperore:creeper_pickaxe");
 		this.setMaxStackSize(1);
 		this.setUnlocalizedName("Creeper_Pickaxe");
@@ -23,7 +25,7 @@ public class CreeperPickaxe extends ItemPickaxe{
     public boolean onBlockDestroyed(ItemStack pickaxe, World world, Block block, int x, int y, int z, EntityLivingBase entity)
     {
        	if(!world.isRemote){
-       		float f = 1.5F;
+       		float f = 10F;
        		world.createExplosion(entity, x, y, z, f, true);
        	}
     	return true;	
