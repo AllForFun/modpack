@@ -2,9 +2,6 @@ package com.allforfunmc.EarthStuff;
 
 import java.util.Random;
 
-import com.elementalores.elementaloresmod.Blocks;
-import com.elementalores.elementaloresmod.Items;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -33,7 +30,7 @@ public class EarthOreGenerator implements IWorldGenerator {
       public void generateSurface(World world, Random random, int x, int z) {
 
             
-              addOreSpawn(Blocks.earthore, world, random,
+              addOreSpawn(Main.EarthOre, world, random,
                       x, z, 7, 7, 6, 6, 0, 11);
               
       }

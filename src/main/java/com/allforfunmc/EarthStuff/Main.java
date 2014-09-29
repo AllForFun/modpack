@@ -5,12 +5,14 @@ import net.minecraft.block.BlockStone;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.TemplatePick;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -34,9 +36,12 @@ public class Main {
 	public static Item.ToolMaterial EarthMat = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 15f, 30);
 	
 	public static Item EarthSword = (new ItemSword(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_sword");
-	public static Item EarthPickaxe = (new ItemPickaxe(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_pick").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_pick");
+	public static Item EarthPickaxe = (new TemplatePick(EarthMat)).setUnlocalizedName("earth_pick").setTextureName("sleshymod:earth_pick");
+	public static Item EarthHoe = (new ItemHoe(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_hoe").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_hoe");
 	
 	public static Block EarthBlock = new EarthBlock(Material.ground);
+	public static Block EarthOre = new EarthOre(Material.rock);
+	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		

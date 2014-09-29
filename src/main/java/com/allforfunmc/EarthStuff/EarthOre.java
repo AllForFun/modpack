@@ -1,6 +1,6 @@
 package com.allforfunmc.EarthStuff;
 
-import com.allforfunmc.elementalores.BlocksAndItems;
+import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -8,10 +8,10 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class EarthOre extends  Block{
 	
-	public EarthOre (int earthoreID, Material mat){
+	public EarthOre (Material mat){
 		super(mat);
 		setBlockName("earth_ore");
-		setCreativeTab(BlocksAndItems.moditemsTab);
+		setCreativeTab(Core.AllForFunBlocks);
 		this.setHardness(30f);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setBlockTextureName("sleshymod:earth_ore");
