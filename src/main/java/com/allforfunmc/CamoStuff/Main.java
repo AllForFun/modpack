@@ -29,8 +29,6 @@ public class Main {
 	//Materials
 	public static ToolMaterial camoMat = EnumHelper.addToolMaterial("camo_material", 3, 3000, 15f, 15f, 30);
 	public static ArmorMaterial camoArmorMat = EnumHelper.addArmorMaterial("camo_armor_material", 100, new int[]{3, 6, 5, 2}, 30);
-	//Null Id
-	public static int NullID;
 	//Items
 	public static Item CamoApple = new CamoApple(2, 2, false);
 	public static Item CamoArmorHat = new CamoArmor(camoArmorMat, NullID, 1);
@@ -38,6 +36,7 @@ public class Main {
 	public static Item CamoArmorPants = new CamoArmor(camoArmorMat, NullID, 3);
 	public static Item CamoArmorShoes = new CamoArmor(camoArmorMat, NullID, 4);
 	public static Item CamoAxe = new CamoAxe(camoMat);
+	//Simple Items
 	public static Item CamoGem = (new Item()).setUnlocalizedName("camo_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:camo_gem");
 	//Blocks
 	public Block CamoBlock = new CamoBlock(Material.rock);
@@ -51,9 +50,9 @@ public class Main {
 		GameRegistry.registerBlock(CamoOre, "camo_ore");
 		//Items
 		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
-		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
-		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
-		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
+		GameRegistry.registerItem(CamoArmorShirt, "camo_chestplate");
+		GameRegistry.registerItem(CamoArmorPants, "camo_leggings");
+		GameRegistry.registerItem(CamoArmorShoes, "camo_boots");
 		
 	}
 	@EventHandler()
@@ -61,7 +60,13 @@ public class Main {
 		
 		//Crafting
 		//Shaped
-		GameRegistry.addShapedRecipe(CamoArmorHat, Core.getArmorCrafting(1, CamoGem));
+		GameRegistry.addRecipe(new ItemStack(CamoArmorHat), Core.getArmorCrafting(1, CamoGem));
+		GameRegistry.addRecipe(new ItemStack(CamoArmorShirt), Core.getArmorCrafting(2, CamoGem));
+		GameRegistry.addRecipe(new ItemStack(CamoArmorPants), Core.getArmorCrafting(3, CamoGem));
+		GameRegistry.addRecipe(new ItemStack(CamoArmorShoes), Core.getArmorCrafting(4, CamoGem));
+		//Smelting
+		GameRegistry.addRecipe(new ItemStack(CamoGem), CamoOre);
 		//Shapeless
+		GameRegistry.addShapelessRecipe(new ItemStack(CamoBlock), new ItemStack(CamoGem, 9));
 	}
 }

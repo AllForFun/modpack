@@ -87,6 +87,7 @@ public class Core {
 		}
 		return crafting;
 	}
+	public static int NullID;
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		
