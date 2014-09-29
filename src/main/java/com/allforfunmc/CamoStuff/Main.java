@@ -1,5 +1,7 @@
 package com.allforfunmc.CamoStuff;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -36,7 +38,7 @@ public class Main {
 	public static Item CamoArmorPants = new CamoArmor(camoArmorMat, NullID, 3);
 	public static Item CamoArmorShoes = new CamoArmor(camoArmorMat, NullID, 4);
 	public static Item CamoAxe = new CamoAxe(camoMat);
-	
+	public static Item CamoGem = (new Item()).setUnlocalizedName("camo_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:camo_gem");
 	//Blocks
 	public Block CamoBlock = new CamoBlock(Material.rock);
 	public static Block CamoOre = new CamoOre(Material.rock);
@@ -49,13 +51,17 @@ public class Main {
 		GameRegistry.registerBlock(CamoOre, "camo_ore");
 		//Items
 		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
+		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
+		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
+		GameRegistry.registerItem(CamoArmorHat, "camo_helmet");
+		
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		
 		//Crafting
 		//Shaped
-		GameRegistry.addShapedRecipe(output, params)
+		GameRegistry.addShapedRecipe(CamoArmorHat, Core.getArmorCrafting(1, CamoGem));
 		//Shapeless
 	}
 }
