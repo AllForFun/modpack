@@ -1,7 +1,7 @@
 package com.allforfunmc.EarthStuff;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+
+import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class EarthAxe extends ItemAxe{
 		super(mat);
 		this.setMaxStackSize(1);
 		setUnlocalizedName("earth_axe");
-		setCreativeTab(BlocksAndItems.moditemsTab);
+		setCreativeTab(Core.AllForFunTools);
 		this.setTextureName("sleshymod:earth_axe");
 	}
 

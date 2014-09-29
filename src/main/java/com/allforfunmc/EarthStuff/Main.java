@@ -1,5 +1,17 @@
 package com.allforfunmc.EarthStuff;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockStone;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemPickaxe;
+import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemSword;
+import net.minecraftforge.common.util.EnumHelper;
+
+import com.allforfunmc.allforfuncore.Core;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -16,8 +28,20 @@ public class Main {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 	}
+	
+	public static Item EarthGem = (new Item()).setUnlocalizedName("earth_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:earth_gem");
+	
+	public static Item.ToolMaterial EarthMat = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 15f, 30);
+	
+	public static Item EarthSword = (new ItemSword(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_sword");
+	public static Item EarthPickaxe = (new ItemPickaxe(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_pick").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_pick");
+	
+	public static Block EarthBlock = new EarthBlock(Material.ground);
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
+		
+		
+		
 		
 	}
 }

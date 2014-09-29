@@ -11,10 +11,7 @@ public class EarthPick extends ItemPickaxe{
 	
 	public EarthPick(ToolMaterial mat){
 		super(mat);
-		this.setMaxStackSize(1);
-		setUnlocalizedName("earth_pick");
-		setCreativeTab(BlocksAndItems.moditemsTab);
-		this.setTextureName("sleshymod:earth_pick");
+		this.setMaxStackSize(1).setUnlocalizedName("earth_pick").setCreativeTab(BlocksAndItems.moditemsTab).setTextureName("sleshymod:earth_pick");
 	}
 
 }

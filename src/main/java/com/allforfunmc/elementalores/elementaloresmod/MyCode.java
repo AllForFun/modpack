@@ -2,8 +2,6 @@ package sleshy.sleshymod;
 
 import java.util.Random;
 
-import sleshy.sleshymod.myblocks.CamoBlock;
-import sleshy.sleshymod.myblocks.CamoOre;
 import sleshy.sleshymod.myblocks.EarthBlock;
 import sleshy.sleshymod.myblocks.EarthOre;
 import sleshy.sleshymod.myblocks.FireBlock;
@@ -12,11 +10,6 @@ import sleshy.sleshymod.myblocks.IceBlock;
 import sleshy.sleshymod.myblocks.IceOre;
 import sleshy.sleshymod.myblocks.LightningBlock;
 import sleshy.sleshymod.myblocks.LightningOre;
-import sleshy.sleshymod.myitems.CamoApple;
-import sleshy.sleshymod.myitems.CamoArmor;
-import sleshy.sleshymod.myitems.CamoAxe;
-import sleshy.sleshymod.myitems.CamoGem;
-import sleshy.sleshymod.myitems.CamoSword;
 import sleshy.sleshymod.myitems.EarthArmor;
 import sleshy.sleshymod.myitems.EarthAxe;
 import sleshy.sleshymod.myitems.EarthGem;
@@ -79,10 +72,8 @@ public class MyCode {
 	public static Block iceore;
 	public static Block earthore;
 	public static Block lightningore;
-	public static Block camoOre;
 	public static Block fireblock;
 	public static Block iceblock;
-	public static Block camoblock;
 	public static Block earthblock;
 	public static Block lightningblock;
 	
@@ -90,7 +81,6 @@ public class MyCode {
 	public static Item icecrystal;
 	public static Item earthgem;
 	public static Item lightningcrystal;
-	public static Item camoGem;
 	public static Item firepick;
 	public static Item icepick;
 	public static Item earthpick;
@@ -111,16 +101,10 @@ public class MyCode {
 	public static Item earthshovel;
 	public static Item earthaxe;
 	public static Item earthsword;
-	public static Item camoApple;
-	public static Item camoaxe;
-	public static Item camosword;
-	
 	public static ToolMaterial fireMaterial;
     public static ToolMaterial iceMaterial;
     public static ToolMaterial earthMaterial;
     public static ToolMaterial lightningMaterial;
-    public static ToolMaterial camoMaterial;
-    
     public static ArmorMaterial myArmorMaterial;
     
    
@@ -143,10 +127,6 @@ public class MyCode {
     public static int legid2;
     public static int bootid2;
     
-    public static Item CamoHelmet;
-    public static Item CamoPlate;
-    public static Item CamoLegs;
-    public static Item CamoBoots;
     public static int helmid3;
     public static int chestid3;
     public static int legid3;
@@ -178,8 +158,6 @@ public class MyCode {
 	public static void MyRecipes(){
 		//shapeless Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(icecrystal, 1),new ItemStack(iceore));
-		GameRegistry.addShapelessRecipe(new ItemStack(camoApple, 1),new ItemStack(camoGem));
-		GameRegistry.addShapelessRecipe(new ItemStack(camoblock, 1),new ItemStack(camoGem, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(earthblock, 1),new ItemStack(earthgem, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(iceblock, 1),new ItemStack(icecrystal, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(fireblock, 1),new ItemStack(firecrystal, 9));
@@ -386,37 +364,6 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
 		"B  ",
 		'A', new ItemStack(lightningcrystal), 'B', new ItemStack(Items.stick)});
 	
-	GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
-		"A  ",
-		"A  ",
-		"B  ",
-	    'A', new ItemStack(camoGem), 'B', new ItemStack(Items.stick)});
-	
-	GameRegistry.addRecipe(new ItemStack(camoaxe), new Object[]{
-	    "AA ",
-	    "BA ",
-	    "B  ",
-	    'A', new ItemStack(camoGem), 'B', new ItemStack(Items.stick)});
-
-		GameRegistry.addRecipe(new ItemStack(camoaxe), new Object[]{
-		" AA",
-		" BA",
-		" B ",
-		'A', new ItemStack(camoGem), 'B', new ItemStack(Items.stick)});
-
-
-GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
-	" A ",
-	" A ",
-	" B ",
-    'A', new ItemStack(camoGem), 'B', new ItemStack(Items.stick)});
-
-GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
-	"  A",
-	"  A",
-	"  B",
-    'A', new ItemStack(camoGem), 'B', new ItemStack(Items.stick)});
-		
 		GameRegistry.addRecipe(new ItemStack(Blocks.wool, 1), new Object[]{
 			" A ",
 			" B ",
@@ -512,41 +459,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
 			"AAA",
 			"AAA",
 			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(camoblock), new Object[]{
-			"AAA",
-			"AAA",
-			"AAA",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoHelmet), new Object[]{
-			"   ",
-			"AAA",
-			"A A",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoHelmet), new Object[]{
-			"AAA",
-			"A A",
-			"   ",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoPlate), new Object[]{
-			"A A",
-			"AAA",
-			"AAA",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoLegs), new Object[]{
-			"AAA",
-			"A A",
-			"A A",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoBoots), new Object[]{
-			"   ",
-			"A A",
-			"A A",
-			'A', new ItemStack(camoGem)});
-		GameRegistry.addRecipe(new ItemStack(CamoBoots), new Object[]{
-			"A A",
-			"A A",
-			"   ",
-			'A', new ItemStack(camoGem)});
 		
 		GameRegistry.addRecipe(new ItemStack(EarthHelmet), new Object[]{
 			"   ",
@@ -645,7 +557,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
 		GameRegistry.addSmelting(new ItemStack(fireOre), new ItemStack(firecrystal), 5f);
 		GameRegistry.addSmelting(new ItemStack(earthore), new ItemStack(earthgem), 5f);
 		GameRegistry.addSmelting(new ItemStack(lightningore), new ItemStack(lightningcrystal), 5f);
-		GameRegistry.addSmelting(new ItemStack(camoOre), new ItemStack(camoGem), 5f);
 		//enchantment
 		
 		ItemStack newEnch = new ItemStack(firepick);
@@ -808,9 +719,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
     	lightningcrystal = new LightningCrystal();
     	GameRegistry.registerItem(lightningcrystal, "lightning_crystal");
     	
-    	camoGem = new CamoGem();
-    	GameRegistry.registerItem(camoGem, "camo_gem");
-    	
     	//pick are here
     	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 5f, 30);
     	firepick = new FirePick(fireMaterial);
@@ -891,14 +799,6 @@ GameRegistry.addRecipe(new ItemStack(camosword), new Object[]{
     	lightningMaterial = EnumHelper.addToolMaterial("lightning_material", 3, 1500, 30f, 5f, 30);
     	lightninghoe = new LightningHoe(lightningMaterial);
     	GameRegistry.registerItem(lightninghoe, "lightning_hoe");
-    	
-    	camoMaterial = EnumHelper.addToolMaterial("camo_material", 3, 3000, 0f, 15f, 30);
-    	camosword = new CamoSword(camoMaterial);
-    	GameRegistry.registerItem(camosword, "camo_sword");
-    	
-    	camoMaterial = EnumHelper.addToolMaterial("camo_material", 3, 3000, 15f, 15f, 30);
-    	camoaxe = new CamoAxe(camoMaterial);
-    	GameRegistry.registerItem(camoaxe, "camo_axe");
     	
     	
     	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 2000, new int[]{6, 10, 9, 5}, 30);

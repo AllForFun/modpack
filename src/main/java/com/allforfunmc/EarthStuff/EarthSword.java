@@ -1,5 +1,6 @@
 package com.allforfunmc.EarthStuff;
 
+import com.allforfunmc.allforfuncore.Core;
 import com.elementalores.elementaloresmod.BlocksAndItems;
 import com.elementalores.elementaloresmod.ElementalOresMod;
 
@@ -12,10 +13,7 @@ public class EarthSword extends ItemSword{
 	
 	public EarthSword(ToolMaterial mat){
 		super(mat);
-		this.setMaxStackSize(1);
-		setUnlocalizedName("earth_sword");
-		setCreativeTab(BlocksAndItems.moditemsTab);
-		this.setTextureName("sleshymod:earth_sword");
+		this.
 	}
 
 }
