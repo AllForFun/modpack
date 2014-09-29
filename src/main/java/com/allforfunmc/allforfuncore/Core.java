@@ -2,6 +2,7 @@ package com.allforfunmc.allforfuncore;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -9,6 +10,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import java.util.Random;
 
 @Mod (modid="Core", name="AllForFun's Modpack Core", version="1")
 public class Core {
@@ -20,6 +22,13 @@ public class Core {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 	}
+	@EventHandler()
+	public void postInit(FMLInitializationEvent event){
+		
+	}
+	
+	
+	//Below is custom code for the mod -- used in all of AllForFun's Mods.
 	public static final CreativeTabs AllForFunItems = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Items") {
 	    @Override
 	    @SideOnly(Side.CLIENT)
@@ -88,8 +97,5 @@ public class Core {
 		return crafting;
 	}
 	public static int NullID;
-	@EventHandler()
-	public void postInit(FMLInitializationEvent event){
-		
-	}
+	public static Random Random = new Random();
 }
