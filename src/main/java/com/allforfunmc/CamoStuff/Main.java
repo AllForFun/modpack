@@ -15,6 +15,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+WorkToDo:
+	//Add the registers and crafting recipes.
 
 @Mod (modid="camostuff", name="AllForFun's CamoStuff", version="1")
 public class Main {
