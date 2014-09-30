@@ -454,42 +454,6 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
 			"AAA",
 			"AAA",
 			'A', new ItemStack(icecrystal)});
-		GameRegistry.addRecipe(new ItemStack(earthblock), new Object[]{
-			"AAA",
-			"AAA",
-			"AAA",
-			'A', new ItemStack(earthgem)});
-		
-		GameRegistry.addRecipe(new ItemStack(EarthHelmet), new Object[]{
-			"   ",
-			"AAA",
-			"A A",
-			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(EarthHelmet), new Object[]{
-			"AAA",
-			"A A",
-			"   ",
-			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(EarthPlate), new Object[]{
-			"A A",
-			"AAA",
-			"AAA",
-			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(EarthLegs), new Object[]{
-			"AAA",
-			"A A",
-			"A A",
-			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(EarthBoots), new Object[]{
-			"   ",
-			"A A",
-			"A A",
-			'A', new ItemStack(earthgem)});
-		GameRegistry.addRecipe(new ItemStack(EarthBoots), new Object[]{
-			"A A",
-			"A A",
-			"   ",
-			'A', new ItemStack(earthgem)});
 		
 		GameRegistry.addRecipe(new ItemStack(LightningHelmet), new Object[]{
 			"   ",
@@ -713,9 +677,6 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
     	icecrystal = new IceCrystal();
     	GameRegistry.registerItem(icecrystal, "ice_crystal");
     	
-    	earthgem = new EarthGem();
-    	GameRegistry.registerItem(earthgem, "earth_gem");
-    	
     	lightningcrystal = new LightningCrystal();
     	GameRegistry.registerItem(lightningcrystal, "lightning_crystal");
     	
@@ -760,26 +721,6 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
     	icehoe = new IceHoe(iceMaterial);
     	GameRegistry.registerItem(icehoe, "ice_hoe");
     	
-    	earthMaterial = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 5f, 30);
-    	earthpick = new EarthPick(earthMaterial);
-    	GameRegistry.registerItem(earthpick, "earth_pick");
-    	
-    	earthMaterial = EnumHelper.addToolMaterial("earth_material", 3, 3000, 0f, 15f, 30);
-    	earthsword = new EarthSword(earthMaterial);
-    	GameRegistry.registerItem(earthsword, "earth_sword");
-    	
-    	earthMaterial = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 15f, 30);
-    	earthaxe = new EarthAxe(earthMaterial);
-    	GameRegistry.registerItem(earthaxe, "earth_axe");
-    	
-    	earthMaterial = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 5f, 30);
-    	earthshovel = new EarthShovel(earthMaterial);
-    	GameRegistry.registerItem(earthshovel, "earth_shovel");
-    	
-    	earthMaterial = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 5f, 30);
-    	earthhoe = new EarthHoe(earthMaterial);
-    	GameRegistry.registerItem(earthhoe, "earth_hoe");
-    	
     	lightningMaterial = EnumHelper.addToolMaterial("lightning_material", 3, 1500, 30f, 5f, 30);
     	lightningpick = new LightningPick(lightningMaterial);
     	GameRegistry.registerItem(lightningpick, "lightning_pick");
@@ -821,22 +762,7 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
     	 GameRegistry.registerItem(IceHelmet, "Ice_helmet");
     	 GameRegistry.registerItem(IcePlate, "Ice_chestplate");
     	 GameRegistry.registerItem(IceLegs, "Ice_leggings");
-    	 GameRegistry.registerItem(IceBoots, "Ice_boots");
-    	 
-         
-     	 
-         
-     	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 3000, new int[]{7, 13, 12, 6}, 30);
-     	 //(name, durability, damageReductionAmounts, enchantability)
-     	 EarthHelmet = new EarthArmor(myArmorMaterial, helmid4, 0).setUnlocalizedName("Earth_helmet");
-     	EarthPlate = new EarthArmor(myArmorMaterial, chestid4, 1).setUnlocalizedName("Earth_chestplate");
-     	EarthLegs = new EarthArmor(myArmorMaterial, legid4, 2).setUnlocalizedName("Earth_leggings");
-     	EarthBoots = new EarthArmor(myArmorMaterial, bootid4, 3).setUnlocalizedName("Earth_boots");
-     	 GameRegistry.registerItem(EarthHelmet, "Earth_helmet");
-     	 GameRegistry.registerItem(EarthPlate, "Earth_chestplate");
-     	 GameRegistry.registerItem(EarthLegs, "Earth_leggings");
-     	 GameRegistry.registerItem(EarthBoots, "Earth_boots");
-     	 
+    	 GameRegistry.registerItem(IceBoots, "Ice_boots"); 
          
      	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 1500, new int[]{8, 15, 14, 1}, 30);
      	 //(name, durability, damageReductionAmounts, enchantability)

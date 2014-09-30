@@ -5,6 +5,7 @@ import net.minecraft.block.BlockStone;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
@@ -44,16 +45,24 @@ public class Main {
 		//Register Blocks
 		GameRegistry.registerBlock(EarthBlock, "Earth_Block");
 		GameRegistry.registerBlock(EarthOre, "Earth_Ore");
+		//Register Item
+		Crafting.smartRegister(new Item[]{EArmorH,EArmorC,EArmorL,EArmorB}, EarthGem);
 	}
 	
 	public static Item EarthGem = (new Item()).setUnlocalizedName("earth_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:earth_gem");
 	
 	public static Item.ToolMaterial EarthMat = EnumHelper.addToolMaterial("earth_material", 3, 3000, 15f, 15f, 30);
+	public static ArmorMaterial EarthArmorMat = EnumHelper.addArmorMaterial("myArmorMaterial", 3000, new int[]{7, 13, 12, 6}, 30);
 	
 	public static Item EarthSword = (new ItemSword(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_sword");
 	public static Item EarthPickaxe = (new TemplatePick(EarthMat)).setUnlocalizedName("earth_pick").setTextureName("sleshymod:earth_pick");
 	public static Item EarthHoe = (new ItemHoe(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_hoe").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_hoe");
 	public static Item EarthAxe = (new TemplateAxe(EarthMat)).setMaxStackSize(1).setUnlocalizedName("earth_axe").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:earth_axe");
+	
+	public static Item EArmorH = new EarthArmor(EarthArmorMat,Core.NullID,0);
+	public static Item EArmorC = new EarthArmor(EarthArmorMat,Core.NullID,1);
+	public static Item EArmorL = new EarthArmor(EarthArmorMat,Core.NullID,2);
+	public static Item EArmorB = new EarthArmor(EarthArmorMat,Core.NullID,3);
 	
 	public static Block EarthBlock = new EarthBlock(Material.ground);
 	public static Block EarthOre = new EarthOre(Material.rock);
@@ -66,7 +75,9 @@ public class Main {
 		//Smelting
 		GameRegistry.addSmelting(EarthOre, new ItemStack(EarthGem), 3F);
 		//Shaped
-		Crafting.armor(slot, material)
+		Crafting.smartRegister((new Item[]{
+				
+		}), EarthGem);
 		
 	}
 }
