@@ -1,5 +1,6 @@
 package com.allforfunmc.fire;
 
+import com.allforfunmc.allforfuncore.Core;
 import com.elementalores.elementaloresmod.BlocksAndItems;
 import com.elementalores.elementaloresmod.ElementalOresMod;
 
@@ -14,10 +15,7 @@ public class FireHoe extends ItemHoe{
 	
 	public FireHoe(ToolMaterial mat){
 		super(mat);
-		this.setMaxStackSize(1);
-		setUnlocalizedName("fire_hoe");
-		setCreativeTab(BlocksAndItems.moditemsTab);
-		this.setTextureName("sleshymod:fire_hoe");
+		.setMaxStackSize(1).setUnlocalizedName("fire_hoe").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_hoe");
 	}
 
 }

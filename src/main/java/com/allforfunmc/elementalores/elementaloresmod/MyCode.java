@@ -275,7 +275,6 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
 			
 		//smelting
 		GameRegistry.addSmelting(new ItemStack(fireOre), new ItemStack(firecrystal), 5f);
-		GameRegistry.addSmelting(new ItemStack(earthore), new ItemStack(earthgem), 5f);
 		GameRegistry.addSmelting(new ItemStack(lightningore), new ItemStack(lightningcrystal), 5f);
 		//enchantment
 		
@@ -437,7 +436,7 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
     	GameRegistry.registerItem(lightningcrystal, "lightning_crystal");
     	
     	//pick are here
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 5f, 30);
+    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 20f, 30);
     	firepick = new FirePick(fireMaterial);
     	GameRegistry.registerItem(firepick, "fire_pick");
     	

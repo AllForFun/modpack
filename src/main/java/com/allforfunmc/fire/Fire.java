@@ -37,10 +37,10 @@ public class Fire {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 		GameRegistry.registerItem(FireCrystal, "fire_crystal");
+		MassRegister.Items(new Item[]{FireAxe,FireHoe,FirePick}, new String[]{"fire_axe"}, "fire");
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		Crafting.smartRegister("Axe", FireCrystal, FireAxe);
-		MassRegister.Items(new Item[]{}, new String[]{}, "fire");
 	}
 }
