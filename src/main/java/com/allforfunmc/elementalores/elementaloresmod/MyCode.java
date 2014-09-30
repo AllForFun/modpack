@@ -1,89 +1,18 @@
-package sleshy.sleshymod;
-
-import java.util.Random;
-
-import sleshy.sleshymod.myblocks.EarthBlock;
-import sleshy.sleshymod.myblocks.EarthOre;
-import sleshy.sleshymod.myblocks.FireBlock;
-import sleshy.sleshymod.myblocks.FireOre;
-import sleshy.sleshymod.myblocks.IceBlock;
-import sleshy.sleshymod.myblocks.IceOre;
-import sleshy.sleshymod.myblocks.LightningBlock;
-import sleshy.sleshymod.myblocks.LightningOre;
-import sleshy.sleshymod.myitems.EarthArmor;
-import sleshy.sleshymod.myitems.EarthAxe;
-import sleshy.sleshymod.myitems.EarthGem;
-import sleshy.sleshymod.myitems.EarthHoe;
-import sleshy.sleshymod.myitems.EarthPick;
-import sleshy.sleshymod.myitems.EarthShovel;
-import sleshy.sleshymod.myitems.EarthSword;
-import sleshy.sleshymod.myitems.FireAxe;
-import sleshy.sleshymod.myitems.FireCrystal;
-import sleshy.sleshymod.myitems.FireHoe;
-import sleshy.sleshymod.myitems.FirePick;
-import sleshy.sleshymod.myitems.FireShovel;
-import sleshy.sleshymod.myitems.FireSword;
-import sleshy.sleshymod.myitems.FlameArmor;
-import sleshy.sleshymod.myitems.IceArmor;
-import sleshy.sleshymod.myitems.IceAxe;
-import sleshy.sleshymod.myitems.IceCrystal;
-import sleshy.sleshymod.myitems.IceHoe;
-import sleshy.sleshymod.myitems.IcePick;
-import sleshy.sleshymod.myitems.IceShovel;
-import sleshy.sleshymod.myitems.IceSword;
-import sleshy.sleshymod.myitems.LightningArmor;
-import sleshy.sleshymod.myitems.LightningAxe;
-import sleshy.sleshymod.myitems.LightningCrystal;
-import sleshy.sleshymod.myitems.LightningHoe;
-import sleshy.sleshymod.myitems.LightningPick;
-import sleshy.sleshymod.myitems.LightningShovel;
-import sleshy.sleshymod.myitems.LightningSword;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraftforge.common.util.EnumHelper;
-import cpw.mods.fml.common.IWorldGenerator;
-import cpw.mods.fml.common.registry.EntityRegistry;
-import cpw.mods.fml.common.registry.GameRegistry;
-
-import java.util.Random;
-
-import net.minecraft.entity.EntityList;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.registry.EntityRegistry;
-
-import java.util.Random;
-
- 	
 
 
 public class MyCode {
-	// item and block declaration go here
+// item and block declaration gohere
 	public static Block fireOre;
 	public static Block iceore;
-	public static Block earthore;
 	public static Block lightningore;
 	public static Block fireblock;
 	public static Block iceblock;
-	public static Block earthblock;
 	public static Block lightningblock;
-	
 	public static Item firecrystal;
 	public static Item icecrystal;
-	public static Item earthgem;
 	public static Item lightningcrystal;
 	public static Item firepick;
 	public static Item icepick;
-	public static Item earthpick;
 	public static Item lightningpick;
 	public static Item lightningshovel;
 	public static Item lightningsword;
@@ -97,13 +26,8 @@ public class MyCode {
 	public static Item icehoe;
 	public static Item icesword;
 	public static Item iceshovel;
-	public static Item earthhoe;
-	public static Item earthshovel;
-	public static Item earthaxe;
-	public static Item earthsword;
 	public static ToolMaterial fireMaterial;
     public static ToolMaterial iceMaterial;
-    public static ToolMaterial earthMaterial;
     public static ToolMaterial lightningMaterial;
     public static ArmorMaterial myArmorMaterial;
     
@@ -132,14 +56,6 @@ public class MyCode {
     public static int legid3;
     public static int bootid3;
     
-    public static Item EarthHelmet;
-    public static Item EarthPlate;
-    public static Item EarthLegs;
-    public static Item EarthBoots;
-    public static int helmid4;
-    public static int chestid4;
-    public static int legid4;
-    public static int bootid4;
     
     public static Item LightningHelmet;
     public static Item LightningPlate;
@@ -158,7 +74,6 @@ public class MyCode {
 	public static void MyRecipes(){
 		//shapeless Recipes
 		GameRegistry.addShapelessRecipe(new ItemStack(icecrystal, 1),new ItemStack(iceore));
-		GameRegistry.addShapelessRecipe(new ItemStack(earthblock, 1),new ItemStack(earthgem, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(iceblock, 1),new ItemStack(icecrystal, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(fireblock, 1),new ItemStack(firecrystal, 9));
 		GameRegistry.addShapelessRecipe(new ItemStack(lightningblock, 1),new ItemStack(lightningcrystal, 9));
@@ -176,12 +91,6 @@ public class MyCode {
 			" B ",
 			'A', new ItemStack(lightningcrystal), 'B', new ItemStack(Items.stick)});
 		
-		GameRegistry.addRecipe(new ItemStack(earthpick), new Object[]{
-			"AAA",
-			" B ",
-			" B ",
-			'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-		
 		GameRegistry.addRecipe(new ItemStack(iceshovel), new Object[]{
 		"A  ",
 		"B  ",
@@ -193,12 +102,6 @@ public class MyCode {
 		"B  ",
 		"B  ",
 		'A', new ItemStack(lightningcrystal), 'B', new ItemStack(Items.stick)});
-
-		GameRegistry.addRecipe(new ItemStack(earthshovel), new Object[]{
-		"A  ",
-		"B  ",
-		"B  ",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
 		
 		
 		GameRegistry.addRecipe(new ItemStack(iceshovel), new Object[]{
@@ -212,13 +115,6 @@ public class MyCode {
 		" B ",
 		" B ",
 		'A', new ItemStack(lightningcrystal), 'B', new ItemStack(Items.stick)});
-
-		GameRegistry.addRecipe(new ItemStack(earthshovel), new Object[]{
-		" A ",
-		" B ",
-		" B ",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-
 		
 		GameRegistry.addRecipe(new ItemStack(iceshovel), new Object[]{
 		"  A",
@@ -231,12 +127,6 @@ public class MyCode {
 		"  B",
 		"  B",
 		'A', new ItemStack(lightningcrystal), 'B', new ItemStack(Items.stick)});
-
-		GameRegistry.addRecipe(new ItemStack(earthshovel), new Object[]{
-		"  A",
-		"  B",
-		"  B",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
 		
 		GameRegistry.addRecipe(new ItemStack(icesword), new Object[]{
 				"A  ",
@@ -255,24 +145,6 @@ public class MyCode {
 			"  A",
 			"  B",
 		    'A', new ItemStack(icecrystal), 'B', new ItemStack(Items.stick)});
-		
-		GameRegistry.addRecipe(new ItemStack(earthsword), new Object[]{
-			"A  ",
-			"A  ",
-			"B  ",
-		    'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-	
-	GameRegistry.addRecipe(new ItemStack(earthsword), new Object[]{
-		" A ",
-		" A ",
-		" B ",
-	    'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-	
-	GameRegistry.addRecipe(new ItemStack(earthsword), new Object[]{
-		"  A",
-		"  A",
-		"  B",
-	    'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
 	
 	GameRegistry.addRecipe(new ItemStack(lightningsword), new Object[]{
 		"A  ",
@@ -304,18 +176,6 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
 	"B  ",
 'A', new ItemStack(icecrystal), 'B', new ItemStack(Items.stick)});
 
-GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
-	" AA",
-	" BA",
-	" B ",
-    'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-
-	GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
-		"AA ",
-		"BA ",
-		"B  ",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-
 	GameRegistry.addRecipe(new ItemStack(lightningaxe), new Object[]{
 	" AA",
 	" BA",
@@ -340,17 +200,6 @@ GameRegistry.addRecipe(new ItemStack(earthaxe), new Object[]{
 		"B  ",
 		'A', new ItemStack(icecrystal), 'B', new ItemStack(Items.stick)});
 
-	GameRegistry.addRecipe(new ItemStack(earthhoe), new Object[]{
-		" AA",
-		" B ",
-		" B ",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
-
-	GameRegistry.addRecipe(new ItemStack(earthhoe), new Object[]{
-		"AA ",
-		"B  ",
-		"B  ",
-		'A', new ItemStack(earthgem), 'B', new ItemStack(Items.stick)});
 
 	GameRegistry.addRecipe(new ItemStack(lightninghoe), new Object[]{
 		" AA",
