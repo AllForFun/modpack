@@ -9,10 +9,12 @@ import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.Crafting;
 import com.allforfunmc.allforfuncore.TemplateAxe;
 import com.allforfunmc.allforfuncore.TemplatePick;
 
@@ -58,9 +60,13 @@ public class Main {
 	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		
-		
-		
+		//Shapeless
+		GameRegistry.addShapelessRecipe(new ItemStack(EarthBlock),new ItemStack(EarthGem,9));
+		GameRegistry.addShapelessRecipe(new ItemStack(EarthGem,9),new ItemStack(EarthBlock));
+		//Smelting
+		GameRegistry.addSmelting(EarthOre, new ItemStack(EarthGem), 3F);
+		//Shaped
+		Crafting.armor(slot, material)
 		
 	}
 }
