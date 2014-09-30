@@ -37,34 +37,17 @@ public class MyCode {
     public static Item FlamePlate;
     public static Item FlameLegs;
     public static Item FlameBoots;
-    public static int helmid;
-    public static int chestid;
-    public static int legid;
-    public static int bootid;
     
     public static Item IceHelmet;
     public static Item IcePlate;
     public static Item IceLegs;
     public static Item IceBoots;
-    public static int helmid2;
-    public static int chestid2;
-    public static int legid2;
-    public static int bootid2;
-    
-    public static int helmid3;
-    public static int chestid3;
-    public static int legid3;
-    public static int bootid3;
     
     
     public static Item LightningHelmet;
     public static Item LightningPlate;
     public static Item LightningLegs;
     public static Item LightningBoots;
-    public static int helmid5;
-    public static int chestid5;
-    public static int legid5;
-    public static int bootid5;
     
 	public static void MyBlocks(){
 		//block code goes here
