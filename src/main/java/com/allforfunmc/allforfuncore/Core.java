@@ -64,38 +64,8 @@ public class Core {
 	        return com.allforfunmc.refineddiamond.Code.MeltingPick;
 	    }
 	};
-	public static Object getArmorCrafting(int slot, Item material){
-		Object crafting = null;
-		switch(slot){
-		case 1:
-			crafting = new Object[]{
-				"xxx",
-				"x x",
-				'x', material
-				};
-		case 2:
-			crafting = new Object[]{
-				"x x",
-				"xxx",
-				"xxx",
-				'x', material
-			};
-		case 3:
-			crafting = new Object[]{
-				"xxx",
-				"x x",
-				"x x",
-				'x', material
-			};
-		case 4:
-			crafting = new Object[]{
-				"x x",
-				"x x",
-				'x', material
-			};
-		}
-		return crafting;
-	}
+
+	
 	public static int NullID;
 	public static Random Random = new Random();
 }
