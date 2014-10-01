@@ -1,7 +1,6 @@
 package com.allforfunmc.fire;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+import com.allforfunmc.allforfuncore.Core;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,11 +14,11 @@ public class FlameArmor extends ItemArmor {
     
     private String texturePath = "sleshymod:textures/models/";
 
-    public FlameArmor(ArmorMaterial material, int id, int place) {
-            super(material, id, place);
+    public FlameArmor(ArmorMaterial material, int place) {
+            super(material, Core.NullID, place);
            
             this.setMaxStackSize(1);
-            this.setCreativeTab(BlocksAndItems.moditemsTab);
+            this.setCreativeTab(Core.AllForFunArmor);
             this.setTextures(place);
     }
    

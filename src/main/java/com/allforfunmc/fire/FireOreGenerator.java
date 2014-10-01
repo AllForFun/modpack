@@ -2,9 +2,6 @@ package com.allforfunmc.fire;
 
 import java.util.Random;
 
-import com.elementalores.elementaloresmod.Blocks;
-import com.elementalores.elementaloresmod.Items;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -32,7 +29,7 @@ public class FireOreGenerator implements IWorldGenerator {
 //----------------------VVV--THE IMPORTANT CODE IS HERE--VVV-------------------
       public void generateSurface(World world, Random random, int x, int z) {
 
-              addOreSpawn(Blocks.fireore, world, random,
+              addOreSpawn(Fire.FireOre, world, random,
                       x, z, 7, 7, 6, 3, 0, 11);
               
              
