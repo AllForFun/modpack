@@ -267,7 +267,7 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
 			"A A",
 			"A A",
 			'A', new ItemStack(icecrystal)});
-		GameRegistry.addRecipe(new ItemStack(IceBoots), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(IceBoxts), new Object[]{
 			"A A",
 			"A A",
 			"   ",
@@ -426,35 +426,12 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
 	
     public static void MyItems(){
     	//what comes out of block
-    	firecrystal = new FireCrystal();
-    	GameRegistry.registerItem(firecrystal, "fire_crystal");
     	
     	icecrystal = new IceCrystal();
     	GameRegistry.registerItem(icecrystal, "ice_crystal");
     	
     	lightningcrystal = new LightningCrystal();
     	GameRegistry.registerItem(lightningcrystal, "lightning_crystal");
-    	
-    	//pick are here
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 20f, 30);
-    	firepick = new FirePick(fireMaterial);
-    	GameRegistry.registerItem(firepick, "fire_pick");
-    	
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 0f, 20f, 30);
-    	firesword = new FireSword(fireMaterial);
-    	GameRegistry.registerItem(firesword, "fire_sword");
-    	
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 20f, 30);
-    	fireaxe = new FireAxe(fireMaterial);
-    	GameRegistry.registerItem(fireaxe, "fire_axe");
-    	
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 5f, 30);
-    	fireshovel = new FireShovel(fireMaterial);
-    	GameRegistry.registerItem(fireshovel, "fire_shovel");
-    	
-    	fireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 2000, 20f, 5f, 30);
-    	firehoe = new FireHoe(fireMaterial);
-    	GameRegistry.registerItem(firehoe, "fire_hoe");
     	
     	iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
     	icepick = new IcePick(iceMaterial);
@@ -497,7 +474,7 @@ GameRegistry.addRecipe(new ItemStack(iceaxe), new Object[]{
     	GameRegistry.registerItem(lightninghoe, "lightning_hoe");
     	
     	
-    	 myArmorMaterial = EnumHelper.addArmorMaterial("myArmorMaterial", 2000, new int[]{6, 10, 9, 5}, 30);
+    	 myArmorMaterial =  
          //(name, durability, damageReductionAmounts, enchantability)
     	 FlameHelmet = new FlameArmor(myArmorMaterial, helmid, 0).setUnlocalizedName("flame_helmet");
     	 FlamePlate = new FlameArmor(myArmorMaterial, chestid, 1).setUnlocalizedName("flame_chestplate");

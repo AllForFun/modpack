@@ -1,7 +1,6 @@
 package com.allforfunmc.FrozenMod;
 
-import com.elementalores.elementaloresmod.BlocksAndItems;
-import com.elementalores.elementaloresmod.ElementalOresMod;
+import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -14,8 +13,7 @@ public class IceSword extends ItemSword{
 		super(mat);
 		this.setMaxStackSize(1);
 		setUnlocalizedName("ice_sword");
-		setCreativeTab(BlocksAndItems.moditemsTab);
-		this.setTextureName("sleshymod:ice_sword");
+		setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
 	}
 
 }
