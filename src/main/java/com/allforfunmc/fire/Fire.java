@@ -36,7 +36,6 @@ public class Fire {
 	public static Item FireCrystal = (new Item()).setUnlocalizedName("fire_crystal").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_crystal");
 	
 	public static Item FireAxe = (new TemplateAxe(FireMaterial)).setUnlocalizedName("fireaxe").setTextureName("sleshymod:fire_axe");
-	public static Item FireHoe = (new ItemHoe(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_hoe").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_hoe");
 	public static Item FirePick = (new TemplatePick(FireMaterial));
 	public static Item FireSword = (new ItemSword(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("fire_shovel");
 	public static Item FireShovel = (new ItemSpade(FireMaterial).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_shovel"));
@@ -53,12 +52,15 @@ public class Fire {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 		MassRegister.Items(new Item[]
-				{FireAxe,FireHoe,FirePick,FireCrystal,FireSword,FireShovel,FireArmorTop,FireArmorChest,FireArmorLegs,FireArmorFeet}, new String[]{
-				"fire_axe","fire_hoe","fire_pick","fire_crystal","fire_sword","fire_shovel","fire_armor_helmet", "fire_armor_chestplate", "fire_armor_leggings", "fire_armor_boots"}, "fire");
+				{FireAxe,FirePick,FireCrystal,FireSword,FireShovel,FireArmorTop,FireArmorChest,FireArmorLegs,FireArmorFeet}, new String[]{
+				"fire_axe","fire_pick","fire_crystal","fire_sword","fire_shovel","fire_armor_helmet", "fire_armor_chestplate", "fire_armor_leggings", "fire_armor_boots"}, "fire");
 		
 	}	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		Crafting.smartRegister("Axe", FireCrystal, FireAxe);
+		Crafting.smartRegister(new Item[]{FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet}, FireCrystal);
+		Crafting.smartRegister("Sword", FireCrystal, FireSword);
+		Crafting.smartRegister("Shovel", FireCrystal, FireShovel);
 	}
 }
