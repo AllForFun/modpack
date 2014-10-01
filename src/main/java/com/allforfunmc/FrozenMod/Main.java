@@ -1,6 +1,8 @@
 package com.allforfunmc.FrozenMod;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemSword;
 
 import com.allforfunmc.allforfuncore.Core;
@@ -13,6 +15,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 
 @Mod (modid="frozenmod", name="AllForFun's Frozen Mod (not based on Frozen)", version="1")
 public class Main {
+
 	public String modid = "refineddiamondmod";
 	
 	@Instance (value="GenericModID")
@@ -23,8 +26,10 @@ public class Main {
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
 	}
+	public static ToolMaterial iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
+	public static Item IceSword = (new ItemSword(iceMaterial)).setMaxStackSize(1).setUnlocalizedName("ice_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
 	
-	public static Block IceSword = (new ItemSword()).setMaxStackSize(1).setUnlocalizedName("ice_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
+	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
 		

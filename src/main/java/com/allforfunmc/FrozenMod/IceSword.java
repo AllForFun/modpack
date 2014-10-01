@@ -11,9 +11,7 @@ public class IceSword extends ItemSword{
 	
 	public IceSword(ToolMaterial mat){
 		super(mat);
-		this.setMaxStackSize(1);
-		setUnlocalizedName("ice_sword");
-		setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
+		.setMaxStackSize(1).setUnlocalizedName("ice_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
 	}
 
 }
