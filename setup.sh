@@ -2,7 +2,7 @@
 cd ${PWD}
 mkdir .temp
 cd ./.temp
-wget http://files.minecraftforge.net/minecraftforge/minecraftforge-src-latest.zip -O mcforge.zip
+curl -o mcforge.zip http://files.minecraftforge.net/minecraftforge/minecraftforge-src-latest.zip
 unzip file.zip -d ./mcforge
 cd ..
 mv ./.temp/mcforge/eclipse ./
