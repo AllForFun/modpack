@@ -12,6 +12,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.common.util.EnumHelper;
 
 @Mod (modid="frozenmod", name="AllForFun's Frozen Mod (not based on Frozen)", version="1")
 public class Main {
