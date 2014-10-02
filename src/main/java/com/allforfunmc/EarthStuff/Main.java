@@ -74,10 +74,5 @@ public class Main {
 		GameRegistry.addShapelessRecipe(new ItemStack(EarthGem,9),new ItemStack(EarthBlock));
 		//Smelting
 		GameRegistry.addSmelting(EarthOre, new ItemStack(EarthGem), 3F);
-		//Shaped
-		Crafting.smartRegister((new Item[]{
-				
-		}), EarthGem);
-		
 	}
 }
