@@ -22,9 +22,10 @@ Contributing is pretty simple, just follow the instuctions, or on mac, a script 
   Do both commands one after anouther:
   
   	gradlew setupdecompworkspace --refresh-dependencies
+  	
   	gradlew eclipse
   
-8. Start coding
+8. Start coding in Eclipse
 
 Building:
 --------
