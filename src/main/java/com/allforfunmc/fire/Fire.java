@@ -2,11 +2,13 @@ package com.allforfunmc.fire;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 
@@ -62,6 +64,8 @@ public class Fire {
 	public void postInit(FMLInitializationEvent event){
 		Crafting.smartRegister("Axe", FireCrystal, FireAxe);
 		Crafting.smartRegister(new Item[]{FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet}, FireCrystal);
+		ItemStack FireSwordStack = new ItemStack(FireSword);
+		FireSwordStack.addEnchantment(Enchantment.fireAspect, 1);
 		Crafting.smartRegister("Sword", FireCrystal, FireSword);
 		Crafting.smartRegister("Shovel", FireCrystal, FireShovel);
 		Crafting.smartRegister("Pickaxe", FireCrystal, FirePick);
