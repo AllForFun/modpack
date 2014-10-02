@@ -31,19 +31,7 @@ public class FireOre extends  Block{
     }
     @Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune){
-        ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-        drops.add(new ItemStack(Fire.FireCrystal,1));
-        if(fortune >= 0 && Core.Random.nextBoolean()) {
-        	
-        	drops.add(new ItemStack(Fire.FireCrystal,1));
-        }
-        if(fortune >= 2 && Core.Random.nextBoolean()) {
-        	drops.add(new ItemStack(Fire.FireCrystal,1));
-        }
-        if(fortune >= 3 && drops.size() < 3 && Core.Random.nextBoolean()) {
-        	drops.add(new ItemStack(Fire.FireCrystal,1));
-        }
-        return drops;
+        return Core.getOreDrops(Fire.FireCrystal, fortune);
 	}
     
 }
