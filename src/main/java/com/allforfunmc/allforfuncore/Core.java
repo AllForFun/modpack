@@ -2,7 +2,7 @@ package com.allforfunmc.allforfuncore;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -10,7 +10,11 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
 import java.util.Random;
+import java.util.ArrayList;
+
+import com.allforfunmc.fire.Fire;
 
 @Mod (modid="Core", name="AllForFun's Modpack Core", version="1")
 public class Core {
@@ -64,7 +68,27 @@ public class Core {
 	        return com.allforfunmc.refineddiamond.Code.MeltingPick;
 	    }
 	};
-
+	
+	/**
+	 * Get drops of an ore
+	 * @param Item to drop
+	 * @param Fortune of pickaxe (6th param of getDrops)
+	 * @return List of items to drop.
+	 */
+	public static final ArrayList<ItemStack> getOreDrops(Item itemDropped, int fortune) {
+		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
+        drops.add(new ItemStack(itemDropped,1));
+        if(fortune >= 0 && Core.Random.nextBoolean()) {
+        	drops.add(new ItemStack(itemDropped,1));
+        }
+        if(fortune >= 2 && Random.nextBoolean()) {
+        	drops.add(new ItemStack(itemDropped,1));
+        }
+        if(fortune >= 3 && drops.size() < 3 && Random.nextBoolean()) {
+        	drops.add(new ItemStack(itemDropped,1));
+        }
+        return drops;
+	}
 	
 	public static int NullID;
 	public static Random Random = new Random();
