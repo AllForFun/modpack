@@ -54,6 +54,8 @@ public class Fire {
 		MassRegister.Items(new Item[]
 				{FireAxe,FirePick,FireCrystal,FireSword,FireShovel,FireArmorTop,FireArmorChest,FireArmorLegs,FireArmorFeet}, new String[]{
 				"fire_axe","fire_pick","fire_crystal","fire_sword","fire_shovel","fire_armor_helmet", "fire_armor_chestplate", "fire_armor_leggings", "fire_armor_boots"}, "fire");
+		GameRegistry.registerBlock(FireBlock, "fire_block");
+		GameRegistry.registerBlock(FireOre, "fire_ore");
 		
 	}	
 	@EventHandler()
@@ -62,5 +64,7 @@ public class Fire {
 		Crafting.smartRegister(new Item[]{FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet}, FireCrystal);
 		Crafting.smartRegister("Sword", FireCrystal, FireSword);
 		Crafting.smartRegister("Shovel", FireCrystal, FireShovel);
+		Crafting.smartRegister("Pickaxe", FireCrystal, FirePick);
+		Crafting.smartRegister(FireBlock, FireCrystal);
 	}
 }
