@@ -1,11 +1,14 @@
 package com.allforfunmc.FrozenMod;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.TemplateAxe;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -28,11 +31,15 @@ public class Main {
 		proxy.registerRenderers();
 	}
 	public static ToolMaterial iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
-	public static Item IceSword = (new ItemSword(iceMaterial)).setMaxStackSize(1).setUnlocalizedName("ice_sword").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:ice_sword");
 	
+	//Items
+	public static Item IceSword = (new IceSword(iceMaterial));
+	public static Item IceAxe = (new TemplateAxe(iceMaterial)).setUnlocalizedName("ice_axe").setTextureName("sleshymod:ice_axe");
+	public static Item IcePick = new IcePick(iceMaterial);
 	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		
+		ItemStack IcePickStack = new ItemStack(IcePick);
+		IcePickStack.addEnchantment(Enchantment.silkTouch, 1);
 	}
 }
