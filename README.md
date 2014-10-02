@@ -1,9 +1,16 @@
-AllForFunMods
+AllForFun's Modpack
 =============
 
-First repository! Tell me if I did something wrong :).
+Contributing:
+------------
+Contributing is pretty simple, just follow the instuctions, or on mac, a script to do this automaticly is coming.
 
-To code, clone this into the /src/ directory. If there is already a /main folder, move it, or remove it.
+1. Download the lastest MinecraftForge src version
+2. Clone the repository
+3. Temperaly move the existing build.gradle file somewhere else
+4. Move the build.gradle file from the MinecraftForge folder you downloaded into the repository 
+5. CD in to the repository in your command promt.
+6. Run the command based on your operating system:
 
-
-Check out the wiki for help!
+####Unix/Bash####
+  ./gradlew setupdecompworkspace --refresh-dependencies; ./gradle eclipse
