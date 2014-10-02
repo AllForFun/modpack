@@ -47,7 +47,7 @@ public class Crafting {
 				"xxx",
 				" | ",
 				" | ",
-				'x', material, "l", Items.stick
+				'x', material, 'l', Items.stick
 		};
 		return crafting;
 	}
@@ -56,7 +56,7 @@ public class Crafting {
 				"xx ",
 				"x| ",
 				" | ",
-				'x', material, "l", Items.stick
+				'x', material, 'l', Items.stick
 		};
 		return crafting;
 	}
@@ -65,7 +65,7 @@ public class Crafting {
 				" x ",
 				" | ",
 				" | ",
-				'x', material, "l", Items.stick
+				'x', material, '|', Items.stick
 		};
 		return crafting;
 	}
@@ -74,7 +74,7 @@ public class Crafting {
 				" x ",
 				" x ",
 				" | ",
-				'x', material, "l", Items.stick
+				'x', material, '|', Items.stick
 		};
 		return crafting;
 	}
