@@ -62,13 +62,13 @@ public class Fire {
 	}	
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
-		Crafting.smartRegister("Axe", FireCrystal, FireAxe);
-		Crafting.smartRegister(new Item[]{FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet}, FireCrystal);
+		Crafting.smartRegisterTool("Axe", FireCrystal, FireAxe);
+		Crafting.smartRegisterArmor(new Item[]{FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet}, FireCrystal);
 		ItemStack FireSwordStack = new ItemStack(FireSword);
 		FireSwordStack.addEnchantment(Enchantment.fireAspect, 1);
-		Crafting.smartRegister("Sword", FireCrystal, FireSword);
-		Crafting.smartRegister("Shovel", FireCrystal, FireShovel);
-		Crafting.smartRegister("Pickaxe", FireCrystal, FirePick);
-		Crafting.smartRegister(FireBlock, FireCrystal);
+		Crafting.smartRegisterTool("Sword", FireCrystal, FireSword);
+		Crafting.smartRegisterTool("Shovel", FireCrystal, FireShovel);
+		Crafting.smartRegisterTool("Pickaxe", FireCrystal, FirePick);
+		Crafting.smartRegisterBlock(FireBlock, FireCrystal);
 	}
 }

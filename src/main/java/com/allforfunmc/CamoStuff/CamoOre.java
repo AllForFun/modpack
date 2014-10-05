@@ -16,7 +16,7 @@ public class CamoOre extends Block{
 	public CamoOre (Material mat){
 		super(mat);
 		setBlockName("camo_ore");
-		setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(Core.AllForFunBlocks);
 		this.setHardness(6f);
 		this.setHarvestLevel("pickaxe", 3);
 		this.setBlockTextureName("sleshymod:camo_ore");

@@ -37,6 +37,7 @@ public class Main {
 	public static Item CamoArmorPants = new CamoArmor(camoArmorMat, Core.NullID, 2);
 	public static Item CamoArmorShoes = new CamoArmor(camoArmorMat, Core.NullID, 3);
 	public static Item CamoAxe = new CamoAxe(camoMat);
+	public static Item CamoSword = new CamoSword(camoMat);
 	//Simple Items
 	public static Item CamoGem = (new Item()).setUnlocalizedName("camo_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:camo_gem");
 	//Blocks
@@ -55,6 +56,8 @@ public class Main {
 		GameRegistry.registerItem(CamoArmorPants, "camo_leggings");
 		GameRegistry.registerItem(CamoArmorShoes, "camo_boots");
 		GameRegistry.registerItem(CamoAxe, "camo_axe");
+		GameRegistry.registerItem(CamoApple, "camo_apple");
+		GameRegistry.registerItem(CamoSword, "camo_sword");
 		
 	}
 	@EventHandler()
@@ -62,14 +65,11 @@ public class Main {
 		
 		//Crafting
 		//Shaped
-		GameRegistry.addRecipe(new ItemStack(CamoArmorHat), Crafting.armor(0, CamoGem));
-		GameRegistry.addRecipe(new ItemStack(CamoArmorShirt), Crafting.armor(1, CamoGem));
-		GameRegistry.addRecipe(new ItemStack(CamoArmorPants), Crafting.armor(2, CamoGem));
-		GameRegistry.addRecipe(new ItemStack(CamoArmorShoes), Crafting.armor(3, CamoGem));
-		Crafting.smartRegister("Axe", CamoGem, CamoAxe);
+		Crafting.smartRegisterArmor(new Item[]{CamoArmorHat,CamoArmorShirt,CamoArmorPants,CamoArmorShoes}, CamoGem);
+		Crafting.smartRegisterTool("Axe", CamoGem, CamoAxe);
 		//Smelting
 		GameRegistry.addSmelting(CamoOre, new ItemStack(CamoGem),1F);
 		//Shapeless
-		Crafting.smartRegister(CamoBlock, CamoGem);
+		Crafting.smartRegisterBlock(CamoBlock, CamoGem);
 	}
 }

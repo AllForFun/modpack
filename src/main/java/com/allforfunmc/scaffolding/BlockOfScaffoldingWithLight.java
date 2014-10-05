@@ -1,5 +1,7 @@
 package com.allforfunmc.scaffolding;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,7 +15,7 @@ public class BlockOfScaffoldingWithLight extends Block {
     {
             super(material);
             setHardness(0);
-            setCreativeTab(CreativeTabs.tabMisc);
+            setCreativeTab(Core.AllForFunBlocks);
             setBlockTextureName("ScaffoldingMod:lightedScaffolding");
             setHarvestLevel("hand", 0);
             setLightLevel(1F);

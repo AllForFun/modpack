@@ -42,42 +42,6 @@ public class Crafting {
 		}
 		return crafting;
 	}
-	public static Object Pickaxe(Item material){
-		Object crafting = new Object[]{
-				"xxx",
-				" | ",
-				" | ",
-				'x', material, 'l', Items.stick
-		};
-		return crafting;
-	}
-	public static Object Axe(Item material){
-		Object crafting = new Object[]{
-				"xx ",
-				"x| ",
-				" | ",
-				'x', material, 'l', Items.stick
-		};
-		return crafting;
-	}
-	public static Object Spade(Item material){
-		Object crafting = new Object[]{
-				" x ",
-				" | ",
-				" | ",
-				'x', material, '|', Items.stick
-		};
-		return crafting;
-	}
-	public static Object Sword(Item material){
-		Object crafting = new Object[]{
-				" x ",
-				" x ",
-				" | ",
-				'x', material, '|', Items.stick
-		};
-		return crafting;
-	}
 	/**
 	 * Just pass in the params to create an item of that type's crafting
 	 * 
@@ -85,28 +49,48 @@ public class Crafting {
 	 * @param Item to make output
 	 * @param Output
 	 */
-	public static void smartRegister(String type, Item material, Item output){
+	public static void smartRegisterTool(String type, Item material, Item output){
 		if(type == "Pickaxe"){
-			GameRegistry.addRecipe(new ItemStack(output), Pickaxe(material));
+			GameRegistry.addRecipe(new ItemStack(output), new Object[]{
+				"xxx",
+				" l ",
+				" l ",
+				'x', material, 'l', Items.stick
+				});
 		}else if (type == "Axe"){
-			GameRegistry.addRecipe(new ItemStack(output), Axe(material));
+			GameRegistry.addRecipe(new ItemStack(output), new Object[]{
+				"xx",
+				"xl",
+				" l",
+				'x', material, 'l', Items.stick
+		});
 		}else if (type == "Shovel"){
-			GameRegistry.addRecipe(new ItemStack(output), Spade(material));
+			GameRegistry.addRecipe(new ItemStack(output), new Object[]{
+				"x",
+				"l",
+				"l",
+				'x', material, 'l', Items.stick});
 		}else if (type == "Sword"){
-			GameRegistry.addRecipe(new ItemStack(output), Sword(material));
+			GameRegistry.addRecipe(new ItemStack(output), new Object[]{
+				"x",
+				"x",
+				"l",
+				'x', material, 'l', Items.stick
+			});
 		}else{
-			throw (new java.lang.IndexOutOfBoundsException("Cannot create type " + type));
+			throw (new java.lang.IndexOutOfBoundsException("Crafting api Cannot create type " + type));
 		}
 	}
 	/**
 	 * Create crafting recipes from both
-	 * 9 items to 1 block
-	 * and 1 block to 9 items
+	 * 9 items to 1 block and
+	 * 1 block to 9 items
 	 * 
 	 * @param Block
 	 * @param Item
 	 */
-	public static void smartRegister(Block block, Item item){
+	public static void smartRegisterBlock(Block block, Item item){
+		System.out.println("Creating crafting for " + block + " and back.");
 		GameRegistry.addShapelessRecipe(new ItemStack(block), new ItemStack(item,9));
 		GameRegistry.addShapelessRecipe(new ItemStack(item,9), block);
 	}
@@ -115,10 +99,28 @@ public class Crafting {
 	 * @param Item[] of armor pieces (helment, chestplate, leggings, boots)
 	 * @param Armor Material
 	 */
-	public static void smartRegister(Item[] Pieces,Item material){
-		GameRegistry.addRecipe(new ItemStack(Pieces[0]), armor(0, material));
-		GameRegistry.addRecipe(new ItemStack(Pieces[1]), armor(1, material));
-		GameRegistry.addRecipe(new ItemStack(Pieces[2]), armor(2, material));
-		GameRegistry.addRecipe(new ItemStack(Pieces[3]), armor(3, material));
+	public static void smartRegisterArmor(Item[] Pieces,Item material){
+		GameRegistry.addRecipe(new ItemStack(Pieces[0]), new Object[]{
+			"xxx",
+			"x x",
+			'x', material
+		});
+		GameRegistry.addRecipe(new ItemStack(Pieces[1]), new Object[]{
+			"x x",
+			"xxx",
+			"xxx",
+			'x', material
+		});
+		GameRegistry.addRecipe(new ItemStack(Pieces[2]), new Object[]{
+			"xxx",
+			"x x",
+			"x x",
+			'x', material
+		});
+		GameRegistry.addRecipe(new ItemStack(Pieces[3]), new Object[]{
+			"x x",
+			"x x",
+			'x', material
+		});
 	}
 }

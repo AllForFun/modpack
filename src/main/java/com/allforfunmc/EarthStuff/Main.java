@@ -46,7 +46,7 @@ public class Main {
 		GameRegistry.registerBlock(EarthBlock, "Earth_Block");
 		GameRegistry.registerBlock(EarthOre, "Earth_Ore");
 		//Register Item
-		Crafting.smartRegister(new Item[]{EArmorH,EArmorC,EArmorL,EArmorB}, EarthGem);
+		Crafting.smartRegisterArmor(new Item[]{EArmorH,EArmorC,EArmorL,EArmorB}, EarthGem);
 	}
 	
 	public static Item EarthGem = (new Item()).setUnlocalizedName("earth_gem").setCreativeTab(Core.AllForFunItems).setTextureName("sleshymod:earth_gem");
