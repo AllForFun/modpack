@@ -1,8 +1,8 @@
 cd ${PWD}
 mkdir .temp
 cd ./.temp
-curl -o mcforge.zip http://files.minecraftforge.net/minecraftforge/minecraftforge-src-latest.zip
-unzip file.zip -d ./mcforge
+curl -L -o mcforge.zip http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.1.1219/forge-1.7.10-10.13.1.1219-src.zip
+unzip mcforge.zip -d ./mcforge
 cd ..
 mv ./.temp/mcforge/eclipse ./
 mv build.gradle ./.temp/build.gradle
