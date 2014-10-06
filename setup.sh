@@ -1,4 +1,3 @@
-#!Bin/Bash
 cd ${PWD}
 mkdir .temp
 cd ./.temp
