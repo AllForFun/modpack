@@ -23,6 +23,6 @@
 /.gradle
 gradle-app.setting
 ./gradle
-
+*.lock
 
 apikey.txt
