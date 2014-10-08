@@ -45,5 +45,6 @@ public class Main{
 		ItemStack IcePickStack = new ItemStack(IcePick);
 		IcePickStack.addEnchantment(Enchantment.silkTouch, 1);
 		Crafting.smartRegisterTool("Axe", IceCrystal, IceAxe);
+		MassR
 	}
 }
