@@ -1,5 +1,7 @@
 package com.allforfunmc.FrozenMod;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemPickaxe;
@@ -12,7 +14,7 @@ public class IceShovel extends ItemSpade{
 		super(mat);
 		this.setMaxStackSize(1);
 		setUnlocalizedName("ice_shovel");
-		setCreativeTab(BlocksAndItems.moditemsTab);
+		setCreativeTab(Core.AllForFunTools);
 		this.setTextureName("sleshymod:ice_shovel");
 	}
 
