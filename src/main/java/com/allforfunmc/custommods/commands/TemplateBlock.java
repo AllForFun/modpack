@@ -6,7 +6,9 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 
 public class TemplateBlock extends Block {
-	public TemplateBlock(Material material){
+	public TemplateBlock(Material material,String texture){
 		super (material);
+		this.setBlockTextureName(texture);
+		this.setCreativeTab(Core.AllForFunBlocks);
 	}
 }

@@ -7,7 +7,7 @@ import net.minecraft.block.material.Material;
 
 public class IceBlock extends  Block{
 	
-	public IceBlock (int iceblockID, Material mat){
+	public IceBlock (Material mat){
 		super(mat);
 		setBlockName("ice_block");
 		setCreativeTab(Core.AllForFunBlocks);
