@@ -86,7 +86,7 @@ public class Crafting {
 	 * 9 items to 1 block and
 	 * 1 block to 9 items
 	 * 
-	 * @param Block
+	 * @param CustomBlock
 	 * @param Item
 	 */
 	public static void smartRegisterBlock(Block block, Item item){

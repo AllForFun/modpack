@@ -13,7 +13,7 @@ public class Code {
 	public static void Blocks() {
 		
 	}	public static void Items() {
-		chocolateBar = new ChocolateBar(5, 5, false);
+		chocolateBar = new ChocolateBar();
 		GameRegistry.registerItem(chocolateBar, "chocolateBar");
 		meltedChocolate = new MeltedChocolate();
 		GameRegistry.registerItem(meltedChocolate, "meltedChocolate");
