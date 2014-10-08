@@ -10,6 +10,7 @@ import net.minecraft.item.ItemSword;
 
 import com.allforfunmc.allforfuncore.Core;
 import com.allforfunmc.allforfuncore.Crafting;
+import com.allforfunmc.allforfuncore.MassRegister;
 import com.allforfunmc.allforfuncore.TemplateAxe;
 import com.allforfunmc.custommods.commands.TemplateBlock;
 
@@ -18,6 +19,7 @@ import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraftforge.common.util.EnumHelper;
 
 @Mod (modid="frozenmod", name="AllForFun's Frozen Mod (not based on Frozen)", version="1")
@@ -30,6 +32,11 @@ public class Main{
 	@EventHandler()
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
+		MassRegister.Items(new Item[]{IceSword,IceAxe,IcePick,IceCrystal
+						},new String[]{"ice_sword","ice_axe","ice_pick","IceCrystal"
+				}, "frozenmod");
+		GameRegistry.registerBlock(IceOre, "ice_ore");
+		GameRegistry.registerBlock(IceBlock, "ice_block");
 	}
 	public static ToolMaterial iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
 	//Blocks
@@ -45,6 +52,5 @@ public class Main{
 		ItemStack IcePickStack = new ItemStack(IcePick);
 		IcePickStack.addEnchantment(Enchantment.silkTouch, 1);
 		Crafting.smartRegisterTool("Axe", IceCrystal, IceAxe);
-		MassR
 	}
 }
