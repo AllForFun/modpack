@@ -14,7 +14,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 import java.util.Random;
 import java.util.ArrayList;
 
-import com.allforfunmc.custommods.Mods;
 import com.allforfunmc.fire.Fire;
 
 @Mod (modid="Core", name="AllForFun's Modpack Core", version="1")
@@ -26,7 +25,6 @@ public class Core {
 	@EventHandler()
 	public void load(FMLInitializationEvent event) {
 		proxy.registerRenderers();
-		Mods.runMods();
 	}
 	@EventHandler()
 	public void postInit(FMLInitializationEvent event){
