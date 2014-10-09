@@ -38,7 +38,8 @@ public class MineMaker extends Block{
     		return null;
     	} else {
 			Block mine = new Mine(block);
-			GameRegistry.registerBlock(mine, block.getLocalizedName() + "Mine");
+			GameRegistry.registerBlock(mine, block.getLocalizedName() + ".Mine");
+			System.out.println("Making "+ block.getLocalizedName() + ".Mine");
 			Mines.put(block, mine);
 	    	return mine;
 	    	}
