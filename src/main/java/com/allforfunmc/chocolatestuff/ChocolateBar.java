@@ -14,10 +14,11 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ChocolateBar extends ItemFood{
 	@Override
     public ItemStack onEaten(ItemStack itemStack, World world, EntityPlayer player){
-        --itemStack.stackSize;
+		int type = itemStack.getItemDamage();
+		--itemStack.stackSize;
         player.getFoodStats().func_151686_a(this, itemStack);
         world.playSoundAtEntity(player, "random.burp", 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
-        switch (itemStack.getItemDamage()){
+        switch (type){
         case 0:
             player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 300 * 20, 3));
             player.addPotionEffect(new PotionEffect(Potion.weakness.getId(), 300 * 20, 3));

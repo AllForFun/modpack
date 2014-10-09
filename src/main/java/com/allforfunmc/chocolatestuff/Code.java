@@ -18,12 +18,12 @@ public class Code {
 		meltedChocolate = new MeltedChocolate();
 		GameRegistry.registerItem(meltedChocolate, "meltedChocolate");
 	}	public static void Crafting() {
-		GameRegistry.addRecipe(new ItemStack(chocolateBar), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(chocolateBar,0), new Object[]{
 			"scs",
 			"csc",
 			's', Items.sugar, 'c', meltedChocolate
 		});
-		GameRegistry.addRecipe(new ItemStack(chocolateBar), new Object[]{
+		GameRegistry.addRecipe(new ItemStack(chocolateBar,1), new Object[]{
 			"scs",
 			"cmc",
 			's', Items.sugar, 'c', meltedChocolate, 'm', Items.milk_bucket}
