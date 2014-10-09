@@ -13,8 +13,6 @@
 *.dsstore
 *.metadata*
 
-/eclipse/*
-
 
 /.settings
 /libs
@@ -26,3 +24,8 @@ gradle-app.setting
 *.lock
 
 apikey.txt
+
+# Eclipes #
+/eclipse/config
+/eclipse/logs
+/eclipse/options.txt
