@@ -1,9 +1,9 @@
 AllForFun's Modpack
 =============
 
-Contributing:
+Cloning:
 ------------
-Contributing is pretty simple, just follow the instuctions, or on mac, a script to do this automaticly is coming.
+Cloning is pretty simple, just follow the instuctions, or on mac, a script to do this automaticly is coming.
 
 1. Download the lastest MinecraftForge src version.
 2. Clone the repository.
@@ -25,7 +25,8 @@ Contributing is pretty simple, just follow the instuctions, or on mac, a script 
   	
   	gradlew eclipse
   
-8. Start coding in Eclipse
+8. Code away!
+
 
 Building:
 --------
