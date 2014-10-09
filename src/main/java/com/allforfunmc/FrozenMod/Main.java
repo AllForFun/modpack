@@ -12,7 +12,7 @@ import com.allforfunmc.allforfuncore.Core;
 import com.allforfunmc.allforfuncore.Crafting;
 import com.allforfunmc.allforfuncore.MassRegister;
 import com.allforfunmc.allforfuncore.TemplateAxe;
-import com.allforfunmc.custommods.commands.TemplateBlock;
+import com.allforfunmc.allforfuncore.TemplateBlock;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -40,7 +40,7 @@ public class Main{
 	}
 	public static ToolMaterial iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
 	//Blocks
-	public static Block IceOre = new Block(Material.ice,"sleshymod:ice_ore").setBlockName("ice_ore").setHardness(6f);
+	public static Block IceOre = new TemplateBlock(Material.ice,"sleshymod:ice_ore").setBlockName("ice_ore").setHardness(6f);
 	public static Block IceBlock = new IceBlock(Material.ice);
 	//Items
 	public static Item IceSword = (new IceSword(iceMaterial));
@@ -52,5 +52,8 @@ public class Main{
 		ItemStack IcePickStack = new ItemStack(IcePick);
 		IcePickStack.addEnchantment(Enchantment.silkTouch, 1);
 		Crafting.smartRegisterTool("Axe", IceCrystal, IceAxe);
+		Crafting.smartRegisterTool("Pickaxe", IceCrystal, IcePick);
+		Crafting.smartRegisterTool("Sword", IceSword, IceSword);
+		Crafting.smartRegisterBlock(IceBlock, IceCrystal);
 	}
 }
