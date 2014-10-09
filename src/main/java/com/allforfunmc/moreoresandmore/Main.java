@@ -1,7 +1,5 @@
 package com.allforfunmc.moreoresandmore;
 
-import com.allforfunmc.easyoreapi.EasyOre;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
@@ -86,8 +84,6 @@ public class Main {
 	
 	@EventHandler
 	public void PostInit(FMLPostInitializationEvent postEvent){
-		/*Args: int maxX, int maxZ, int maxVeinSize, int chancesToSpawn, int minY, int maxY*/
-		EasyOre.EasyGenerator(blockCompressedCobble, 2, 2, 100, 500, 1, 35,24);
 		//items
 	}
 }
