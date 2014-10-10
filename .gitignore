@@ -29,4 +29,4 @@ apikey.txt
 /eclipse/config
 /eclipse/logs
 /eclipse/options.txt
-/eclipse/saves
+/eclipse/saves/*
