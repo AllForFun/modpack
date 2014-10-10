@@ -1,7 +1,7 @@
 package com.allforfunmc.obsidiantools;
 
 public class CommonProxy {
-	public void registerRenderers() {
-		
-	}
+    public void registerRenderers() {
+
+    }
 }
