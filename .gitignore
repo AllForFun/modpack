@@ -25,7 +25,11 @@ gradle-app.setting
 
 apikey.txt
 
-/eclipse
+*eclipse*
 *.dat
 
 *.mca
+
+*.mca
+
+*.dat
