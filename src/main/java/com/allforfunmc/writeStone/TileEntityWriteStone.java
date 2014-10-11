@@ -23,7 +23,7 @@ public class TileEntityWriteStone extends TileEntity {
     public void updateEntity() {
 	if (timer == 20) {
 	    timer = 0;
-	    file = new File(xCoord + "," + yCoord + "," + zCoord + ".txt");
+	    file = new File(worldObj.provider.dimensionId + "," + xCoord + "," + yCoord + "," + zCoord + ".txt");
 	    try {
 		file.createNewFile();
 	    } catch (IOException e1) {
