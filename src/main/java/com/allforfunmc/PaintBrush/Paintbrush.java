@@ -16,17 +16,7 @@ public class Paintbrush extends Item{
 		int x = (int) player.getLookVec().xCoord;
 		int y = (int) player.getLookVec().yCoord;
 		int z = (int) player.getLookVec().zCoord;
-		ForgeDirection down = ForgeDirection.DOWN;
-		ForgeDirection east = ForgeDirection.EAST;
-		ForgeDirection north = ForgeDirection.NORTH;
-		ForgeDirection south = ForgeDirection.SOUTH;
-		ForgeDirection up = ForgeDirection.UP;
-		ForgeDirection west = ForgeDirection.WEST;
-		Block.recolourBlock colorBlock = new Block.recolourBlock();
-
-		if(
-			
-		}
+		
         return stack;
     }
 }

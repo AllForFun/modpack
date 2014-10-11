@@ -11,7 +11,7 @@ import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import net.minecraft.item.ItemTool;
 
-@Mod (modid="PaintingMod", name="AllForFun's Painting Mod", version="1")
+//@Mod (modid="PaintingMod", name="AllForFun's Painting Mod", version="1")
 public class Main {
 	@Instance (value="GenericModID")
 	public static PaintingMod instance;
