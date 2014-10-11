@@ -3,6 +3,7 @@ package com.allforfunmc.writeStone;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Path;
 
 import net.minecraft.tileentity.TileEntity;
 
@@ -10,6 +11,14 @@ public class TileEntityWriteStone extends TileEntity {
 
     private int timer = 0;
     File file;
+
+    public File getFile() {
+	return file;
+    }
+
+    public void setFile(File file) {
+	this.file = file;
+    }
 
     public void updateEntity() {
 	if (timer == 20) {
