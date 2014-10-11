@@ -34,6 +34,7 @@ public class Main {
     public static ArmorMaterial CobbleArmorMaterial = EnumHelper.addArmorMaterial("CobbleArmor", 15, new int[] { 2, 6, 5, 2 }, 9);
 
     public static Block blockCompressedCobble;
+    public static Block cobbleGen = new CobbleGen(Blocks.cobblestone);
 
     @EventHandler
     public void PreInit(FMLPreInitializationEvent preEvent) {
@@ -41,6 +42,7 @@ public class Main {
 	// blocks
 	blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
 	GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
+	GameRegistry.registerBlock(cobbleGen, "Cobble_Generator");
 
 	// armor
 	armorCobbleHelm = new CobbleArmor(CobbleArmorMaterial, armorCobbleHelmID, 0).setUnlocalizedName("CobbleHelm");
