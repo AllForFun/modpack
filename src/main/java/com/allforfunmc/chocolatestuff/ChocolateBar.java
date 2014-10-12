@@ -1,5 +1,7 @@
 package com.allforfunmc.chocolatestuff;
 
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
@@ -35,6 +37,6 @@ public class ChocolateBar extends ItemFood {
 	setUnlocalizedName("chocolatebar.unknown");
 	setTextureName("chocolatestuff:chocolatebar");
 	setAlwaysEdible();
-	setCreativeTab(CreativeTabs.tabFood);
+	setCreativeTab(Core.AllForFunFood);
     }
 }
