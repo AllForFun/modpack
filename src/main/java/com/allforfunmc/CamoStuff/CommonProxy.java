@@ -1,7 +1,7 @@
 package com.allforfunmc.CamoStuff;
 
 public class CommonProxy {
-	public void registerRenderers() {
-		
-	}
+    public void registerRenderers() {
+
+    }
 }
