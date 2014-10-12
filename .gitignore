@@ -26,6 +26,7 @@ gradle-app.setting
 apikey.txt
 
 /eclipse/saves/testing
+eclipse
 *.dat
 
 *.mca
