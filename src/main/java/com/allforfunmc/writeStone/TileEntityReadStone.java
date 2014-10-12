@@ -12,11 +12,14 @@ import net.minecraft.init.Blocks;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityReadStone extends TileEntity {
-
+	
     private int timer = 0;
     private boolean shouldProvidePower;
     File file;
-
+    /*
+     * TODO: Finish reading of file
+     * 
+     */
     public void updateEntity() {
 	if (file != null) {
 	    if (timer == 20) {
