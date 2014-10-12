@@ -38,6 +38,10 @@ public class Main {
 	GameRegistry.registerItem(EarthPickaxe, "earth_pickaxe");
 	GameRegistry.registerItem(EarthHoe, "earth_hoe");
 	GameRegistry.registerItem(EarthAxe, "earth_axe");
+	GameRegistry.registerItem(EArmorH, "earth_hat");
+	GameRegistry.registerItem(EArmorC, "earth_chestplate");
+	GameRegistry.registerItem(EArmorL, "earth_leggings");
+	GameRegistry.registerItem(EArmorB, "earth_boots");
 	// Register Blocks
 	GameRegistry.registerBlock(EarthBlock, "Earth_Block");
 	GameRegistry.registerBlock(EarthOre, "Earth_Ore");
