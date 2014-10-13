@@ -15,7 +15,6 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityReadStone extends TileEntity {
     private int timer = 0;
-    public boolean shouldProvidePower;
     public boolean hasFile = false;
     public File File;
     
@@ -26,10 +25,10 @@ public class TileEntityReadStone extends TileEntity {
     	try {
 		    if (new Scanner(File).nextInt() == 1) {
 		    	Core.Debug("Providing Power");
-		    	shouldProvidePower = true;
+		    	worldObj.setBlock(xCoord, yCoord + 1, zCoord, Blocks.redstone_block);
 		    } else {
 		    	Core.Debug("Not Providing Power");
-		    	shouldProvidePower = false;
+		    	worldObj.setBlockToAir(xCoord, yCoord+1, zCoord);
 		    }
 		    	Core.Debug("Scanned: " + new Scanner(File).nextInt());
 		} catch (FileNotFoundException e1) {
