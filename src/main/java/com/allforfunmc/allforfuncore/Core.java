@@ -16,8 +16,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = "Core", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
-	//TODO: Turn off debug mode
-	public static final Boolean DebugMode = true;
+	public static final Boolean DebugMode = false;
+	
 	public static void Debug(Object Message){
 		if(Core.DebugMode) {System.out.println(Message);}
 	}
