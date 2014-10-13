@@ -28,11 +28,17 @@ Cloning is pretty simple, just follow the instuctions, or on mac, a script to do
 8. Code away!
 
 
+Waffle:
+------
+If you are a contributor, then use waffle. It looks better then GitHub Issues. 
+https://waffle.io/allforfun/modpack
+
+
 Contributing:
 -------------
 All contrubutions are licensed under an MIT lisence. If you don't like it, don't code for us.
 
-1. We want **good** stuff. Good ideas are always welcome, and there are tons of ideas in the issues.
+1. We want **good** stuff. Good ideas are always welcome, and there are tons of ideas in the waffle page.
 2. Make sure you show what you are working on in the issues **before** you start.
 3. Commit often while you are building - if you make a mistake, rolling back is possable.
 4. Refrence your issue with #(Issue Number) in the title to link the commits and issues.
