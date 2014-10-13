@@ -15,17 +15,13 @@ public class TileEntityReadStone extends TileEntity {
 	
     private int timer = 0;
     private boolean shouldProvidePower;
-    File file;
+    public File File;
     /*
      * TODO: Finish reading of file
-     * 
      */
     public void updateEntity() {
-	if (file != null) {
-	    if (timer == 20) {
-		timer = 0;
 		try {
-		    Scanner scanner = new Scanner(file);
+		    Scanner scanner = new Scanner(File);
 		    if (scanner.next() == "1") {
 			shouldProvidePower = true;
 		    } else {
@@ -35,29 +31,16 @@ public class TileEntityReadStone extends TileEntity {
 		} catch (FileNotFoundException e1) {
 		    e1.printStackTrace();
 		}
-
-	    } else {
-		timer++;
-	    }
-	} else {
-	    worldObj.setBlock(xCoord, yCoord + 1, zCoord, Blocks.stone);
 	}
-    }
 
     public boolean isShouldProvidePower() {
 	return shouldProvidePower;
     }
-
+    public TileEntityReadStone setFile(File settingFile){
+    	File = settingFile;
+    	return this;
+    }
     public void setShouldProvidePower(boolean shouldProvidePower) {
 	this.shouldProvidePower = shouldProvidePower;
     }
-
-    public File getFile() {
-	return file;
-    }
-
-    public void setFile(File file) {
-	this.file = file;
-    }
-
 }

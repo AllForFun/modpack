@@ -52,8 +52,8 @@ public class WriteStone {
 
 	readStone = new BlockReadStone();
 	readStone.setCreativeTab(CreativeTabs.tabRedstone).setBlockName("Read Stone").setBlockTextureName("writestone:Read_Stone");
-	//GameRegistry.registerBlock(readStone, "Read_Stone");
-	//GameRegistry.registerTileEntity(TileEntityReadStone.class, "Read_Stone");
+	GameRegistry.registerBlock(readStone, "Read_Stone");
+	GameRegistry.registerTileEntity(TileEntityReadStone.class, "Read_Stone");
 
 	GameRegistry.addShapelessRecipe(new ItemStack(writeStone, 1), new Object[] { Blocks.redstone_block, Items.writable_book });
     }
