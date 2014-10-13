@@ -1,10 +1,8 @@
-package com.emeraldarmor.mod.armor;
+package com.allforfunmc.emeraldarmor;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-
-import com.emeraldarmor.mod.Main;
 
 public class EmeraldArmor extends ItemArmor{
 

@@ -1,19 +1,19 @@
-package com.emeraldarmor.mod.tools;
+package com.allforfunmc.emeraldarmor;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemSpade;
+import net.minecraft.item.ItemPickaxe;
 
-import com.emeraldarmor.mod.Main;
+import com.allforfunmc.allforfuncore.Core;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EmeraldShovel extends ItemSpade{
+public class EmeraldPickaxe extends ItemPickaxe{
 
-	public EmeraldShovel(ToolMaterial p_i45356_1_) {
+	public EmeraldPickaxe(ToolMaterial p_i45356_1_) {
 		super(p_i45356_1_);
-		this.setCreativeTab(Main.emeraldarmorTab);
+		this.setCreativeTab(Core.AllForFunTools);
 	}
 
 	@SideOnly(Side.CLIENT)

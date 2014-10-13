@@ -1,4 +1,4 @@
-package com.emeraldarmor.mod;
+package com.allforfunmc.emeraldarmor;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
@@ -8,14 +8,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
-
-import com.emeraldarmor.mod.Main;
-import com.emeraldarmor.mod.armor.EmeraldArmor;
-import com.emeraldarmor.mod.tools.EmeraldAxe;
-import com.emeraldarmor.mod.tools.EmeraldHoe;
-import com.emeraldarmor.mod.tools.EmeraldPickaxe;
-import com.emeraldarmor.mod.tools.EmeraldShovel;
-import com.emeraldarmor.mod.tools.EmeraldSword;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -28,8 +20,6 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid =  Main.modid, version = Main.version, name = Main.name)
 public class Main {
-
-	//Added to re-upload file
 	
 	public static final String modid = "emeraldarmor";
 	public static final String version = "1.0.0";
@@ -60,13 +50,6 @@ public class Main {
 	
 	@EventHandler
 	public void PreInit(FMLPreInitializationEvent preEvent){
-		
-		emeraldarmorTab = new CreativeTabs("Main.modid"){
-			@SideOnly(Side.CLIENT)
-			public Item getTabIconItem() {
-				return itemEmeraldPickaxe;
-			}
-		};
 		
 		//armor
 		armorEmeraldHelmet = new EmeraldArmor(EmeraldArmorMaterial, armorEmeraldHelmetID, 0).setUnlocalizedName("EmeraldHelmet");
