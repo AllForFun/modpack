@@ -55,6 +55,5 @@ public class WriteStone {
 	GameRegistry.registerBlock(readStone, "Read_Stone");
 	GameRegistry.registerTileEntity(TileEntityReadStone.class, "Read_Stone");
 
-	GameRegistry.addShapelessRecipe(new ItemStack(writeStone, 1), new Object[] { Blocks.redstone_block, Items.writable_book });
     }
 }
