@@ -15,54 +15,39 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityReadStone extends TileEntity {
     private int timer = 0;
-    private boolean shouldProvidePower;
+    public boolean shouldProvidePower;
     public boolean hasFile = false;
     public File File;
+    
     /*
      * TODO: Finish reading of file
      */
     public void updateEntity() {
-		
     	try {
 		    if (new Scanner(File).nextInt() == 1) {
-			shouldProvidePower = true;
+		    	Core.Debug("Providing Power");
+		    	shouldProvidePower = true;
 		    } else {
-			shouldProvidePower = false;
+		    	Core.Debug("Not Providing Power");
+		    	shouldProvidePower = false;
 		    }
-		    if(Core.DebugMode){
-		    	System.out.println("Scanned: " + new Scanner(File).nextInt());
-		    }
+		    	Core.Debug("Scanned: " + new Scanner(File).nextInt());
 		} catch (FileNotFoundException e1) {
-		    e1.printStackTrace();
+		    Core.Debug(e1.getStackTrace());
 		} catch (NullPointerException e) {
 			if(hasFile){
 				System.out.println("Could not find file: " + File.toString());
-				if(Core.DebugMode){
-					e.printStackTrace();
-				}
 			}
 		} catch (java.util.NoSuchElementException error){
-			if(Core.DebugMode){
-				System.out.println("Something went wrong scanning " + error.toString());
-			}
+			Core.Debug("Something went wrong scanning " + error.toString());
 		}
 	}
-
-    public boolean isShouldProvidePower() {
-	return shouldProvidePower;
-    }
     public TileEntityReadStone setFile(File settingFile){
     	File = settingFile;
     	hasFile = true;
-    	if(Core.DebugMode){
-    		System.out.println("Setting File to" + settingFile.toString());
-    		if (File != settingFile){
-    			System.out.println("Something went wrong in setting the file (" + File.toString() + ") to " + settingFile.toString());
-    		}
-    	}
+		Core.Debug("Setting File to" + settingFile.toString());
+    	Core.Debug("Something went wrong in setting the file (" + File.toString() + ") to " + settingFile.toString());
+    	//TODO: Insert NBT here.
     	return this;
-    }
-    public void setShouldProvidePower(boolean shouldProvidePower) {
-	this.shouldProvidePower = shouldProvidePower;
     }
 }

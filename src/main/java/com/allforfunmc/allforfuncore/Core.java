@@ -18,6 +18,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class Core {
 	//TODO: Turn off debug mode
 	public static final Boolean DebugMode = true;
+	public static void Debug(Object Message){
+		if(Core.DebugMode) {System.out.println(Message);}
+	}
     @Instance(value = "GenericModID")
     public static Core instance;
     @SidedProxy(clientSide = "com.allforfunmc.allforfuncore.ClientProxy", serverSide = "com.allforfunmc.allforfuncore.CommonProxy")

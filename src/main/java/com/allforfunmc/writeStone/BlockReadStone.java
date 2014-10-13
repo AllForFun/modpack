@@ -29,15 +29,18 @@ public class BlockReadStone extends Block implements ITileEntityProvider {
     public boolean canConnectRedstone(IBlockAccess world, int x, int y, int z, int side) {
 	return true;
     }
+    public boolean canProvidePower()
+    {
+        return true;
+    }
 
     public int isProvidingStrongPower(IBlockAccess world, int x, int y, int z, int par5) {
-	TileEntityReadStone tile = (TileEntityReadStone) world.getTileEntity(x, y, z);
-	if (tile.isShouldProvidePower()) {
-	    return 15;
-	} else
-	    return 0;
-
-    }
+    	TileEntityReadStone tile = (TileEntityReadStone) world.getTileEntity(x, y, z);
+		if (tile.shouldProvidePower) {
+		    return 15;
+		} else
+		    return 0;
+    	}
 
     public boolean onBlockActivated(final World world, final int x, final int y, final int z, EntityPlayer player, int metadata, float hitX, float hitY, float hitZ) {
 	if (!world.isRemote) {
