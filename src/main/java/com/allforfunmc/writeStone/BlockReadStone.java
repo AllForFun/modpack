@@ -20,7 +20,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockReadStone extends Block{
+public class BlockReadStone extends Block implements ITileEntityProvider {
 
     protected BlockReadStone() {
 	super(Material.redstoneLight);
@@ -39,7 +39,7 @@ public class BlockReadStone extends Block{
 
     }
 
-    public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int metadata, float hitX, float hitY, float hitZ) {
+    public boolean onBlockActivated(final World world, final int x, final int y, final int z, EntityPlayer player, int metadata, float hitX, float hitY, float hitZ) {
 	if (!world.isRemote) {
 	    final JFrame frame = new JFrame();
 	    final JFileChooser file = new JFileChooser(Minecraft.getMinecraft().mcDataDir.getAbsoluteFile());
@@ -53,12 +53,20 @@ public class BlockReadStone extends Block{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 		    frame.dispose();
+		    PlaceTile(world, x, y, z, file);
 		}
 	    });
-	    
-	    TileEntityReadStone tile = (new TileEntityReadStone()).setFile(file.getSelectedFile());
-	    world.setTileEntity(x, y, z, tile);
+
 	}
 	return true;
+    }
+    public static void PlaceTile(World world, int x, int y, int z, JFileChooser file){
+    	TileEntityReadStone tile = (new TileEntityReadStone()).setFile(file.getSelectedFile());
+	    world.setTileEntity(x, y, z, tile);
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World p_149915_1_, int p_149915_2_) {
+	return new TileEntityReadStone();
     }
 }
