@@ -1,14 +1,13 @@
-def modVersion = "3.0"
+def modVersion = "3.1"
 def changes = """
 New:
-• Elemental Ore Mod by @ess090502
-• The Elemental Ore mod is so big, it deserves more lines in this changelog..
-• So now it got three. YAY!
-• Organized Creative Tabs
-• New creepers on the gos
-• Crafting api
-Power Level:
-• 9001
+• Snowball launcher
+• Write Stone
+• Emerald Mod
+Known Bugs:
+• Armor is null
+• Chocolate Bar is broken
+• Not all of Ess's mod is registered
 """
 
 
