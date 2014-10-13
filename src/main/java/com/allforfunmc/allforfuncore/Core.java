@@ -16,6 +16,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = "Core", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
+	public static final Boolean DebugMode = false;
     @Instance(value = "GenericModID")
     public static Core instance;
     @SidedProxy(clientSide = "com.allforfunmc.allforfuncore.ClientProxy", serverSide = "com.allforfunmc.allforfuncore.CommonProxy")
