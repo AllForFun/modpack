@@ -25,8 +25,8 @@ public class Core {
 		if(Core.DebugMode) {
 		System.out.println("=======Error=======");
 		System.out.println(Error.getMessage());
-		System.out.println(Error.getStackTrace());}
-		System.out.println("=======Error=======");
+		System.out.println(Error.getStackTrace());
+		System.out.println("=======Error=======");}
 	}
     @Instance(value = "GenericModID")
     public static Core instance;
