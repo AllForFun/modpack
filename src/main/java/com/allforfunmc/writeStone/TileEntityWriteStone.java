@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.Scanner;
+
+import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.tileentity.TileEntity;
 
@@ -21,38 +24,31 @@ public class TileEntityWriteStone extends TileEntity {
     }
 
     public void updateEntity() {
-	if (timer == 20) {
-	    timer = 0;
-	    file = new File(worldObj.provider.dimensionId + "," + xCoord + "," + yCoord + "," + zCoord + ".txt");
-	    try {
-		file.createNewFile();
-	    } catch (IOException e1) {
-		e1.printStackTrace();
-	    }
-	    if (worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)) {
-
-		try {
-
-		    FileWriter writer = new FileWriter(file);
-		    writer.write("1");
-		    writer.close();
-		} catch (IOException e) {
-
-		    e.printStackTrace();
-		}
-	    } else {
-		try {
-		    FileWriter writer = new FileWriter(file);
-		    writer.write("0");
-		    writer.close();
-		} catch (IOException e) {
-		    e.printStackTrace();
-		}
-	    }
-
-	} else {
-	    timer++;
-	}
-
+    	int powered = 0;
+    	if (worldObj.isBlockIndirectlyGettingPowered(xCoord, yCoord, zCoord)){
+    		powered = 1;
+    	}
+		try{
+			file = new File(worldObj.provider.dimensionId + "," + xCoord + "," + yCoord + "," + zCoord + ".txt");
+			if(!file.exists()){
+				file.createNewFile();
+			}else {
+				Core.Debug("Writing " + powered);
+				Core.Debug("Writing to " + file.toString());
+				try {
+					if (new Scanner(file).nextInt() != powered){
+						FileWriter writer = new FileWriter(file);
+						file.createNewFile();
+						writer.write(powered + "");
+						writer.close();
+					}
+				}catch(java.util.NoSuchElementException e){
+					FileWriter writer = new FileWriter(file);
+					file.createNewFile();
+					writer.write(powered + "");
+					writer.close();
+				}
+			}
+		} catch(IOException e){Core.Debug(e);}
     }
 }
