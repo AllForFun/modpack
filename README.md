@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/allforfun/modpack.png?label=ready&title=Ready)](https://waffle.io/allforfun/modpack)
 AllForFun's Modpack
 =============
 
