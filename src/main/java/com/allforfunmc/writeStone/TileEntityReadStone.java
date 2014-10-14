@@ -11,10 +11,10 @@ import java.util.Scanner;
 import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.init.Blocks;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityReadStone extends TileEntity {
-    private int timer = 0;
     public boolean hasFile = false;
     public File File;
     
@@ -49,4 +49,14 @@ public class TileEntityReadStone extends TileEntity {
     	//TODO: Insert NBT here.
     	return this;
     }
+    public void writeToNBT(NBTTagCompound nbt)
+	  {
+	    nbt.setString("File", this.File.toString());
+	    super.writeToNBT(nbt);
+	  }
+    public void readFromNBT(NBTTagCompound nbt)
+	  {
+	    this.File = new File(nbt.getString("File"));
+	    super.readFromNBT(nbt);
+	  }
 }
