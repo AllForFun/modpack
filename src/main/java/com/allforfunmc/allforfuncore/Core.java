@@ -16,10 +16,17 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = "Core", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
-	public static final Boolean DebugMode = false;
+	public static final Boolean DebugMode = true;
 	
 	public static void Debug(Object Message){
 		if(Core.DebugMode) {System.out.println(Message);}
+	}
+	public static void Debug(Exception Error){
+		if(Core.DebugMode) {
+		System.out.println("=======Error=======");
+		System.out.println(Error.getMessage());
+		System.out.println(Error.getStackTrace());}
+		System.out.println("=======Error=======");
 	}
     @Instance(value = "GenericModID")
     public static Core instance;
