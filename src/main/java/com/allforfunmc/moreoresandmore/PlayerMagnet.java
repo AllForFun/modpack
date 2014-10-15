@@ -1,7 +1,7 @@
 package com.allforfunmc.moreoresandmore;
 
+import com.allforfunmc.allforfuncore.Cordinates;
 import com.allforfunmc.allforfuncore.Core;
-import com.allforfunmc.allforfuncore.Players;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -21,31 +21,34 @@ public class PlayerMagnet extends ItemSword{
 		this.setMaxStackSize(1);
 	}
 	@Override
-    public boolean hitEntity(ItemStack stack, EntityLivingBase useingPlayer, EntityLivingBase hitplayer)
+    public boolean hitEntity(ItemStack stack, EntityLivingBase hitPlayer, EntityLivingBase useingPlayer)
     {
-		if (hitplayer.isDead){
-			return true;
+		if(IsOn(stack)){
+			nbt(stack);
+		} else {
+			nbt(stack, hitPlayer.getEntityId());
 		}
-		if(!nbt.getBoolean("On")){
-			nbt.setInteger("holding", hitplayer.getEntityId());
-			nbt.setBoolean("On", true);
-		} else{
-			nbt.setString("holding", "");
-			nbt.setBoolean("On", false);
-		}
-		Core.Debug("It is " + nbt.getBoolean("On") + " that I am holding " + nbt.getString("holding") );
-		stack.setTagCompound(nbt);
+		Core.Debug("It is " + IsOn(stack) + " that I am holding " + getEntity(stack, hitPlayer.worldObj));
         return true;
     }
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity playerAsEntity, int p_77663_4_, boolean p_77663_5_) {
 		EntityPlayer player = (EntityPlayer) playerAsEntity;
 		try {
-			if (this.getEntity(stack, world) == null){
+			if (this.getEntity(stack, world).isDead){
 				nbt(stack);
 			}
 			if (player.getHeldItem() != stack){
 				nbt(stack);
+			} else {
+				EntityLivingBase EntityHolding = (EntityLivingBase) getEntity(stack, playerAsEntity.worldObj);
+				EntityHolding.motionX = playerAsEntity.motionX;
+				EntityHolding.motionY = playerAsEntity.motionY;
+				EntityHolding.motionZ = playerAsEntity.motionZ;
+				if (this.IsClose(stack, player, 5)){
+					
+				}
+				
 			}
 		} catch(java.lang.NullPointerException e){
 			nbt(stack);
@@ -64,11 +67,38 @@ public class PlayerMagnet extends ItemSword{
 	public NBTTagCompound nbt(ItemStack stack, int ID){
 		return nbt(stack, ID, true);
 	}
-	private Entity getEntity(ItemStack stack, World world){
+	public Entity getEntity(ItemStack stack, World world){
 		Entity entity = world.getEntityByID(stack.getTagCompound().getInteger("holding"));
 		return entity;
 	}
-	public IsOn(ItemStack stack){
-		return stack.getTagCompound().getBoolean(p_74767_1_)
+	public boolean IsOn(ItemStack stack){
+		return stack.getTagCompound().getBoolean("On");
+	}
+	/**
+	 * Call to calculate where to move the entity that is being held
+	 * @param holding (entity the player is holding)
+	 * @param player
+	 * @return Double Array with directions to move (0 = x, 1 = y, 2 = z)
+	 */
+	public double[] MoveCalc(EntityLivingBase holding, EntityPlayer player){
+		double x = 0; double y = 0; double z = 0;
+		
+		
+		
+		double[] Move = new double[]{x,y,z};
+		return Move;
+	}
+	/**
+	 * 
+	 * @param HoldingCord
+	 * @param HolderCord
+	 * @param Close
+	 * @return
+	 */
+	public double Calc(Cordinates HoldingCord, Cordinates HolderCord, double Close){
+		double Return = 0;
+		if (HoldingCord.x - HolderCord.x >= Close){
+			}
+		return Return;
 	}
 }
