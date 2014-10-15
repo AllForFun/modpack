@@ -1,6 +1,7 @@
 package com.allforfunmc.moreoresandmore;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.Players;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -25,9 +26,8 @@ public class PlayerMagnet extends ItemSword{
 		if (hitplayer.isDead){
 			return true;
 		}
-		NBTTagCompound nbt = stack.stackTagCompound;
 		if(!nbt.getBoolean("On")){
-			nbt.setString("holding", hitplayer.getUniqueID().toString());
+			nbt.setInteger("holding", hitplayer.getEntityId());
 			nbt.setBoolean("On", true);
 		} else{
 			nbt.setString("holding", "");
@@ -38,21 +38,37 @@ public class PlayerMagnet extends ItemSword{
         return true;
     }
 	@Override
-	public void onUpdate(ItemStack stack, World p_77663_2_, Entity playerAsEntity, int p_77663_4_, boolean p_77663_5_) {
+	public void onUpdate(ItemStack stack, World world, Entity playerAsEntity, int p_77663_4_, boolean p_77663_5_) {
 		EntityPlayer player = (EntityPlayer) playerAsEntity;
 		try {
-			if (Entity.class. .getTagCompound().getString("Holding"))
+			if (this.getEntity(stack, world) == null){
+				nbt(stack);
+			}
 			if (player.getHeldItem() != stack){
-				NBTTagCompound nbt = stack.getTagCompound();
-				nbt.setString("holding", "");
-				nbt.setBoolean("On", false);
-				stack.setTagCompound(nbt);
+				nbt(stack);
 			}
 		} catch(java.lang.NullPointerException e){
-			NBTTagCompound nbt = new NBTTagCompound();
-		    nbt.setString("holding", "");
-		    nbt.setBoolean("On", false);
-		    stack.setTagCompound(nbt);
+			nbt(stack);
 		}
+	}
+	private NBTTagCompound nbt(ItemStack stack, int ID, boolean On){
+		NBTTagCompound nbt = new NBTTagCompound();
+	    nbt.setInteger("holding", ID);
+	    nbt.setBoolean("On", On);
+	    stack.setTagCompound(nbt);
+	    return nbt;
+	}
+	public NBTTagCompound nbt(ItemStack stack){
+		return nbt(stack, -1, false);
+	}
+	public NBTTagCompound nbt(ItemStack stack, int ID){
+		return nbt(stack, ID, true);
+	}
+	private Entity getEntity(ItemStack stack, World world){
+		Entity entity = world.getEntityByID(stack.getTagCompound().getInteger("holding"));
+		return entity;
+	}
+	public IsOn(ItemStack stack){
+		return stack.getTagCompound().getBoolean(p_74767_1_)
 	}
 }
