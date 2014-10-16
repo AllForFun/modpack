@@ -36,7 +36,7 @@ https://waffle.io/allforfun/modpack
 
 Contributing:
 -------------
-All contrubutions are licensed under an MIT lisence. If you don't like it, don't code for us.
+All contrubutions are licensed under an MIT licence. If you don't like it, don't code for us.
 
 1. We want **good** stuff. Good ideas are always welcome, and there are tons of ideas in the waffle page.
 2. Make sure you show what you are working on in the issues **before** you start.
