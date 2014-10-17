@@ -1,6 +1,6 @@
 package com.allforfunmc.moreoresandmore;
 
-import com.allforfunmc.allforfuncore.Cordinates;
+import com.allforfunmc.allforfuncore.Coordinates;
 import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.block.Block;
@@ -40,15 +40,10 @@ public class PlayerMagnet extends ItemSword{
 			}
 			if (player.getHeldItem() != stack){
 				nbt(stack);
-			} else {
-				EntityLivingBase EntityHolding = (EntityLivingBase) getEntity(stack, playerAsEntity.worldObj);
-				EntityHolding.motionX = playerAsEntity.motionX;
-				EntityHolding.motionY = playerAsEntity.motionY;
-				EntityHolding.motionZ = playerAsEntity.motionZ;
-				if (this.IsClose(stack, player, 5)){
-					
-				}
-				
+			}
+			if (IsOn(stack)){
+				Core.Debug("Moving " + getEntity(stack, world));
+				Move((EntityLivingBase) getEntity(stack, world),player);
 			}
 		} catch(java.lang.NullPointerException e){
 			nbt(stack);
@@ -67,8 +62,8 @@ public class PlayerMagnet extends ItemSword{
 	public NBTTagCompound nbt(ItemStack stack, int ID){
 		return nbt(stack, ID, true);
 	}
-	public Entity getEntity(ItemStack stack, World world){
-		Entity entity = world.getEntityByID(stack.getTagCompound().getInteger("holding"));
+	public EntityLivingBase getEntity(ItemStack stack, World world){
+		EntityLivingBase entity = (EntityLivingBase) world.getEntityByID(stack.getTagCompound().getInteger("holding"));
 		return entity;
 	}
 	public boolean IsOn(ItemStack stack){
@@ -76,29 +71,51 @@ public class PlayerMagnet extends ItemSword{
 	}
 	/**
 	 * Call to calculate where to move the entity that is being held
-	 * @param holding (entity the player is holding)
-	 * @param player
+	 * @param holding (entity the player is holding with their magnet)
+	 * @param player (player that is holding the magnet)
 	 * @return Double Array with directions to move (0 = x, 1 = y, 2 = z)
+	 * @author penne12
+	 * @see Coordinates
+	 * @see Calc
+	 * @see PlayerMagnet
 	 */
-	public double[] MoveCalc(EntityLivingBase holding, EntityPlayer player){
-		double x = 0; double y = 0; double z = 0;
-		
-		
-		
-		double[] Move = new double[]{x,y,z};
-		return Move;
+	public void Move(EntityLivingBase holding, EntityPlayer player){
+		Core.Debug(player + " is moving " + holding);
+		Coordinates holdingCords = new Coordinates(holding);
+		Core.Debug("HoldingCords" + holdingCords);
+		Coordinates holderCords = new Coordinates(player);
+		Core.Debug("HolderCords" + holderCords);
+		Coordinates MoveBy = Calc(holdingCords, holderCords, 5);
+		Coordinates.Move(holding, MoveBy);
 	}
 	/**
-	 * 
+	 * Calculates how to move entity based on the following
 	 * @param HoldingCord
 	 * @param HolderCord
 	 * @param Close
-	 * @return
+	 * @return A coordinates variable to run further testing on
+	 * @author penne12
+	 * @see Move
 	 */
-	public double Calc(Cordinates HoldingCord, Cordinates HolderCord, double Close){
-		double Return = 0;
-		if (HoldingCord.x - HolderCord.x >= Close){
-			}
+	public static Coordinates Calc(Coordinates holdingCords, Coordinates holderCords, double Close){
+		Coordinates Return = new Coordinates();
+		double temp = 0;
+		if (Math.abs(holdingCords.x - holderCords.x) >= Close){
+			temp = ((holdingCords.z - holderCords.z) / 4);
+			Core.Debug(temp);
+			Return.x = temp;
+		}
+		if (Math.abs(holdingCords.y - holderCords.y) >= Close){
+			temp = ((holdingCords.y - holderCords.y) / 4);
+			Core.Debug(temp);
+			Return.y = temp;
+		}
+		if (Math.abs(holdingCords.z - holderCords.z) >= Close){
+			temp = ((holdingCords.z - holderCords.z) / 4);
+			Core.Debug(temp);
+			Return.z = temp;
+		}
 		return Return;
 	}
+	
 }
