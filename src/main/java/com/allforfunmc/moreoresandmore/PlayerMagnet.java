@@ -62,9 +62,14 @@ public class PlayerMagnet extends ItemSword{
 	public NBTTagCompound nbt(ItemStack stack, int ID){
 		return nbt(stack, ID, true);
 	}
-	public EntityLivingBase getEntity(ItemStack stack, World world){
-		EntityLivingBase entity = (EntityLivingBase) world.getEntityByID(stack.getTagCompound().getInteger("holding"));
-		return entity;
+	public EntityLivingBase getEntity(ItemStack stack, World world) throws NullPointerException{
+		try{
+			EntityLivingBase entity = (EntityLivingBase) world.getEntityByID(stack.getTagCompound().getInteger("holding"));
+			return entity;
+		} catch(java.lang.ClassCastException e){
+			nbt(stack);
+			return null;
+		}
 	}
 	public boolean IsOn(ItemStack stack){
 		return stack.getTagCompound().getBoolean("On");
