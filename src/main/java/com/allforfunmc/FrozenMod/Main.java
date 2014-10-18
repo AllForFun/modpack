@@ -39,7 +39,7 @@ public class Main {
 
     public static ToolMaterial iceMaterial = EnumHelper.addToolMaterial("ice_material", 3, 2000, 10f, 5f, 30);
     // Blocks
-    public static Block IceOre = new TemplateBlock(Material.ice, "sleshymod:ice_ore").setBlockName("ice_ore").setHardness(6f);
+    public static Block IceOre = new TemplateBlock(Material.ice, "").setBlockName("ice_ore").setBlockTextureName("sleshymod:ice_ore").setHardness(6f);
     public static Block IceBlock = new IceBlock(Material.ice);
     // Items
     public static Item IceSword = (new IceSword(iceMaterial));
