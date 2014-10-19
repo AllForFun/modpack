@@ -6,33 +6,50 @@ import java.util.Random;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.common.config.Property;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = "Core", name = "AllForFun's Modpack Core", version = "1")
+@Mod(modid = "AllForFunCore", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
-	public static final Boolean DebugMode = true;
-	
+	@Deprecated
+	public static final Boolean BooleanDebugMode = true;
+	@Deprecated
 	public static void Debug(Object Message){
-		if(Core.DebugMode) {System.out.println(Message);}
+		if(Core.BooleanDebugMode) {System.out.println(Message);}
 	}
+	@Deprecated
 	public static void Debug(Exception Error){
-		if(Core.DebugMode) {
+		if(Core.BooleanDebugMode) {
 		System.out.println("=======Error=======");
 		System.out.println(Error.getMessage());
 		System.out.println(Error.getStackTrace());
 		System.out.println("=======Error=======");}
 	}
+	
+	public static DebugMode debugMode = DebugMode.None;
+	
     @Instance(value = "GenericModID")
     public static Core instance;
     @SidedProxy(clientSide = "com.allforfunmc.allforfuncore.ClientProxy", serverSide = "com.allforfunmc.allforfuncore.CommonProxy")
     public static CommonProxy proxy;
 
+    @EventHandler()
+    public void preInit(FMLPreInitializationEvent event) {
+            Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+            config.load();
+            Property debugLevelProperty = config.get("Debug", "DebugLevel", "none");
+            debugLevelProperty.comment = "Please enter a debug type. The choices are: all, light, warn, error, or none";
+            debugMode = DebugMode.getByName(debugLevelProperty.getString());
+            config.save();
+    }
     @EventHandler()
     public void load(FMLInitializationEvent event) {
 	proxy.registerRenderers();
