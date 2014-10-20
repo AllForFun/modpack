@@ -2,6 +2,7 @@ package com.allforfunmc.moreoresandmore;
 
 import com.allforfunmc.allforfuncore.Coordinates;
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.Debug;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
@@ -28,7 +29,7 @@ public class PlayerMagnet extends ItemSword{
 		} else {
 			nbt(stack, hitPlayer.getEntityId());
 		}
-		Core.Debug("It is " + IsOn(stack) + " that I am holding " + getEntity(stack, hitPlayer.worldObj));
+		Debug.info("It is " + IsOn(stack) + " that I am holding " + getEntity(stack, hitPlayer.worldObj));
         return true;
     }
 	@Override
@@ -42,7 +43,7 @@ public class PlayerMagnet extends ItemSword{
 				nbt(stack);
 			}
 			if (IsOn(stack)){
-				Core.Debug("Moving " + getEntity(stack, world));
+				Debug.info("Moving " + getEntity(stack, world));
 				Move((EntityLivingBase) getEntity(stack, world),player);
 			}
 		} catch(java.lang.NullPointerException e){
@@ -85,11 +86,11 @@ public class PlayerMagnet extends ItemSword{
 	 * @see PlayerMagnet
 	 */
 	public void Move(EntityLivingBase holding, EntityPlayer player){
-		Core.Debug(player + " is moving " + holding);
+		Debug.info(player + " is moving " + holding);
 		Coordinates holdingCords = new Coordinates(holding);
-		Core.Debug("HoldingCords" + holdingCords);
+		Debug.info("HoldingCords" + holdingCords);
 		Coordinates holderCords = new Coordinates(player);
-		Core.Debug("HolderCords" + holderCords);
+		Debug.info("HolderCords" + holderCords);
 		Coordinates MoveBy = Calc(holdingCords, holderCords, 5);
 		Coordinates.Move(holding, MoveBy);
 	}
@@ -107,17 +108,17 @@ public class PlayerMagnet extends ItemSword{
 		double temp = 0;
 		if (Math.abs(holdingCords.x - holderCords.x) >= Close){
 			temp = ((holdingCords.z - holderCords.z) / 4);
-			Core.Debug(temp);
+			Debug.info(temp);
 			Return.x = temp;
 		}
 		if (Math.abs(holdingCords.y - holderCords.y) >= Close){
 			temp = ((holdingCords.y - holderCords.y) / 4);
-			Core.Debug(temp);
+			Debug.info(temp);
 			Return.y = temp;
 		}
 		if (Math.abs(holdingCords.z - holderCords.z) >= Close){
 			temp = ((holdingCords.z - holderCords.z) / 4);
-			Core.Debug(temp);
+			Debug.info(temp);
 			Return.z = temp;
 		}
 		return Return;

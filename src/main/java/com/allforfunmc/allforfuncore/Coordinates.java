@@ -22,7 +22,9 @@ public class Coordinates extends Object{
 	 * @param entity
 	 */
 	public Coordinates(EntityLivingBase entity){
-		this(entity.posX,entity.posY,entity.posZ);
+		double x = entity.posX;
+		double y = entity.posY;
+		double z = entity.posZ;
 	}
 	//Declarations
 	public double x;
