@@ -47,7 +47,7 @@ public class Core {
             config.load();
             Property debugLevelProperty = config.get("Debug", "DebugLevel", "none");
             debugLevelProperty.comment = "Please enter a debug type. The choices are: all, light, warn, error, or none";
-            debugMode = DebugMode.getByName(debugLevelProperty.);
+            debugMode = DebugMode.getByName(debugLevelProperty.getString());
             config.save();
     }
     @EventHandler()

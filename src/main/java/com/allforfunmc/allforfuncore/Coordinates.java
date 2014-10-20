@@ -11,9 +11,9 @@ public class Coordinates extends Object{
 	 * @author penne12
 	 */
 	public Coordinates(double xCoord, double yCoord, double zCoord){
-		double x = xCoord;
-		double y = yCoord;
-		double z = zCoord;
+		x = xCoord;
+		y = yCoord;
+		z = zCoord;
 	}public Coordinates(){
 		this(0,0,0);
 	}	
@@ -22,9 +22,9 @@ public class Coordinates extends Object{
 	 * @param entity
 	 */
 	public Coordinates(EntityLivingBase entity){
-		double x = entity.posX;
-		double y = entity.posY;
-		double z = entity.posZ;
+		x = entity.posX;
+		y = entity.posY;
+		z = entity.posZ;
 	}
 	//Declarations
 	public double x;
@@ -47,5 +47,15 @@ public class Coordinates extends Object{
 	}
 	public String toString(){
 		return "X: "+x+" Y: "+y+" Z: "+z;
+	}
+	/**
+	 * Multiplies all by -1. 
+	 * @return this.
+	 */
+	public Coordinates reverse(){
+		x = x * -1;
+		y = y * -1;
+		z = z * -1;
+		return this;
 	}
 }

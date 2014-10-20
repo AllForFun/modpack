@@ -107,12 +107,12 @@ public class PlayerMagnet extends ItemSword{
 		Coordinates Return = new Coordinates();
 		double temp = 0;
 		if (Math.abs(holdingCords.x - holderCords.x) >= Close){
-			temp = ((holdingCords.z - holderCords.z) / 4);
+			temp = ((holdingCords.x - holderCords.x) / 4);
 			Debug.info(temp);
 			Return.x = temp;
 		}
-		if (Math.abs(holdingCords.y - holderCords.y) >= Close){
-			temp = ((holdingCords.y - holderCords.y) / 4);
+		if (Math.abs(holdingCords.y - holderCords.y ) >= Close){
+			temp = ((holdingCords.y - holderCords.y  - Close) / 4);
 			Debug.info(temp);
 			Return.y = temp;
 		}
@@ -121,7 +121,7 @@ public class PlayerMagnet extends ItemSword{
 			Debug.info(temp);
 			Return.z = temp;
 		}
-		return Return;
+		return Return.reverse();
 	}
 	
 }
