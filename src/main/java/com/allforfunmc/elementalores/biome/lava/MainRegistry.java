@@ -7,8 +7,11 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.AchievementPage;
-
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeManager;
+import net.minecraftforge.common.BiomeDictionary.Type;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -21,10 +24,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
+@Mod(modid = MainRegistry.MODID, name = MainRegistry.NAME, version = MainRegistry.VERSION)
 public class MainRegistry 
 {
-	
+	public static final String MODID = "elementalores";
+	public static final String NAME = "Elemental Ores Mod";
+	public static final String VERSION = "1.0";
 	@SidedProxy(clientSide = "com.elementalores.ClientProxy", serverSide = "com.elementalores.ServerProxy")
 	public static ServerProxy proxy;
    
@@ -32,7 +37,7 @@ public class MainRegistry
     @Metadata
     public static ModMetadata meta;
     
-    @Instance(Strings.MODID)
+    @Instance(MODID)
     public static MainRegistry modInstance;
 
     
@@ -40,7 +45,7 @@ public class MainRegistry
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
     	
-    	BiomeRegistry.MainRegistry();
+    	RegisterBiomes();
     	
     	proxy.registerRenderThings();
     }
@@ -58,5 +63,11 @@ public class MainRegistry
     	WorldType LAVA = new WorldTypeLava(3, "lava");
     	
     }
+	public static BiomeGenBase biomelava;
+	public static void RegisterBiomes(){
+		biomelava = new BiomeGenLava(3).setBiomeName("Lava").setTemperatureRainfall(1.2F, 0.9F);
+		BiomeDictionary.registerBiomeType(biomelava, Type.FOREST);
+		BiomeManager.addSpawnBiome(biomelava);
+	}
     
 }
