@@ -44,7 +44,6 @@ public class MainRegistry
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
-    	
     	RegisterBiomes();
     	
     	proxy.registerRenderThings();
