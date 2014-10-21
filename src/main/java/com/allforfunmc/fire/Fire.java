@@ -38,7 +38,7 @@ public class Fire {
 
     public static Item FireAxe = (new TemplateAxe(FireMaterial)).setUnlocalizedName("fireaxe").setTextureName("sleshymod:fire_axe");
     public static Item FirePick = (new TemplatePick(FireMaterial));
-    public static Item FireSword = (new ItemSword(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("fire_shovel");
+    public static Item FireSword = (new ItemSword(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_sword").setCreativeTab(Core.AllForFunTools).setTextureName("fire_sword");
     public static Item FireShovel = (new ItemSpade(FireMaterial).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_shovel"));
 
     public static Block FireBlock = new FireBlock(Material.rock);
