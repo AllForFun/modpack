@@ -23,11 +23,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
+//@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
 public class MainRegistry 
 {
 	
-	//@SidedProxy(clientSide = "com.allforfunmc.elementalores.camochest.ClientProxy", serverSide = "com.allforfunmc.elementalores.camochest.ServerProxy")
+	@SidedProxy(clientSide = "com.allforfunmc.elementalores.camochest.ClientProxy", serverSide = "com.allforfunmc.elementalores.camochest.ServerProxy")
 	public static ServerProxy proxy;
    
     
