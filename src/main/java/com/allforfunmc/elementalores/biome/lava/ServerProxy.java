@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.chest;
+package com.allforfunmc.elementalores.biome.lava;
 
 public class ServerProxy {
 	 

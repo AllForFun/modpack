@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.chest;
+package com.allforfunmc.elementalores.camochest;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;

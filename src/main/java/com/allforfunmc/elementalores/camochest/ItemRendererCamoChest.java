@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.chest;
+package com.allforfunmc.elementalores.camochest;
 
 import net.minecraft.client.model.ModelChest;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;

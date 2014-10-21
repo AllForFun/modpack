@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.chest;
+package com.allforfunmc.elementalores.camochest;
 
 public class Strings {
 	

@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.chest;
+package com.allforfunmc.elementalores.camochest;
 
 import static net.minecraftforge.common.util.ForgeDirection.DOWN;
 
