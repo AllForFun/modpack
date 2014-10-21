@@ -2,13 +2,15 @@ package com.allforfunmc.elementalores.chest;
 
 
 
+import com.allforfunmc.allforfuncore.Core;
+
+import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldType;
 import net.minecraftforge.common.AchievementPage;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -34,12 +36,16 @@ public class MainRegistry
     
     @Instance(Strings.MODID)
     public static MainRegistry modInstance;
+    
+    public static Block camochest;
 
     
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
-    	MyBlocks.MainRegistry();
+    	camochest = new CamoChest(0).setCreativeTab(Core.AllForFunBlocks).setBlockName("camo_chest");
+    	GameRegistry.registerBlock(camochest, "camo_chest");
+    	
     	TileEntityCamo.MainRegistry();
     	
     	proxy.registerRenderThings();

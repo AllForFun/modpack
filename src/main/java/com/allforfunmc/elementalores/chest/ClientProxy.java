@@ -12,7 +12,7 @@ public class ClientProxy extends ServerProxy{
 	public void registerRenderThings(){
 		
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCamoChest.class, new CamoChestRenderer());
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(MyBlocks.camochest), new ItemRendererCamoChest());
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(MainRegistry.camochest), new ItemRendererCamoChest());
 	}
 
 }
