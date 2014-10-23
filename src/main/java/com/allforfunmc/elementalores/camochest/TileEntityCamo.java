@@ -9,7 +9,7 @@ public class TileEntityCamo {
 	}
 
 	public static void registerTileEntities() {
-		GameRegistry.registerTileEntity(TileEntityCamoChest.class, Strings.MODID);
+		GameRegistry.registerTileEntity(TileEntityCamoChest.class, "sleshymod");
 		
 	}
 

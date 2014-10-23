@@ -23,7 +23,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Strings.MODID, name = Strings.NAME, version = Strings.VERSION)
+@Mod(modid = "sleshymod", name = "Elemental Ores Mod", version = "1.0")
 public class MainRegistry 
 {
 	
@@ -34,7 +34,7 @@ public class MainRegistry
     @Metadata
     public static ModMetadata meta;
     
-    @Instance(Strings.MODID)
+    @Instance("sleshymod")
     public static MainRegistry modInstance;
     
     public static Block camochest;

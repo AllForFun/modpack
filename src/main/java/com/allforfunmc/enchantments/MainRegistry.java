@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.biome.lava;
+package com.allforfunmc.enchantments;
 
 
 
@@ -34,13 +34,15 @@ public class MainRegistry
     
     @Instance("sleshymod")
     public static MainRegistry modInstance;
-
+    
+    public static Achievement achievementdeath;
+    public static Achievement achievementdeath5;
+    
+    public static final Enchantment speedboost = new EnchantmentSpeedBoost(84, 5);
     
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
-    	
-    	BiomeRegistry.MainRegistry();
     	
     	proxy.registerRenderThings();
     }
@@ -48,14 +50,12 @@ public class MainRegistry
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-    	
+    
     }
     
     @EventHandler
     public void PostLoad(FMLPostInitializationEvent PostEvent)
     {
-    	
-    	WorldType LAVA = new WorldTypeLava(3, "lava");
     	
     }
     

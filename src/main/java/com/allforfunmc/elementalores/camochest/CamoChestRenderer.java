@@ -19,8 +19,8 @@ import org.lwjgl.opengl.GL12;
 @SideOnly(Side.CLIENT)
 public class CamoChestRenderer extends TileEntitySpecialRenderer
 {
-    private static final ResourceLocation field_147505_d = new ResourceLocation(Strings.MODID + ":textures/blocks/camo_chest_double.png");
-    private static final ResourceLocation field_147504_g = new ResourceLocation(Strings.MODID + ":textures/blocks/camo_chest.png");
+    private static final ResourceLocation field_147505_d = new ResourceLocation("sleshymod:textures/blocks/camo_chest_double.png");
+    private static final ResourceLocation field_147504_g = new ResourceLocation("sleshymod:textures/blocks/camo_chest.png");
     private ModelChest field_147510_h = new ModelChest();
     private ModelChest field_147511_i = new ModelLargeChest();
     private boolean field_147509_j;
