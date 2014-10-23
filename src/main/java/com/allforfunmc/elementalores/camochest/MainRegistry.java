@@ -24,10 +24,11 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "sleshymod", name = "Elemental Ores Mod", version = "1.0")
+
 public class MainRegistry 
 {
 	
-	@SidedProxy(clientSide = "com.elementalores.ClientProxy", serverSide = "com.elementalores.ServerProxy")
+	@SidedProxy(clientSide = "com.allforfunmc.elementalores.camochest.ClientProxy", serverSide = "com.allforfunmc.elementalores.camochest.ServerProxy")
 	public static ServerProxy proxy;
    
     
