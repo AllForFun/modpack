@@ -43,12 +43,8 @@ public class Core {
 
     @EventHandler()
     public void preInit(FMLPreInitializationEvent event) {
-            Configuration config = new Configuration(event.getSuggestedConfigurationFile());
-            config.load();
-            Property debugLevelProperty = config.get("Debug", "DebugLevel", "none");
-            debugLevelProperty.comment = "Please enter a debug type. The choices are: all, light, warn, error, or none";
-            debugMode = DebugMode.getByName(debugLevelProperty.getString());
-            config.save();
+            Config Config = new Config(event);
+            Config.load();
     }
     @EventHandler()
     public void load(FMLInitializationEvent event) {
