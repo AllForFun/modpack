@@ -8,6 +8,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 
 public class ServerTickHandler {
 // note this class registers enchantments for natural minecraft stuff
@@ -43,6 +44,23 @@ public class ServerTickHandler {
 				if(j > 0){
 					event.player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 50, j - 1));
 					
+				}
+			}
+		}	
+	}
+	
+	@SubscribeEvent
+	public void onPlayerTick1(PlayerTickEvent event){
+		boolean b = event.player.isSwingInProgress;
+		if(b != false){
+			ItemStack item = event.player.getCurrentEquippedItem();
+			
+			if(item.getItem() == Items.diamond_sword || item.getItem() == Items.golden_sword || item.getItem() == Items.iron_sword || item.getItem() == Items.stone_sword || item.getItem() == Items.wooden_sword){
+				int a = EnchantmentHelper.getEnchantmentLevel(MainRegistry.explodingarrows.effectId, item);
+				if(a > 0){
+					//penne12 can you make this explode whenever the player hits an object
+					//the explosion is on the object
+
 				}
 			}
 		}	

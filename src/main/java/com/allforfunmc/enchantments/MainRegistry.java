@@ -35,10 +35,11 @@ public class MainRegistry
     @Instance("sleshymod")
     public static MainRegistry modInstance;
     
-    public static Achievement achievementdeath;
-    public static Achievement achievementdeath5;
+    static int a;
+    static int b;
     
-    public static final Enchantment speedboost = new EnchantmentSpeedBoost(84, 5);
+    public static final Enchantment speedboost = new EnchantmentSpeedBoost(a, 5);
+    public static final Enchantment explodingarrows = new ExplodingEnchantment(b, 10);
     
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
