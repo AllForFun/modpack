@@ -39,14 +39,14 @@ public class LavaGenLayerBiome extends GenLayer
             desertBiomes.add(new BiomeEntry(BiomeGenBase.swampland, 10));
             desertBiomes.add(new BiomeEntry(BiomeGenBase.plains, 10));
             desertBiomes.add(new BiomeEntry(BiomeGenBase.taiga, 10));
-            desertBiomes.add(new BiomeEntry(MainRegistry.biomelava, 10));
+            desertBiomes.add(new BiomeEntry(BiomeRegistry.biomelava, 10));
         }
         else
         {
             desertBiomes.add(new BiomeEntry(BiomeGenBase.desert, 30));
             desertBiomes.add(new BiomeEntry(BiomeGenBase.savanna, 20));
             desertBiomes.add(new BiomeEntry(BiomeGenBase.plains, 10));
-            desertBiomes.add(new BiomeEntry(MainRegistry.biomelava, 10));
+            desertBiomes.add(new BiomeEntry(BiomeRegistry.biomelava, 10));
         }
     }
 

@@ -20,7 +20,6 @@ public class PlayerMagnet extends ItemSword{
 	public PlayerMagnet(){
 		super(likeNothing);
 		this.setMaxStackSize(1);
-		this.setTextureName("allforfun:Magnet");
 	}
 	@Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase hitPlayer, EntityLivingBase useingPlayer)
@@ -31,7 +30,7 @@ public class PlayerMagnet extends ItemSword{
 			nbt(stack, hitPlayer.getEntityId());
 		}
 		Debug.info("It is " + IsOn(stack) + " that I am holding " + getEntity(stack, hitPlayer.worldObj));
-		return true;
+        return true;
     }
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity playerAsEntity, int p_77663_4_, boolean p_77663_5_) {
