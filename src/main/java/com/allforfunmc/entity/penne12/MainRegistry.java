@@ -39,7 +39,7 @@ public class MainRegistry
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
-    	
+    	EntityPenne12.MainRegistry();
     	proxy.registerRenderThings();
     }
     
