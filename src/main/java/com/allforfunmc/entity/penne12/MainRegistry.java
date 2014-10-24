@@ -21,11 +21,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod2", name = "Elemental Ores Mod", version = "1.0")
+@Mod(modid = "sleshymod2", name = "Elemental Ores Mod2", version = "1.0m")
 public class MainRegistry 
 {
 	
-	@SidedProxy(clientSide = "com.elementalores.ClientProxy", serverSide = "com.elementalores.ServerProxy")
+	@SidedProxy(clientSide = "com.allforfunmc.elementalores.entity.penne12.ClientProxy", serverSide = "com.allforfunmc.elementalores.entity.penne12.ServerProxy")
 	public static ServerProxy proxy;
    
     
@@ -40,6 +40,7 @@ public class MainRegistry
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
     	EntityPenne12.MainRegistry();
+    	
     	proxy.registerRenderThings();
     }
     

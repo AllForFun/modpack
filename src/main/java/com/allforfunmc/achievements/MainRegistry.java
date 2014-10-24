@@ -26,7 +26,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class MainRegistry 
 {
 	
-	@SidedProxy(clientSide = "com.elementalores.ClientProxy", serverSide = "com.elementalores.ServerProxy")
+	@SidedProxy(clientSide = "ClientProxy.java", serverSide = "com.allforfunmc.achievements.ServerProxy")
 	public static ServerProxy proxy;
    
     

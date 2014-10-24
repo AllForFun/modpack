@@ -21,11 +21,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod1", name = "Elemental Ores Mod", version = "1.0")
+@Mod(modid = "sleshymod1", name = "Elemental Ores Mod", version = "1.0.e")
 public class MainRegistry 
 {
 	
-	@SidedProxy(clientSide = "com.elementalores.ClientProxy", serverSide = "com.elementalores.ServerProxy")
+	@SidedProxy(clientSide = "com.allforfunmc.enchantments.ClientProxy", serverSide = "com.allforfunmc.enchantments.ServerProxy")
 	public static ServerProxy proxy;
    
     

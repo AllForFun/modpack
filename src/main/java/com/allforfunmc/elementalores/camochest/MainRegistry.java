@@ -1,17 +1,8 @@
 package com.allforfunmc.elementalores.camochest;
 
-
-
 import com.allforfunmc.allforfuncore.Core;
 
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
-import net.minecraft.item.ItemStack;
-import net.minecraft.stats.Achievement;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
-import net.minecraftforge.common.AchievementPage;
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -22,8 +13,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.common.event.FMLConstructionEvent;
 
-@Mod(modid = "sleshymod3", name = "Elemental Ores Mod", version = "1.0")
+@Mod(modid = "sleshymod3", name = "Elemental Ores Mod3", version = "1.0.c")
 
 public class MainRegistry 
 {
