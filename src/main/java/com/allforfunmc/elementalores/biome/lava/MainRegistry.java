@@ -24,7 +24,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod", name = "Elemental Ores Mod", version = "1.0")
+@Mod(modid = "sleshymod4", name = "Elemental Ores Mod", version = "1.0")
 
 public class MainRegistry 
 {
