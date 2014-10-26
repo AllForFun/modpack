@@ -8,6 +8,7 @@ tile.ice_block.name=Ice Block
 tile.earth_block.name=Earth Block
 tile.lightning_block.name=Lightning Block
 tile.camo_block.name=Camo Block
+tile.camo_chest.name=Camo Chest
 
 item.fire_crystal.name=Fire Crystal
 item.ice_crystal.name=Ice Crystal
@@ -19,26 +20,31 @@ item.camoApple.name=Camo Apple
 
 item.camo_sword.name=Camo Sword
 item.camo_axe.name=Camo Axe
+
 item.fire_pick.name=Flame Pick
 item.fire_sword.name=Flame Sword
 item.fireaxe.name=Flame Axe
 item.fire_shovel.name=Flame Shovel
 item.fire_hoe.name=Flame Hoe
+
 item.ice_pick.name=Ice Pick
 item.ice_hoe.name=Ice Hoe
 item.ice_shovel.name=Ice Shovel
 item.ice_sword.name=Ice Sword
 item.ice_axe.name=Ice Axe
+
 item.earth_pick.name=Earth Pick
 item.earth_axe.name=Earth Axe
 item.earth_sword.name=Earth Sword
 item.earth_hoe.name=Earth Hoe
 item.earth_shovel.name=Earth Shovel
+
 item.lightning_pick.name=Lightning Pick
 item.lightning_axe.name=Lightning Axe
 item.lightning_sword.name=Lightning Sword
-item.lightning_hoe.name=Lightning Pick
+item.lightning_hoe.name=Lightning Hoe
 item.lightning_shovel.name=Lightning Shovel
+
 item.flame_helmet.name= Flame Helmet
 item.Earth_helmet.name= Earth Helmet
 item.Ice_helmet.name= Ice Helmet
@@ -60,4 +66,15 @@ item.Ice_boots.name= Ice Boots
 item.Camo_boots.name= Camo Boots
 item.Lightning_boots.name= Lightning Boots
 
-itemGroup.modItems= Mod Items
+itemGroup.moditemsTab= Mod Items
+
+achievement.achievementdeath= Congratulations! You Died!
+achievement.achievementdeath.desc= You died for the first time.
+
+enchantment.SpeedBoost=Speed Boost
+enchantment.SpeedBoost II=Speed Boost II
+enchantment.SpeedBoost III=Speed Boost III
+
+WorldType: generator.lava= ElementalOresMod Biomes
+
+entity.Penne12 Mob.name=Penne12

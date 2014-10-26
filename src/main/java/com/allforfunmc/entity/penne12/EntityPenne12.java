@@ -10,28 +10,25 @@ public class EntityPenne12 {
 	public static void MainRegistry(){
 		registerEntity();
 	}
+	
+	public static void registerEntity(){
+		
+		createEntity(EntityPenne12Mob.class, "Penne12 Mob", 0x40FF00, 0xF2FF00);
+		
+	}
+	
+	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor){
+		int randomId = EntityRegistry.findGlobalUniqueEntityId();
+		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomId);
+		EntityRegistry.registerModEntity(entityClass, entityName, randomId, MainRegistry.modInstance, 64, 1, true);
+		EntityRegistry.addSpawn(entityClass, 2, 0, 1, EnumCreatureType.ambient, BiomeGenBase.forest);
+		
+		createEgg(randomId, solidColor, spotColor);
+	}
 
-	public static void registerEntity() {
-		
-		createEntity(EntityPenne12Mob.class, "Penne12 Mob", 0x26FF00, 0xF6FF00);
+	private static void createEgg(int randomId, int solidColor, int spotColor) {
+		EntityList.entityEggs.put(Integer.valueOf(randomId), new EntityList.EntityEggInfo(randomId, solidColor, spotColor));
 		
 	}
-	
-	public static void createEntity(Class entityClass, String entityName, int solidColor, int spotColor) {
-		
-		int randomid = EntityRegistry.findGlobalUniqueEntityId();
-		EntityRegistry.registerGlobalEntityID(entityClass, entityName, randomid);
-		EntityRegistry.registerModEntity(entityClass, entityName, randomid, MainRegistry.modInstance, 64, 1, true);
-		EntityRegistry.addSpawn(entityClass, 2, 0, 1, EnumCreatureType.creature, BiomeGenBase.forest);// incomplete if you want to spawn in more areas
-		
-		createEgg(randomid, solidColor, spotColor);
-	
-	}
-	
-	private static void createEgg(int randomid, int solidColor, int spotColor){
-		
-		EntityList.entityEggs.put(Integer.valueOf(randomid), new EntityList.EntityEggInfo(randomid, solidColor, spotColor));
-	}
-	
 
 }

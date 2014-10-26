@@ -7,18 +7,21 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderPenne12Mob extends RenderLiving{
 	
-	private static final ResourceLocation mobTextures = new ResourceLocation("sleshymod:textures/entities/penne12mob.png");
+	private static final ResourceLocation mobTexture = new ResourceLocation("sleshymod:textures/entities/penne12mob.png");
 
 	public RenderPenne12Mob(ModelBase par1ModelBase, float par2) {
 		super(par1ModelBase, par2);
 		
 	}
-	
-	protected ResourceLocation getEntityTexture(EntityPenne12Mob entity){
-		return mobTextures;
+
+	protected ResourceLocation getEntityTexture(EntityPenne12Mob entity) {
+		
+		return mobTexture;
 	}
-	
-	protected ResourceLocation getEntityTexture(Entity entity){
+
+	@Override
+	protected ResourceLocation getEntityTexture(Entity entity) {
+
 		return this.getEntityTexture((EntityPenne12Mob)entity);
 	}
 
