@@ -21,7 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod1", name = "Elemental Ores Mod", version = "1.0.e")
+@Mod(modid = "AllEnchants", name = "Funchants", version = "1.0")
 public class MainRegistry 
 {
 	
@@ -32,7 +32,7 @@ public class MainRegistry
     @Metadata
     public static ModMetadata meta;
     
-    @Instance("sleshymod")
+    @Instance("GenericModID")
     public static MainRegistry modInstance;
     
     static int a;

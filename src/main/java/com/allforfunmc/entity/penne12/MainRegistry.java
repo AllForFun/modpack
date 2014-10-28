@@ -21,7 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod2", name = "Elemental Ores Mod2", version = "1.0m")
+@Mod(modid = "Penne12 AI", name = "AI Pennes", version = "1.0")
 public class MainRegistry 
 {
 	
