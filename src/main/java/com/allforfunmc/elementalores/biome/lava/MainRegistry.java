@@ -24,7 +24,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "sleshymod4", name = "Elemental Ores Mod4", version = "1.0.l")
+@Mod(modid = "lavaBiomeAFF", name = "Lava Biome Mod", version = "1.0")
 
 public class MainRegistry 
 {
@@ -38,7 +38,7 @@ public class MainRegistry
     @Metadata
     public static ModMetadata meta;
 
-    @Instance("sleshymod")
+    @Instance("GenericModID")
     public static MainRegistry modInstance;
 
     
