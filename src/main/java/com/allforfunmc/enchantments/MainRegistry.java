@@ -38,8 +38,8 @@ public class MainRegistry
     static int a;
     static int b;
     
-    public static final Enchantment speedboost = new EnchantmentSpeedBoost(a, 5);
-    public static final Enchantment explodingarrows = new ExplodingEnchantment(b, 10);
+    public static final Enchantment speedboost = new EnchantmentSpeedBoost(200, 5);
+    public static final Enchantment explodingarrows = new ExplodingEnchantment(201, 10);
     
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
