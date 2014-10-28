@@ -21,11 +21,11 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "Penne12 AI", name = "AI Pennes", version = "1.0")
+@Mod(modid = "Penne12AI", name = "AI Pennes", version = "1.0")
 public class MainRegistry 
 {
 	
-	@SidedProxy(clientSide = "com.allforfunmc.elementalores.entity.penne12.ClientProxy", serverSide = "com.allforfunmc.elementalores.entity.penne12.ServerProxy")
+	@SidedProxy(clientSide = "com.allforfunmc.entity.penne12.ClientProxy", serverSide = "com.allforfunmc.entity.penne12.ServerProxy")
 	public static ServerProxy proxy;
    
     
