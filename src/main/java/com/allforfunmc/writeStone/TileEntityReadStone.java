@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.Debug;
+import com.allforfunmc.allforfuncore.DebugType;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.nbt.NBTTagCompound;
@@ -24,18 +26,18 @@ public class TileEntityReadStone extends TileEntity {
     public void updateEntity() {
     	try {
 		    if (new Scanner(File).nextInt() == 1) {
-		    	Core.Debug("Providing Power");
+		    	Debug.info("Providing Power");
 		    	worldObj.setBlock(xCoord, yCoord + 1, zCoord, Blocks.redstone_block);
 		    } else {
-		    	Core.Debug("Not Providing Power");
+		    	Debug.info("Not Providing Power");
 		    	worldObj.setBlockToAir(xCoord, yCoord+1, zCoord);
 		    }
-		    	Core.Debug("Scanned: " + new Scanner(File).nextInt());
+		    	Debug.info("Scanned: " + new Scanner(File).nextInt());
 		} catch (FileNotFoundException e1) {
-		    Core.Debug(e1.getStackTrace());
+		    Debug.Error(e1);
 		} catch (NullPointerException e) {
 			if(hasFile){
-				System.out.println("Could not find file: " + File.toString());
+				Debug.Print("Could not find file: " + File.toString(), DebugType.Warning);
 			}
 		} catch (java.util.NoSuchElementException error){
 			Core.Debug("Something went wrong scanning " + error.toString());
@@ -44,9 +46,7 @@ public class TileEntityReadStone extends TileEntity {
     public TileEntityReadStone setFile(File settingFile){
     	File = settingFile;
     	hasFile = true;
-		Core.Debug("Setting File to" + settingFile.toString());
-    	Core.Debug("Something went wrong in setting the file (" + File.toString() + ") to " + settingFile.toString());
-    	//TODO: Insert NBT here.
+		Debug.info("Setting File to" + settingFile.toString());
     	return this;
     }
     public void writeToNBT(NBTTagCompound nbt)
