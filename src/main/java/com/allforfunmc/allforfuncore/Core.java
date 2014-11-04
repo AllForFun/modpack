@@ -19,12 +19,27 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 @Mod(modid = "AllForFunCore", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
+	/**
+	 * @see Debug.Debug
+	 * @deprecated
+	 * Removing in ONE week
+	 */
 	@Deprecated
 	public static final Boolean BooleanDebugMode = true;
+	/**
+	 * @see Debug.Debug
+	 * @deprecated
+	 * Removing in ONE week
+	 */
 	@Deprecated
 	public static void Debug(Object Message){
 		if(Core.BooleanDebugMode) {System.out.println(Message);}
 	}
+	/**
+	 * @see Debug.Debug
+	 * @deprecated
+	 * Removing in ONE week
+	 */
 	@Deprecated
 	public static void Debug(Exception Error){
 		if(Core.BooleanDebugMode) {
