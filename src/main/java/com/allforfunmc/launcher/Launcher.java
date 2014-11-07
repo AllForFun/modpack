@@ -11,10 +11,13 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Launcher.MODID, version = Launcher.VERSION)
 public class Launcher {
-	public static final String MODID = "launcher";
+	public static final String MODID = "Launcher";
 	public static final String VERSION = "1.0.0";
 
 	public static Item SnowballLauncher;
+	public static Item EggLauncher;
+	public static Item FireballLauncher;
+	public static Item ArrowLauncher;
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -24,9 +27,37 @@ public class Launcher {
 		GameRegistry.addRecipe(new ItemStack(SnowballLauncher, 1), new Object[]{
 			"XGX",
 			"YYY",
-			"XSS",
-			'S', Items.stick, 'G', Blocks.glass, 'Y', Blocks.stone
+			"CSS",
+			'S', Items.stick, 'G', Blocks.glass, 'Y', Blocks.stone, 'C', Items.snowball
 		});
+		
+		EggLauncher = new EggLauncher();
+		GameRegistry.registerItem(EggLauncher, "egglauncher");
+		GameRegistry.addRecipe(new ItemStack(EggLauncher, 1), new Object[]{
+			"XGX",
+			"YYY",
+			"CSS",
+			'S', Items.stick, 'G', Blocks.glass, 'Y', Blocks.stone, 'C', Items.egg
+		});
+		
+		FireballLauncher = new FireballLauncher();
+		GameRegistry.registerItem(FireballLauncher, "fireballlauncher");
+		//GameRegistry.addRecipe(new ItemStack(FireballLauncher, 1), new Object[]{
+			//"XGX",
+			//"YYY",
+			//"CSS",
+			//'S', Items.stick, 'G', Blocks.glass, 'Y', Blocks.stone, 'C', Items.flint_and_steel
+		//});
+		
+		ArrowLauncher = new ArrowLauncher();
+		GameRegistry.registerItem(ArrowLauncher, "arrowlauncher");
+		GameRegistry.addRecipe(new ItemStack(ArrowLauncher, 1), new Object[]{
+			"XGX",
+			"YYY",
+			"CSS",
+			'S', Items.stick, 'G', Blocks.glass, 'Y', Blocks.stone, 'C', Items.arrow
+		});
+		
 		
 	}
 }
