@@ -40,7 +40,7 @@ public class TileEntityReadStone extends TileEntity {
 				Debug.Print("Could not find file: " + File.toString(), DebugType.Warning);
 			}
 		} catch (java.util.NoSuchElementException error){
-			Core.Debug("Something went wrong scanning " + error.toString());
+			Debug.Print("Something went wrong scanning " + error.toString(),DebugType.Error);
 		}
 	}
     public TileEntityReadStone setFile(File settingFile){

@@ -17,40 +17,13 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = "AllForFunCore", name = "AllForFun's Modpack Core", version = "1")
+@Mod(modid = "AllForFunModpack", name = "AllForFun's Modpack Core", version = "1")
 public class Core {
-	/**
-	 * @see Debug.Debug
-	 * @deprecated
-	 * Removing in ONE week
-	 */
-	@Deprecated
-	public static final Boolean BooleanDebugMode = true;
-	/**
-	 * @see Debug.Debug
-	 * @deprecated
-	 * Removing in ONE week
-	 */
-	@Deprecated
-	public static void Debug(Object Message){
-		if(Core.BooleanDebugMode) {System.out.println(Message);}
-	}
-	/**
-	 * @see Debug.Debug
-	 * @deprecated
-	 * Removing in ONE week
-	 */
-	@Deprecated
-	public static void Debug(Exception Error){
-		if(Core.BooleanDebugMode) {
-		System.out.println("=======Error=======");
-		System.out.println(Error.getMessage());
-		System.out.println(Error.getStackTrace());
-		System.out.println("=======Error=======");}
-	}
-	
 	public static DebugMode debugMode = DebugMode.None;
 	
+	private static void setDebugMode(DebugMode i){
+		debugMode = i;
+	}
     @Instance(value = "GenericModID")
     public static Core instance;
     @SidedProxy(clientSide = "com.allforfunmc.allforfuncore.ClientProxy", serverSide = "com.allforfunmc.allforfuncore.CommonProxy")
@@ -60,6 +33,7 @@ public class Core {
     public void preInit(FMLPreInitializationEvent event) {
             Config Config = new Config(event);
             Config.load();
+            this.setDebugMode((DebugMode)Config.getProperties().get("Debug"));
     }
     @EventHandler()
     public void load(FMLInitializationEvent event) {
@@ -72,35 +46,35 @@ public class Core {
     }
 
     // Below is custom code for the mod -- used in all of AllForFun's Mods.
-    public static final CreativeTabs AllForFunItems = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Items") {
+    public static final CreativeTabs AllForFunItems = new CreativeTabs(CreativeTabs.getNextID(), "funItems") {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 	    return com.allforfunmc.refineddiamond.Code.refinedDiamond;
 	}
     };
-    public static final CreativeTabs AllForFunFood = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Food") {
+    public static final CreativeTabs AllForFunFood = new CreativeTabs(CreativeTabs.getNextID(), "funFood") {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 	    return com.allforfunmc.chocolatestuff.Code.chocolateBar;
 	}
     };
-    public static final CreativeTabs AllForFunArmor = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Armor") {
+    public static final CreativeTabs AllForFunArmor = new CreativeTabs(CreativeTabs.getNextID(), "funArmor") {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 	    return com.allforfunmc.moreoresandmore.Main.armorCobbleChest;
 	}
     };
-    public static final CreativeTabs AllForFunBlocks = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Blocks") {
+    public static final CreativeTabs AllForFunBlocks = new CreativeTabs(CreativeTabs.getNextID(), "funBlocks") {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {
 	    return Item.getItemFromBlock(com.allforfunmc.refineddiamond.Code.Refined_Diamond_Block);
 	}
     };
-    public static final CreativeTabs AllForFunTools = new CreativeTabs(CreativeTabs.getNextID(), "AllForFun's Tools") {
+    public static final CreativeTabs AllForFunTools = new CreativeTabs(CreativeTabs.getNextID(), "funTools") {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public Item getTabIconItem() {

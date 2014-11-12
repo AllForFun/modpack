@@ -19,8 +19,9 @@ public class PlayerMagnet extends ItemSword{
 	static ToolMaterial likeNothing = EnumHelper.addToolMaterial("likeNothing", 0, 999999999, 1F, 0F, 0);
 	public PlayerMagnet(){
 		super(likeNothing);
-		this.setMaxStackSize(1);
-		this.setTextureName("allforfun:Magnet");
+		this.setMaxStackSize(1)
+		.setTextureName("allforfun:Magnet")
+		.setUnlocalizedName("magnet");
 	}
 	@Override
     public boolean hitEntity(ItemStack stack, EntityLivingBase hitPlayer, EntityLivingBase useingPlayer)

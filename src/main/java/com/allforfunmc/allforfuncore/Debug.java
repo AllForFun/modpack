@@ -18,22 +18,22 @@ public class Debug{
 				,DebugType.Error);
 	}
 	
-	public static Debug Print(Object message, DebugType type){
-		return new Debug(message, type);
+	public static void Print(Object message, DebugType type){
+		new Debug(message, type);
 	}
 	
-	public static Debug Error(Exception error){
-		return new Debug("Error! " + error.getMessage() +
+	public static void Error(Exception error){
+		new Debug("Error! " + error.getMessage() +
 				" because of " + error.getCause() +
 				". At" + error.getStackTrace()
 				,DebugType.Error);
 	}
 	
-	public static Debug Print(Object message, int type){
-		return new Debug(message, type);
+	public static void Print(Object message, int type){
+		new Debug(message, type);
 	}
 	
-	public static Debug info(Object message){
-		return new Debug(message, DebugType.Info);
+	public static void info(Object message){
+		new Debug(message, DebugType.Info);
 	}
 }

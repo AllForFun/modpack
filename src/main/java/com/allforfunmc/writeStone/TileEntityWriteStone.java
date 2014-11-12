@@ -7,6 +7,7 @@ import java.nio.file.Path;
 import java.util.Scanner;
 
 import com.allforfunmc.allforfuncore.Core;
+import com.allforfunmc.allforfuncore.Debug;
 
 import net.minecraft.tileentity.TileEntity;
 
@@ -33,8 +34,8 @@ public class TileEntityWriteStone extends TileEntity {
 			if(!file.exists()){
 				file.createNewFile();
 			}else {
-				Core.Debug("Writing " + powered);
-				Core.Debug("Writing to " + file.toString());
+				Debug.info("Writing " + powered);
+				Debug.info("Writing to " + file.toString());
 				try {
 					if (new Scanner(file).nextInt() != powered){
 						FileWriter writer = new FileWriter(file);
@@ -49,6 +50,6 @@ public class TileEntityWriteStone extends TileEntity {
 					writer.close();
 				}
 			}
-		} catch(IOException e){Core.Debug(e);}
+		} catch(IOException e){Debug.Error(e);}
     }
 }
