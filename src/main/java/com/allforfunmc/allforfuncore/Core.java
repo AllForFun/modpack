@@ -28,10 +28,10 @@ public class Core {
     public static Core instance;
     @SidedProxy(clientSide = "com.allforfunmc.allforfuncore.ClientProxy", serverSide = "com.allforfunmc.allforfuncore.CommonProxy")
     public static CommonProxy proxy;
-
+    public static Config Config = null;
     @EventHandler()
     public void preInit(FMLPreInitializationEvent event) {
-            Config Config = new Config(event);
+            Config = new Config(event);
             Config.load();
             this.setDebugMode((DebugMode)Config.getProperties().get("Debug"));
     }

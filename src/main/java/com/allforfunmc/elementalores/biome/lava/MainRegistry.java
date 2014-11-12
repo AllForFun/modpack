@@ -2,6 +2,9 @@ package com.allforfunmc.elementalores.biome.lava;
 
 
 
+import com.allforfunmc.allforfuncore.Config;
+import com.allforfunmc.allforfuncore.Core;
+
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
@@ -59,8 +62,9 @@ public class MainRegistry
     @EventHandler
     public void PostLoad(FMLPostInitializationEvent PostEvent)
     {
-    	
-    	WorldType LAVA = new WorldTypeLava(3, "lava");
+    	if((Boolean) Core.Config.getProperties().get("LavaGeneration")){
+    		WorldType LAVA = new WorldTypeLava(3, "lava");
+    	}
     	
     }
 	public static BiomeGenBase biomelava;
