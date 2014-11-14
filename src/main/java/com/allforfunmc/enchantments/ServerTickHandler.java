@@ -55,13 +55,14 @@ public class ServerTickHandler {
 		boolean d = event.player.isDead;
 		if(b && !d){
 			ItemStack item = event.player.getCurrentEquippedItem();
-			
-			if(item.getItem() == Items.diamond_sword || item.getItem() == Items.golden_sword || item.getItem() == Items.iron_sword || item.getItem() == Items.stone_sword || item.getItem() == Items.wooden_sword){
-				int a = EnchantmentHelper.getEnchantmentLevel(MainRegistry.explodingarrows.effectId, item);
-				if(a > 0){
-					
+			try{
+				if(item.getItem() == Items.diamond_sword || item.getItem() == Items.golden_sword || item.getItem() == Items.iron_sword || item.getItem() == Items.stone_sword || item.getItem() == Items.wooden_sword){
+					int a = EnchantmentHelper.getEnchantmentLevel(MainRegistry.explodingarrows.effectId, item);
+					if(a > 0){
+						
+					}
 				}
-			}
+			} catch(java.lang.NullPointerException e){}
 		}	
 	}
 	
