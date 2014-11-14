@@ -6,8 +6,8 @@ import net.minecraft.enchantment.EnumEnchantmentType;
 public class ExplodingEnchantment extends Enchantment{
 	
 	public ExplodingEnchantment(int id, int rarity){
-		super(id, rarity, EnumEnchantmentType.armor_feet);
-		this.setName("Exploding Arrows");
+		super(id, rarity, EnumEnchantmentType.weapon);
+		this.setName("ExplodingArrows");
 	}
 	
 	public int getMinEnchantability(int par1){
