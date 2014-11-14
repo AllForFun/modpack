@@ -69,9 +69,11 @@ public class MainRegistry
     }
 	public static BiomeGenBase biomelava;
 	public static void RegisterBiomes(){
-		biomelava = new BiomeGenLava(3).setBiomeName("Lava").setTemperatureRainfall(1.2F, 0.9F);
-		BiomeDictionary.registerBiomeType(biomelava, Type.FOREST);
-		BiomeManager.addSpawnBiome(biomelava);
+		if((Boolean) Core.Config.getProperties().get("LavaGeneration")){
+			biomelava = new BiomeGenLava(3).setBiomeName("Lava").setTemperatureRainfall(1.2F, 0.9F);
+			BiomeDictionary.registerBiomeType(biomelava, Type.FOREST);
+			BiomeManager.addSpawnBiome(biomelava);
+		}
 	}
     
 }
