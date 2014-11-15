@@ -28,7 +28,6 @@ public class ServerTickHandler {
 	}
 	 * 
 	 */
-	
 	private Minecraft mc;
 	
 	public ServerTickHandler(Minecraft mc){
