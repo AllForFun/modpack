@@ -26,47 +26,48 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "fire", name = "AllForFun's Fire", version = "1")
 public class Fire {
-    @Instance(value = "GenericModID")
-    public static Fire instance;
-    @SidedProxy(clientSide = "com.allforfunmc.fire.ClientProxy", serverSide = "com.allforfunmc.fire.CommonProxy")
-    public static CommonProxy proxy;
+	@Instance(value = "GenericModID")
+	public static Fire instance;
+	@SidedProxy(clientSide = "com.allforfunmc.fire.ClientProxy", serverSide = "com.allforfunmc.fire.CommonProxy")
+	public static CommonProxy proxy;
 
-    public static ToolMaterial FireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 450, 20f, 20f, 30);
-    public static ArmorMaterial FireArmorMat = EnumHelper.addArmorMaterial("Fire_Material", 450, new int[] { 6, 10, 9, 5 }, 30);
+	public static ToolMaterial FireMaterial = EnumHelper.addToolMaterial("fire_material", 3, 450, 20f, 20f, 30);
+	public static ArmorMaterial FireArmorMat = EnumHelper.addArmorMaterial("Fire_Material", 450, new int[] { 6, 10, 9, 5 }, 30);
 
-    public static Item FireCrystal = (new Item()).setUnlocalizedName("fire_crystal").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_crystal");
 
-    public static Item FireAxe = (new TemplateAxe(FireMaterial)).setUnlocalizedName("fireaxe").setTextureName("sleshymod:fire_axe");
-    public static Item FirePick = (new TemplatePick(FireMaterial));
-    public static Item FireSword = (new ItemSword(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_sword").setCreativeTab(Core.AllForFunTools).setTextureName("fire_sword");
-    public static Item FireShovel = (new ItemSpade(FireMaterial).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_shovel"));
+	public static Item FireCrystal = (new Item()).setUnlocalizedName("fire_crystal").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_crystal");
 
-    public static Block FireBlock = new FireBlock(Material.rock);
-    public static Block FireOre = new FireOre(Material.rock);
+	public static Item FireAxe = (new TemplateAxe(FireMaterial)).setUnlocalizedName("fireaxe").setTextureName("sleshymod:fire_axe");
+	public static Item FirePick = (new TemplatePick(FireMaterial));
+	public static Item FireSword = (new ItemSword(FireMaterial)).setMaxStackSize(1).setUnlocalizedName("fire_sword").setCreativeTab(Core.AllForFunTools).setTextureName("fire_sword");
+	public static Item FireShovel = (new ItemSpade(FireMaterial).setMaxStackSize(1).setUnlocalizedName("fire_shovel").setCreativeTab(Core.AllForFunTools).setTextureName("sleshymod:fire_shovel"));
 
-    public static Item FireArmorTop = (new FlameArmor(FireArmorMat, 0));
-    public static Item FireArmorChest = (new FlameArmor(FireArmorMat, 0));
-    public static Item FireArmorLegs = (new FlameArmor(FireArmorMat, 0));
-    public static Item FireArmorFeet = (new FlameArmor(FireArmorMat, 0));
+	public static Block FireBlock = new FireBlock(Material.rock);
+	public static Block FireOre = new FireOre(Material.rock);
 
-    @EventHandler()
-    public void load(FMLInitializationEvent event) {
-	proxy.registerRenderers();
-	MassRegister.Items(new Item[] { FireAxe, FirePick, FireCrystal, FireSword, FireShovel, FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet }, new String[] { "fire_axe", "fire_pick", "fire_crystal", "fire_sword", "fire_shovel", "fire_armor_helmet", "fire_armor_chestplate", "fire_armor_leggings", "fire_armor_boots" }, "fire");
-	GameRegistry.registerBlock(FireBlock, "fire_block");
-	GameRegistry.registerBlock(FireOre, "fire_ore");
+	public static Item FireArmorTop = (new FlameArmor(FireArmorMat, 0));
+	public static Item FireArmorChest = (new FlameArmor(FireArmorMat, 0));
+	public static Item FireArmorLegs = (new FlameArmor(FireArmorMat, 0));
+	public static Item FireArmorFeet = (new FlameArmor(FireArmorMat, 0));
 
-    }
+	@EventHandler()
+	public void load(FMLInitializationEvent event) {
+		proxy.registerRenderers();
+		MassRegister.Items(new Item[] { FireAxe, FirePick, FireCrystal, FireSword, FireShovel, FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet }, new String[] { "fire_axe", "fire_pick", "fire_crystal", "fire_sword", "fire_shovel", "fire_armor_helmet", "fire_armor_chestplate", "fire_armor_leggings", "fire_armor_boots" }, "fire");
+		GameRegistry.registerBlock(FireBlock, "fire_block");
+		GameRegistry.registerBlock(FireOre, "fire_ore");
 
-    @EventHandler()
-    public void postInit(FMLInitializationEvent event) {
-	Crafting.smartRegisterTool("Axe", FireCrystal, FireAxe);
-	Crafting.smartRegisterArmor(new Item[] { FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet }, FireCrystal);
-	ItemStack FireSwordStack = new ItemStack(FireSword);
-	FireSwordStack.addEnchantment(Enchantment.fireAspect, 1);
-	Crafting.smartRegisterTool("Sword", FireCrystal, FireSword);
-	Crafting.smartRegisterTool("Shovel", FireCrystal, FireShovel);
-	Crafting.smartRegisterTool("Pickaxe", FireCrystal, FirePick);
-	Crafting.smartRegisterBlock(FireBlock, FireCrystal);
-    }
+	}
+
+	@EventHandler()
+	public void postInit(FMLInitializationEvent event) {
+		Crafting.smartRegisterTool("Axe", FireCrystal, FireAxe);
+		Crafting.smartRegisterArmor(new Item[] { FireArmorTop, FireArmorChest, FireArmorLegs, FireArmorFeet }, FireCrystal);
+		final ItemStack FireSwordStack = new ItemStack(FireSword);
+		FireSwordStack.addEnchantment(Enchantment.fireAspect, 1);
+		Crafting.smartRegisterTool("Sword", FireCrystal, FireSword);
+		Crafting.smartRegisterTool("Shovel", FireCrystal, FireShovel);
+		Crafting.smartRegisterTool("Pickaxe", FireCrystal, FirePick);
+		Crafting.smartRegisterBlock(FireBlock, FireCrystal);
+	}
 }
