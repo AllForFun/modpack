@@ -4,21 +4,36 @@ def baseName = "AllForFunModpack"
 def changeLog(){
     boolean isGettingVersion = false
     StringBuilder changes = new StringBuilder(new File('changes.txt').text.length()*2)
+    String header = "Changes for version ${version()}:\n"
+    changes.append(header)
+    for(t in header.toCharArray()){
+        changes.append('=')
+    }
+    changes.append('\n')
+    boolean isList = false
     new File('changes.txt').eachLine { line ->
-        if (!isGettingVersion && line != "Version:") {
+        if (!isGettingVersion && line != "Version:" && line != "" && !line.startsWith("//") && !line.startsWith("#")) {
             def chars = line.toCharArray()
             if (chars.getAt(chars.size() - 1) == ':') {
-                changes.append("$line\n")
-            } else {
-                changes.append("• $line\n")
+                isList = true
+                changes.append("\n$line\n")
+                StringBuilder lineBelow = new StringBuilder(line.length())
+                for(t in line.toCharArray()){
+                    lineBelow.append('-')
+                }
+                changes.append("${lineBelow.toString()}\n")
+            } else if (isList) {
+                changes.append("- $line\n")
             }
+        } else if(line == ""){
+            isList = false
         }
         isGettingVersion = line == "Version:"
     }
     changes.toString()
 }
 task changes << {
-    println "Changes for ${version()}: \n${changeLog()}"
+    println changeLog()
 }
 def version(){
     boolean isGettingVersion = false
@@ -29,7 +44,7 @@ def version(){
         }
         isGettingVersion = line == "Version:"
     }
-    modVersion
+    "v$modVersion"
 }
 
 buildscript {
