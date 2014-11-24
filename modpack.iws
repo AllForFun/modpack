@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ec155ec-5c62-4473-8b5c-62330f2d9d8a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/changes.txt" afterPath="$PROJECT_DIR$/changes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modpack.iws" afterPath="$PROJECT_DIR$/modpack.iws" />
     </list>
     <ignored path="modpack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1038,12 +1037,12 @@
       <created>1416786309444</created>
       <option name="number" value="Default" />
       <updated>1416786309444</updated>
-      <workItem from="1416786310073" duration="9583000" />
+      <workItem from="1416786310073" duration="9880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9583000" />
+    <option name="totallyTimeSpent" value="9880000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="43" width="1416" height="753" extended-state="0" />
