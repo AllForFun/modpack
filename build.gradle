@@ -1,15 +1,36 @@
-def modVersion = "3.5"
-def changes = """
-Added:
-•
-"""
-
-
-//Don't mess with anything below this text. Thanks!
-
 def apikey = new File('apikey.txt').text
-def changeLog = new File('changes.txt').text
 def baseName = "AllForFunModpack"
+
+def changeLog(){
+    boolean isGettingVersion = false
+    StringBuilder changes = new StringBuilder(new File('changes.txt').text.length()*2)
+    new File('changes.txt').eachLine { line ->
+        if (!isGettingVersion && line != "Version:") {
+            def chars = line.toCharArray()
+            if (chars.getAt(chars.size() - 1) == ':') {
+                changes.append("$line\n")
+            } else {
+                changes.append("• $line\n")
+            }
+        }
+        isGettingVersion = line == "Version:"
+    }
+    changes.toString()
+}
+task changes << {
+    println "Changes for ${version()}: \n${changeLog()}"
+}
+def version(){
+    boolean isGettingVersion = false
+    String modVersion = "?.?"
+    new File('changes.txt').eachLine { line ->
+        if(isGettingVersion){
+            modVersion = line
+        }
+        isGettingVersion = line == "Version:"
+    }
+    modVersion
+}
 
 buildscript {
     repositories {
@@ -30,8 +51,8 @@ buildscript {
 
 apply plugin: 'forge'
 apply plugin: 'curseforge'
-
-version= modVersion
+changeLog()
+version= version()
 group= "com.allforfunmc.modpack" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = baseName
 
@@ -42,7 +63,7 @@ minecraft {
 curse {
     apiKey = apikey
     projectId = "224515"
-    changelog = changes
+    changelog = changeLog()
     releaseType = "beta"
 }
 
@@ -82,3 +103,4 @@ processResources
         exclude 'mcmod.info'
     }
 }
+
