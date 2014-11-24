@@ -5,18 +5,13 @@ Version:
 3.7
 
 When marking a change, put it in the appropriate category, or create a new one.
-Do NOT use bullets or formatting in the change log.
+A catergory name ends with a ':'.
 THIS IS NOT INSTEAD OF DETAILED COMMITS AND THE WAFFLE BOARD. MAKE SURE TO BE USING BOTH.
 
 Example...
 
 //Added:
 Null Pointless things, GitHub issue #2001
-//Removed:
-Things that need to be there, GitHub issue #1337
-//Fixed:
-Every. Single. Last. Bug. There are no bugs, GitHub issue #42
-
 
 Now on to the change log!
 
