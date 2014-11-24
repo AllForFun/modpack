@@ -1,19 +1,14 @@
 def modVersion = "3.5"
 def changes = """
 Added:
-• Launchers!
-• More Launchers!
-• Lava Biomes
-• Configuration
-• And more!
-Fixed:
-• Tons of stuff
+•
 """
 
 
 //Don't mess with anything below this text. Thanks!
 
 def apikey = new File('apikey.txt').text
+def changeLog = new File('changes.txt').text
 def baseName = "AllForFunModpack"
 
 buildscript {
