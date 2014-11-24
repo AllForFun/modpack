@@ -9,7 +9,7 @@ A category name ends with a ':'.
 Make sure to include the GitHub issue number that your change relates to.
 THIS IS NOT INSTEAD OF DETAILED COMMITS AND THE WAFFLE BOARD. MAKE SURE TO BE USING BOTH.
 
-Changed:
-Nothing
-Planned:
-Player Cannons
+Removed:
+Grass Block Mine, does not fix a GitHub issue.
+In Progress:
+Player Cannons, GitHub Issue #

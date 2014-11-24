@@ -15,11 +15,14 @@ public class Cannon extends Block {
 		this.setCreativeTab(Core.AllForFunBlocks);
 	}
 	@Override
-	public void onEntityWalking(World p_149724_1_, int x, int y, int z, Entity entity) {
-		xDif = x - entity.posX;
-		zDif = z - entity.posZ;
-		for (int i = 1; i >= 100; i++)
-		entity.motionY
+	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
+		double xDif = x - entity.posX;
+		double zDif = z - entity.posZ;
+		for(int i = 0; i >= 99; i++) {
+			System.out.println(entity + " is walking.");
+			entity.posY = entity.posY + Math.pow(i, 2);
+			System.out.println(entity + " is being thrown.");
+		}
 	}
 
 }

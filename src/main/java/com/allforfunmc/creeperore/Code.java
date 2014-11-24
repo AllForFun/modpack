@@ -20,8 +20,9 @@ public class Code {
     public static Generator Generator = new Generator();
     public static Block MineMakerBlock = new MineMaker(Material.rock);
 
+    public static Block playerCannon = new Cannon();
+
     // Mines
-    public static Block GrassMine = MineMaker.CreateMine(Blocks.grass);
     public static Block DirtMine = MineMaker.CreateMine(Blocks.dirt);
     public static Block SandMine = MineMaker.CreateMine(Blocks.sand);
     public static Block StoneMine = MineMaker.CreateMine(Blocks.stone);
@@ -31,15 +32,16 @@ public class Code {
     public static Block WoodenPlankMine = MineMaker.CreateMine(Blocks.planks);
 
     public static void Blocks() {
-	GameRegistry.registerBlock(CreeperOre, "CreeperOre");
-	GameRegistry.registerWorldGenerator(Generator, 20);
-	GameRegistry.registerBlock(MineMakerBlock, "MineMaker");
+        GameRegistry.registerBlock(CreeperOre, "CreeperOre");
+        GameRegistry.registerWorldGenerator(Generator, 20);
+        GameRegistry.registerBlock(MineMakerBlock, "MineMaker");
+        GameRegistry.registerBlock(playerCannon,"playerCannon");
     }
 
     public static void Items() {
-	GameRegistry.registerItem(CreeperPick, "Creeper Pick");
-	GameRegistry.registerItem(CreeperPearl, "Creeper Pearl");
-	GameRegistry.registerItem(creeperOnTheGo, "Creeper On The Go");
+        GameRegistry.registerItem(CreeperPick, "Creeper Pick");
+        GameRegistry.registerItem(CreeperPearl, "Creeper Pearl");
+        GameRegistry.registerItem(creeperOnTheGo, "Creeper On The Go");
     }
 
     public static void Crafting() {
