@@ -1,5 +1,8 @@
 package com.allforfunmc.CamoStuff;
 
+import com.allforfunmc.CamoStuff.camochest.CamoChest;
+import com.allforfunmc.CamoStuff.camochest.TileEntityCamo;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -41,6 +44,7 @@ public class Main {
     // Blocks
     public Block CamoBlock = new CamoBlock(Material.rock);
     public static Block CamoOre = new CamoOre(Material.rock);
+    public static Block CamoChest = new CamoChest();
 
     @EventHandler()
     public void load(FMLInitializationEvent event) {
@@ -58,7 +62,15 @@ public class Main {
 	GameRegistry.registerItem(CamoSword, "camo_sword");
 
     }
+    @EventHandler
+    public void PreLoad(FMLPreInitializationEvent event)
+    {
+        CamoChest.setCreativeTab(Core.AllForFunBlocks).setBlockName("camo_chest");
+        GameRegistry.registerBlock(CamoChest, "camo_chest");
 
+        TileEntityCamo.MainRegistry();
+
+    }
     @EventHandler()
     public void postInit(FMLInitializationEvent event) {
 

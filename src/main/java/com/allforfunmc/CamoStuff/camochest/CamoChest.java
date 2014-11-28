@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.camochest;
+package com.allforfunmc.CamoStuff.camochest;
 
 import static net.minecraftforge.common.util.ForgeDirection.DOWN;
 
@@ -11,12 +11,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryLargeChest;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.MathHelper;
@@ -26,8 +24,8 @@ public class CamoChest extends BlockChest{
 	
 	private final Random field_149955_b = new Random();
 	
-	public CamoChest(int chest){
-		super(chest);
+	public CamoChest(){
+		super(0);
 	}
 	
 	public void onBlockPlacedBy(World p_149689_1_, int p_149689_2_, int p_149689_3_, int p_149689_4_, EntityLivingBase p_149689_5_, ItemStack p_149689_6_)

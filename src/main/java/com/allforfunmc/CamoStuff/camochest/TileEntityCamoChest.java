@@ -1,7 +1,6 @@
-package com.allforfunmc.elementalores.camochest;
+package com.allforfunmc.CamoStuff.camochest;
 
 import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;

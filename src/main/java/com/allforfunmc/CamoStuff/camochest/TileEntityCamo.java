@@ -1,4 +1,4 @@
-package com.allforfunmc.elementalores.camochest;
+package com.allforfunmc.CamoStuff.camochest;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
