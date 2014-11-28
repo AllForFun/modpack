@@ -68,8 +68,8 @@ buildscript {
     }
 }
 
-apply plugin: 'forge'
 apply plugin: "groovy"
+apply plugin: 'forge'
 apply plugin: 'curseforge'
 changeLog()
 version= version()
