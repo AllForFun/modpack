@@ -58,6 +58,10 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+        maven {
+            name = "codehaus"
+            url = 'http://snapshots.repository.codehaus.org/'
+    }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
@@ -65,6 +69,7 @@ buildscript {
 }
 
 apply plugin: 'forge'
+apply plugin: "groovy"
 apply plugin: 'curseforge'
 changeLog()
 version= version()
