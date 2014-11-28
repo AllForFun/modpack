@@ -669,5 +669,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="groovy-2.4.0.beta-3" level="application" />
   </component>
 </module>
