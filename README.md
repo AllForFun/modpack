@@ -21,31 +21,35 @@ Names					| Desc
 **Obsidian Tools**	| Makes what is says on the tin.
 **AND MORE**			| There are way more mods waiting to be discovered.
 
-Cloning:
+Easy Cloning:
 ------------
-Cloning is pretty simple, just follow the instuctions, or on mac, a script to do this automaticly is coming.
+####Mac & Linux
+1. Open Terminal
+2. Type 'cd', and drag in the folder you cloned the repo into. Then press enter.
+3. Run this command, and follow the instuctions.
+~~~
+curl -O https://gist.githubusercontent.com/penne12/c175b48f44426fa7190c/raw/a403a09b5b237b58f0c0f692d6885cc41c9950f1/setup.sh && chmod a+x ./setup.sh && ./setup.sh
+~~~
 
-1. Download the lastest MinecraftForge src version.
-2. Clone the repository.
-3. Temperaly move the existing build.gradle file somewhere else.
-4. Move the build.gradle file from the MinecraftForge folder you downloaded into the repository.
-5. Move the eclipse folder into the repository.
-6. CD in to the repository in your command promt.
-7. Run the command based on your operating system:
+####Windows
 
-  **Unix/Bash**
+#####Easy Way:
+
+1. Install Ubuntu
+2. Follow the above instuctions for Linux
+
+#####Hard Way:
+
+1. Press the start button
+2. Type 'cmd'. Then press enter
+3. In the window that opens, type 'cd', and drag in the folder you cloned the repo into. Then press enter.
+4. In the file you cloned, create an empty text file called apikey.txt.
+5. Go back to the command propt you opened in step 2.
+6. Type the following command: gradlew setupdecompworkspace --refresh-dependencies
+7. If you want to use eclipse, type this command: gradlew eclipse
+8. Download and install Groovy, at this link: http://dl.bintray.com/groovy/Distributions/groovy-2.3.7-installer.exe
+
   
-  	./gradlew setupdecompworkspace --refresh-dependencies; ./gradlew eclipse
-  	
-  **Windows**
-  
-  Do both commands one after anouther:
-  
-  	gradlew setupdecompworkspace --refresh-dependencies
-  	
-  	gradlew eclipse
-  
-8. **Code away!**
 
 
 Waffle:
