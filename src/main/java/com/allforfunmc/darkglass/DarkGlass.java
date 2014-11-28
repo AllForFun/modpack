@@ -12,19 +12,18 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class DarkGlass extends BlockBreakable {
+        public DarkGlass(Material p_i45408_1_, boolean p_i45408_2_) {
+        super("glass", p_i45408_1_, p_i45408_2_);
 
-    public DarkGlass(Material p_i45408_1_, boolean p_i45408_2_) {
-	super("glass", p_i45408_1_, p_i45408_2_);
-
-	this.setCreativeTab(Core.AllForFunBlocks);
-	this.setLightOpacity(1000000);
-	this.setHardness(0.3F);
-	this.setStepSound(soundTypeGlass);
+        this.setCreativeTab(Core.AllForFunBlocks);
+        this.setLightOpacity(1000000);
+        this.setHardness(0.3F);
+        this.setStepSound(soundTypeGlass);
     }
 
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister iconRegister) {
-	this.blockIcon = iconRegister.registerIcon(Main.modid + ":" + this.getUnlocalizedName().substring(5));
+	    this.blockIcon = iconRegister.registerIcon(Main.modid + ":" + this.getUnlocalizedName().substring(5));
     }
 
     public int quantityDropped(Random p_149745_1_) {
@@ -33,7 +32,7 @@ public class DarkGlass extends BlockBreakable {
 
     @SideOnly(Side.CLIENT)
     public int getRenderBlockPass() {
-	return 1;
+	    return 1;
     }
 
     public boolean renderAsNormalBlock() {
