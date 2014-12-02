@@ -26,7 +26,7 @@ public class EntityPenne12Mob extends EntityTameable{
 		this.tasks.addTask(0, new EntityAISwimming(this));
 		this.tasks.addTask(1, new EntityAIPanic(this, 1.0F));
 		this.tasks.addTask(2, new EntityAITempt(this, 1.0F, Item.getItemFromBlock(Blocks.redstone_block), false));
-		this.tasks.addTask(3, new EntityAIFollowOwner(this, 5.0, 1F, 10F));
+		this.tasks.addTask(3, new EntityAIFollowOwner(this, 1.0, 1F, 10F));
 		this.tasks.addTask(10, new EntityAIWander(this, 0.5F));
 	}
 	
