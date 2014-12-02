@@ -8,6 +8,8 @@ When marking a change, put it in the appropriate category, or create a new one.
 A category name ends with a ':'.
 THIS IS NOT INSTEAD OF DETAILED COMMITS AND THE WAFFLE BOARD. MAKE SURE TO BE USING BOTH.
 
+Added:
+Camo Block
 Removed:
 Grass Block Mine, does not fix a GitHub issue.
 Fixed:
