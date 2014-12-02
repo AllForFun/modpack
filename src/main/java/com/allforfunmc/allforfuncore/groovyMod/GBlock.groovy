@@ -24,47 +24,37 @@ abstract class GBlock extends Block {
     GBlock(Material mat){
         super(mat)
     }
+    /**
+     * When...
+     * - added [world, x, y, z]
+     * - destroyed by a player [world, x, y, z, meta]
+     * - destroyed by an explosion [world, x, y, z, explosion]
+     * - right clicked [world, blockX, blockY, blockZ, (EntityPlayer) player, metadata]
+     * - walked on [world, x, y, z, entity]
+     */
+    def when = [String:{/*Do something*/}]
 
-    def onDestroy = {}
-    /**
-     * Called when this block is added to the world
-     * Params: world, x, y, z, explosion
-     */
-    def onAdded = {}
-    /**
-     * Called when the block is destroyed by an explosion
-     * Params: World, x, y, z, explosion
-     */
-    def onDestroyedByExplosion = {}
-    /**
-     * Called when an entity activates, or right clicks, the block.
-     * Must return a boolean.
-     * Params: World, BlockX, BlockY, BlockZ, player, metadata, unknown1, unknown2, unknown3
-     */
-    def onRightClick = {}
-    /**
-     * Called when any entity is walking on this block.
-     * Params: world, x, y, z, and the entity that is walking on the block
-     */
-    def onWalkedOn = {}
+    private def doEvent(String event) {
+       when.get(event)
+    }
 
     //Old methods
     @Override
     public void onBlockDestroyedByPlayer(World world, int x, int y, int z, int meta) {
-        onDestroy(world,x,y,z,meta)
+        doEvent("destroyed by a player")(world, x, y, z, meta)
     }
     @Override
     public void onBlockAdded(World world, int x, int y, int z) {
-        onAdded(world, x, y, z)
+        doEvent("added")(world, x, y, z)
     }
     @Override
     public void onBlockDestroyedByExplosion(World world, int x, int y, int z, Explosion explosion) {
-        onDestroyedByExplosion(world, x, y, z, explosion)
+        doEvent("destroyed by an explosion")
     }
     @Override
     public boolean onBlockActivated(World world, int BlockX, int BlockY, int BlockZ, EntityPlayer player, int metadata, float unknown1, float unknown2, float unknown3)
     {
-        onRightClick(world, BlockX, BlockY, BlockZ, player, metadata, unknown1, unknown2, unknown3)
+        doEvent("right clicked")
     }
     @Override
     public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
