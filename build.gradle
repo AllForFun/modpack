@@ -32,9 +32,11 @@ def changeLog(){
     }
     changes.toString()
 }
+
 task changes << {
     println changeLog()
 }
+
 def version(){
     boolean isGettingVersion = false
     String modVersion = "?.?"
@@ -61,7 +63,7 @@ buildscript {
         maven {
             name = "codehaus"
             url = 'http://snapshots.repository.codehaus.org/'
-    }
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
