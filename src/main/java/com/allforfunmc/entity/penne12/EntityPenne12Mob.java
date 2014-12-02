@@ -14,7 +14,9 @@ import net.minecraft.item.Item;
 import net.minecraft.world.World;
 
 public class EntityPenne12Mob extends EntityTameable{
-
+	public static String getName() {
+		return "EntityPenne12";
+	}
 	public EntityPenne12Mob(World par1World) {
 		super(par1World);
 		

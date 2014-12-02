@@ -33,13 +33,13 @@ public class MainRegistry
     public static ModMetadata meta;
     
     @Instance("sleshymod")
-    public static MainRegistry modInstance;
+    public static MainRegistry modInstance = new MainRegistry();
     
 
     @EventHandler
     public void PreLoad(FMLPreInitializationEvent event)
     {   	
-    	EntityPenne12.MainRegistry();
+    	EntityPenne12.createEntity();
     	
     	proxy.registerRenderThings();
     }

@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ec155ec-5c62-4473-8b5c-62330f2d9d8a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java" afterPath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java" afterPath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java" afterPath="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/allforfunmc/writeStone/TileEntityReadStone.java" afterPath="$PROJECT_DIR$/src/main/java/com/allforfunmc/writeStone/TileEntityReadStone.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modpack.iws" afterPath="$PROJECT_DIR$/modpack.iws" />
     </list>
     <ignored path="modpack.iws" />
@@ -80,12 +81,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainRegistry.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainRegistry.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6066176" vertical-offset="0" max-vertical-offset="720">
-              <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="720">
+              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntityPenne12Mob.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="720">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#665#666#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,21 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntityPenne12.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EntityPenne12.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EntityRegistry.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.1.1217/forgeSrc-1.7.10-10.13.1.1217-sources.jar!/cpw/mods/fml/common/registry/EntityRegistry.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1034" max-vertical-offset="4590">
-              <caret line="181" column="69" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.24816176" vertical-offset="0" max-vertical-offset="544">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -698,12 +703,12 @@
         <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/allforfuncore/groovyMod/GBlock.groovy" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/changes.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/CamoStuff/ClientProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/CamoStuff/CamoBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/writeStone/TileEntityReadStone.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java" />
       </list>
     </option>
   </component>
@@ -1339,12 +1344,12 @@
       <workItem from="1417435955049" duration="147000" />
       <workItem from="1417436513382" duration="956000" />
       <workItem from="1417473560184" duration="3141000" />
-      <workItem from="1417480266174" duration="761000" />
+      <workItem from="1417480266174" duration="2041000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29855000" />
+    <option name="totallyTimeSpent" value="31135000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1638,6 +1643,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1935">
           <caret line="21" column="111" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="111" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1663,6 +1669,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1116505" vertical-offset="1920" max-vertical-offset="2775">
           <caret line="19" column="45" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1677,6 +1684,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33252427" vertical-offset="206" max-vertical-offset="2280">
           <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1691,6 +1699,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2116" max-vertical-offset="2940">
           <caret line="192" column="15" selection-start-line="192" selection-start-column="15" selection-end-line="192" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1698,6 +1707,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08980583" vertical-offset="121" max-vertical-offset="975">
           <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1705,6 +1715,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18203883" vertical-offset="0" max-vertical-offset="885">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1743,16 +1754,6 @@
         <state vertical-scroll-proportion="0.6617647" vertical-offset="0" max-vertical-offset="765">
           <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53125" vertical-offset="146" max-vertical-offset="690">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1810,26 +1811,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12Mob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
-          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="146" max-vertical-offset="720">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="720">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.1.1217/forgeSrc-1.7.10-10.13.1.1217-sources.jar!/cpw/mods/fml/common/registry/EntityRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="899" max-vertical-offset="4590">
-          <caret line="181" column="69" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="69" />
+        <state vertical-scroll-proportion="0.33272058" vertical-offset="1334" max-vertical-offset="4590">
+          <caret line="170" column="0" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/MainRegistry.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/allforfunmc/entity/penne12/EntityPenne12.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6066176" vertical-offset="0" max-vertical-offset="720">
-          <caret line="39" column="52" selection-start-line="39" selection-start-column="52" selection-end-line="39" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.24816176" vertical-offset="0" max-vertical-offset="544">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
           <folding />
         </state>
       </provider>
