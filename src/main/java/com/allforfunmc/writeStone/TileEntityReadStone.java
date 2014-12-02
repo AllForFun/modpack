@@ -20,9 +20,6 @@ public class TileEntityReadStone extends TileEntity {
     public boolean hasFile = false;
     public File File;
     
-    /*
-     * TODO: Finish reading of file
-     */
     public void updateEntity() {
     	try {
 		    if (new Scanner(File).nextInt() == 1) {
