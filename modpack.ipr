@@ -185,6 +185,13 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="Ben">
+      <words>
+        <w>penne</w>
+      </words>
+    </dictionary>
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/modpack.iml" filepath="$PROJECT_DIR$/modpack.iml" />

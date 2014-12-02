@@ -13,11 +13,11 @@ public class EntityPenne12 {
 
 	
 	public static void createEntity(){
-		EntityPenne12Mob.class.getName();
+
 		int randomId = EntityRegistry.findGlobalUniqueEntityId();
 		EntityRegistry.registerGlobalEntityID(EntityPenne12Mob.class, EntityPenne12Mob.getName(), randomId);
-		EntityRegistry.registerModEntity(EntityPenne12Mob.class, EntityPenne12Mob.getName(), randomId, MainRegistry.modInstance, 64, 1, true);
-		EntityRegistry.addSpawn(EntityPenne12Mob.class, 2, 0, 1, EnumCreatureType.ambient, BiomeGenBase.forest);
+		EntityRegistry.registerModEntity(EntityPenne12Mob.class, EntityPenne12Mob.getName(), randomId, "AllForFunsPenne12AI", 64, 1, true);
+		EntityRegistry.addSpawn(EntityPenne12Mob.class.getName(), 2, 0, 1, EnumCreatureType.ambient, BiomeGenBase.forest);
 
 		EntityList.entityEggs.put(randomId, new EntityList.EntityEggInfo(randomId, 0x40FF00, 0xF2FF00));
 	}

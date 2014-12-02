@@ -21,7 +21,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "Penne12AI", name = "AI Pennes", version = "1.0")
+@Mod(modid = "AllForFunsPenne12AI", name = "AllForFun's AI Pennes", version = "1.0")
 public class MainRegistry 
 {
 	
@@ -32,8 +32,8 @@ public class MainRegistry
     @Metadata
     public static ModMetadata meta;
     
-    @Instance("sleshymod")
-    public static MainRegistry modInstance = new MainRegistry();
+    @Instance(value = "GenericModID")
+    public static MainRegistry modInstance;
     
 
     @EventHandler
