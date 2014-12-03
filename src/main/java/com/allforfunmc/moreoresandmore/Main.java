@@ -30,10 +30,12 @@ public class Main {
     public static Item armorCobbleChest;
     public static Item armorCobbleLegs;
     public static Item armorCobbleBoots;
+    public static Item transportationStick = new TransportStick();
     
     public static Item PlayerMagnet = new PlayerMagnet();
 
-    public static ArmorMaterial CobbleArmorMaterial = EnumHelper.addArmorMaterial("CobbleArmor", 15, new int[] { 2, 6, 5, 2 }, 9);
+    public static ArmorMaterial CobbleArmorMaterial = EnumHelper.addArmorMaterial("CobbleArmor", 15,
+            new int[] { 2, 6, 5, 2 }, 9);
 
     public static Block blockCompressedCobble;
     public static Block cobbleGen = new CobbleGen(Blocks.cobblestone);
@@ -41,39 +43,49 @@ public class Main {
     @EventHandler
     public void PreInit(FMLPreInitializationEvent preEvent) {
 
-	// blocks
-	blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble").setHardness(5.0F).setResistance(2000.0F);
-	GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
-	GameRegistry.registerBlock(cobbleGen, "Cobble_Generator");
-	
-	// Items
-	GameRegistry.registerItem(PlayerMagnet, "player_magnet");
+        // blocks
+        blockCompressedCobble = new CompressedCobble(Material.rock).setBlockName("CompressedCobble")
+                .setHardness(5.0F).setResistance(2000.0F);
+        GameRegistry.registerBlock(blockCompressedCobble, "CompressedCobble");
+        GameRegistry.registerBlock(cobbleGen, "Cobble_Generator");
 
-	// armor
-	armorCobbleHelm = new CobbleArmor(CobbleArmorMaterial, armorCobbleHelmID, 0).setUnlocalizedName("CobbleHelm");
-	GameRegistry.registerItem(armorCobbleHelm, "CobbleHelm");
+        // Items
+        GameRegistry.registerItem(PlayerMagnet, "player_magnet");
 
-	armorCobbleChest = new CobbleArmor(CobbleArmorMaterial, armorCobbleChestID, 1).setUnlocalizedName("CobbleChest");
-	GameRegistry.registerItem(armorCobbleChest, "CobbleChest");
+        // armor
+        armorCobbleHelm = new CobbleArmor(CobbleArmorMaterial, armorCobbleHelmID, 0)
+                .setUnlocalizedName("CobbleHelm");
+        GameRegistry.registerItem(armorCobbleHelm, "CobbleHelm");
 
-	armorCobbleLegs = new CobbleArmor(CobbleArmorMaterial, armorCobbleLegsID, 2).setUnlocalizedName("CobbleLegs");
-	GameRegistry.registerItem(armorCobbleLegs, "CobbleLegs");
+        armorCobbleChest = new CobbleArmor(CobbleArmorMaterial, armorCobbleChestID, 1)
+                .setUnlocalizedName("CobbleChest");
+        GameRegistry.registerItem(armorCobbleChest, "CobbleChest");
 
-	armorCobbleBoots = new CobbleArmor(CobbleArmorMaterial, armorCobbleBootsID, 3).setUnlocalizedName("CobbleBoots");
-	GameRegistry.registerItem(armorCobbleBoots, "CobbleBoots");
+        armorCobbleLegs = new CobbleArmor(CobbleArmorMaterial, armorCobbleLegsID, 2).setUnlocalizedName("CobbleLegs");
+        GameRegistry.registerItem(armorCobbleLegs, "CobbleLegs");
 
+        armorCobbleBoots = new CobbleArmor(CobbleArmorMaterial, armorCobbleBootsID, 3)
+                .setUnlocalizedName("CobbleBoots");
+        GameRegistry.registerItem(armorCobbleBoots, "CobbleBoots");
+
+        GameRegistry.registerItem(transportationStick, "TeleportStick");
     }
 
     @EventHandler
     public void Init(FMLInitializationEvent Event) {
 
 	// crafting
-	GameRegistry.addShapedRecipe(new ItemStack(blockCompressedCobble, 1), new Object[] { "XXX", "XXX", "XXX", 'X', Blocks.cobblestone });
+	GameRegistry.addShapedRecipe(new ItemStack(blockCompressedCobble, 1),
+            new Object[] { "XXX", "XXX", "XXX", 'X', Blocks.cobblestone });
 
-	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleHelm, 1), new Object[] { "XXX", "X X", 'X', blockCompressedCobble });
-	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleChest, 1), new Object[] { "X X", "XXX", "XXX", 'X', blockCompressedCobble });
-	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleLegs, 1), new Object[] { "XXX", "X X", "X X", 'X', blockCompressedCobble });
-	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleBoots, 1), new Object[] { "X X", "X X", 'X', blockCompressedCobble });
+	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleHelm, 1),
+            new Object[] { "XXX", "X X", 'X', blockCompressedCobble });
+	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleChest, 1),
+            new Object[] { "X X", "XXX", "XXX", 'X', blockCompressedCobble });
+	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleLegs, 1),
+            new Object[] { "XXX", "X X", "X X", 'X', blockCompressedCobble });
+	GameRegistry.addShapedRecipe(new ItemStack(armorCobbleBoots, 1),
+            new Object[] { "X X", "X X", 'X', blockCompressedCobble });
 
     }
 
