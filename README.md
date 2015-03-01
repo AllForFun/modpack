@@ -1,8 +1,10 @@
-AllForFun's Modpack
-=============
+#AllForFun's Modpack
 
-Mod List:
---------
+###Please note:
+The developers of this pack have lost their interest. If you'd like to continue this, raise an issue, and we'll talk with you! Thanks for everything. If you'd like to keep up with what  [penne12](http://twitter.com/penne12_) is doing, visit [his site](http://bensites.com)
+
+##Mod List:
+
 
 Names					| Desc
 ------------------|-----------
